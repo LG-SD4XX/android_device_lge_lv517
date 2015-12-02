@@ -284,7 +284,7 @@ int32_t mm_camera_open(mm_camera_obj_t *my_obj)
         my_obj->ctrl_fd = open(dev_name, O_RDWR | O_NONBLOCK);
         l_errno = errno;
         LOGD("ctrl_fd = %d, errno == %d", my_obj->ctrl_fd, l_errno);
-        if((my_obj->ctrl_fd >= 0) || (errno != EIO && errno != ETIMEDOUT) || (n_try <= 0 )) {
+        if((my_obj->ctrl_fd >= 0) || (errno != EIO && errno != EINVAL) || (n_try <= 0 )) {
             break;
         }
         LOGE("Failed with %s error, retrying after %d milli-seconds",
