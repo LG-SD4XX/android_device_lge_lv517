@@ -50,6 +50,8 @@ on fs
     chown system system /proc/gesture/onoff 
     chmod 660 /proc/gesture/onoff 
 
+    setprop sys.usb.ffs.aio_compat 1
+
 on post-fs-data
     mkdir /persist/data/sfs 0700 system system
     mkdir /persist/data/tz 0700 system system
