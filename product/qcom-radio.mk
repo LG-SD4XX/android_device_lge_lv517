@@ -57,3 +57,7 @@ PRODUCT_PACKAGES += \
     android.system.net.netd@1.0 \
     libandroid_net \
     netutils-wrapper-1.0
+
+# Whitelisted app
+PRODUCT_COPY_FILES += \
+    $(VENDOR_PATH)/configs/qti_whitelist.xml:system/etc/sysconfig/qti_whitelist.xml
