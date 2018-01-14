@@ -337,6 +337,11 @@ service qti /vendor/bin/qti
     group radio oem_2901 usb
     writepid /dev/cpuset/system-background/tasks
 
+service baseband-sh /vendor/bin/init.qcom.baseband.sh
+    class late_start
+    user root
+    oneshot
+
 service graphics-sh /vendor/bin/init.qcom.graphics.sh
     class core
     user root

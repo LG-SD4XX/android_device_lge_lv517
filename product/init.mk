@@ -9,5 +9,6 @@ PRODUCT_PACKAGES += \
     ueventd.qcom.rc
 
 PRODUCT_PACKAGES += \
-    init.qcom.graphics.sh \
-    init.qcom.sh
+    init.qcom.sh \
+    init.qcom.baseband.sh \
+    init.qcom.graphics.sh
