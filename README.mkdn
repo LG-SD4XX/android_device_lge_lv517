@@ -1,7 +1,7 @@
 Device Tree for LG K20 Plus
 ==============================================
 
-The Stylo 2 Plus (codenamed _"lv517"_) is a mid-range smartphone from Lg Electronics.
+The K20 Plus (codenamed _"lv517"_) is a mid-range smartphone from Lg Electronics.
 It was released on December, 2017.
 
 Basic   | Spec Sheet
