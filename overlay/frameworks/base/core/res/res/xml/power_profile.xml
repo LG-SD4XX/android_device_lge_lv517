@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<device name="Android">
+    <item name="none">0</item>
+    <item name="screen.on">107.89</item>
+    <item name="screen.full">191.46</item>
+    <item name="bluetooth.active">109.49</item>
+    <item name="bluetooth.on">0.19</item>
+    <item name="wifi.on">2.59</item>
+    <item name="wifi.active">105.87</item>
+    <item name="wifi.scan">51.71</item>
+    <item name="dsp.audio">0.1</item>
+    <item name="dsp.video">0.1</item>
+    <item name="camera.flashlight">0.1</item>
+    <item name="camera.avg">0.1</item>
+    <item name="radio.active">195.67</item>
+    <item name="radio.scanning">76.87</item>
+    <item name="gps.on">9.94</item>
+    <array name="radio.on">
+        <value>2.61</value>
+        <value>1.94</value>
+    </array>
+    <array name="cpu.clusters.cores">
+        <value>4</value>
+        <value>4</value>
+    </array>
+    <array name="cpu.speeds.cluster0">
+        <value>960000</value>
+        <value>1094400</value>
+        <value>1209600</value>
+        <value>1248000</value>
+        <value>1344000</value>
+        <value>1401000</value>
+    </array>
+    <array name="cpu.speeds.cluster1">
+        <value>768000</value>
+        <value>902400</value>
+        <value>998400</value>
+        <value>1094400</value>
+    </array>
+    <item name="cpu.idle">4.64</item>
+    <item name="cpu.awake">16.17</item>
+    <array name="cpu.active.cluster0">
+        <value>78.35</value>
+        <value>94.26</value>
+        <value>115.42</value>
+        <value>117.66</value>
+        <value>129.66</value>
+        <value>141.27</value>
+    </array>
+    <array name="cpu.active.cluster1">
+        <value>56.77</value>
+        <value>64.40</value>
+        <value>73.83</value>
+        <value>95.83</value>
+    </array>
+    <item name="battery.capacity">3000</item>
+    <array name="wifi.batchedscan">
+        <value>.0002</value>
+        <value>.002</value>
+        <value>.02</value>
+        <value>.2</value>
+        <value>2</value>
+    </array>
+</device>

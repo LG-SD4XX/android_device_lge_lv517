@@ -1,0 +1,4 @@
+allow qti_init_shell bluetooth_loader_exec:file { read open };
+allow qti_init_shell proc_kernel_sched:file { open write };
+allow qti_init_shell sysfs:dir { write };
+allow qti_init_shell sysfs_power_management:dir { search };
