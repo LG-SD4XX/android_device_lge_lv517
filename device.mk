@@ -23,6 +23,9 @@ $(call inherit-product-if-exists, frameworks/native/build/phone-hdpi-2048-dalvik
 # Get non-open-source specific aspects
 $(call inherit-product-if-exists, vendor/lge/lv517/lv517-vendor.mk)
 
+# common msm8937
+$(call inherit-product, device/lge/msm8937-common/msm8937.mk)
+
 # Overlays
 DEVICE_PACKAGE_OVERLAYS += $(LOCAL_PATH)/overlay
 
@@ -61,9 +64,6 @@ PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.software.midi.xml:system/etc/permissions/android.software.midi.xml \
     frameworks/native/data/etc/android.software.sip.voip.xml:system/etc/permissions/android.software.sip.voip.xml \
     frameworks/native/data/etc/handheld_core_hardware.xml:system/etc/permissions/handheld_core_hardware.xml
-
-# System properties
--include $(LOCAL_PATH)/system_prop.mk
 
 # Audio
 PRODUCT_PACKAGES += \
@@ -114,13 +114,16 @@ PRODUCT_PACKAGES += \
     fingerprint.msm8937
 
 # Gesture handler
-PRODUCT_PACKAGES += \
-    GestureHandler
+#PRODUCT_PACKAGES += \
+#    GestureHandler
 
 # Charger
 PRODUCT_PACKAGES += \
     charger_res_images
-    
+
+# Doze mode
+PRODUCT_PACKAGES += \
+    LgeDoze
 
 # For android_filesystem_config.h
 PRODUCT_PACKAGES += \
@@ -140,13 +143,13 @@ PRODUCT_PACKAGES += \
     init.qcom.power.rc \
     init.class_main.sh \
     init.lge.fingerprints.rc \
-    init.qcom.usb.rc \
+    init.lge.usb.rc \
     init.lge.usb.sh \
     init.lge.usb.default.sh \
     init.qcom.early_boot.sh \
     init.qcom.post_boot.sh \
     init.qcom.class_core.sh \
-    init.ph2n_core.rc \
+    init.lv517_core.rc \
     init.qcom.rc \
     init.qcom.sh \
     init.qcom.sensors.sh \
@@ -183,8 +186,7 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
     frameworks/av/media/libstagefright/data/media_codecs_google_audio.xml:system/etc/media_codecs_google_audio.xml \
     frameworks/av/media/libstagefright/data/media_codecs_google_telephony.xml:system/etc/media_codecs_google_telephony.xml \
-    frameworks/av/media/libstagefright/data/media_codecs_google_video.xml:system/etc/media_codecs_google_video.xml \
-    vendor/cm/prebuilt/common/etc/apns-conf.xml:system/etc/apns-conf.xml
+    frameworks/av/media/libstagefright/data/media_codecs_google_video.xml:system/etc/media_codecs_google_video.xml
 
 # OMX
 PRODUCT_PACKAGES += \
@@ -224,10 +226,7 @@ PRODUCT_PACKAGES += \
 
 # Sensors
 PRODUCT_PACKAGES += \
-    sensors.msm8937 \
-    hals.conf \
-    sensor_def_common.conf \
-    sensor_def_variable.conf
+    sensors.msm8937
 
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/sensors/hals.conf:system/etc/sensors/hals.conf \
@@ -255,8 +254,7 @@ PRODUCT_PACKAGES += \
     p2p_supplicant_overlay.conf \
     hostapd_default.conf \
     hostapd.accept \
-    hostapd.deny \
-    WCNSS_cfg.dat
+    hostapd.deny
 
 # WCNSS
 PRODUCT_COPY_FILES += \
