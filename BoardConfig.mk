@@ -15,7 +15,7 @@
 #
 
 # inherit from common msm8937
-include device/lge/lv517/BoardConfigCommon.mk
+include device/lge/msm8937-common/BoardConfigCommon.mk
 
 LOCAL_PATH := device/lge/lv517
 
