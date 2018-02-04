@@ -271,7 +271,7 @@ etc/firmware/a530v3_gpmu.fw2
 etc/firmware/a530v3_seq.fw2
 etc/firmware/a540_gpmu.fw2
 
-# Keystore - from santoni (Redmi 4X)
+# Keystore - from TA-1000 - OPR1.170623.026
 vendor/lib/hw/keystore.msm8937.so
 vendor/lib64/hw/keystore.msm8937.so
 
@@ -517,17 +517,17 @@ vendor/lib64/lib-uceservice.so
 vendor/lib64/vendor.qti.imsrtpservice@1.0-service-Impl.so
 vendor/lib64/vendor.qti.imsrtpservice@1.0_vendor.so
 
-# Sensors - from santoni (Redmi 4X)
-bin/sensors.qcom:vendor/bin/sensors.qcom
+# Sensors - from TA-1000 - OPR1.170623.026
+vendor/bin/sensors.qcom
 vendor/lib/hw/activity_recognition.msm8937.so
 vendor/lib/libsensor1.so
 vendor/lib/libsensor_reg.so
-vendor/lib/sensor_calibrate.so
+vendor/lib/libsensor_user_cal.so
 vendor/lib/sensors.ssc.so
 vendor/lib64/hw/activity_recognition.msm8937.so
 vendor/lib64/libsensor1.so
 vendor/lib64/libsensor_reg.so
-vendor/lib64/sensor_calibrate.so
+vendor/lib64/libsensor_user_cal.so
 vendor/lib64/sensors.ssc.so
 
 # Thermal - from santoni (Redmi 4X)
