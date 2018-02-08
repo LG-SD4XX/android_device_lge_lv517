@@ -1,6 +1,11 @@
 # ART
 ro.sys.fw.dex2oat_thread_count=4
 
+# boot speed tweaks
+pm.dexopt.install=speed
+pm.dexopt.first-boot=speed
+pm.dexopt.boot=speed
+
 # Camera
 camera.hal1.packagelist=com.skype.raider,com.google.android.talk
 #properties for limiting preview size in camera
@@ -87,7 +92,7 @@ debug.qualcomm.sns.libsensor1=e
 persist.sensors.mag_filter_size=8
 
 # bluetooth
-#ro.bt.bdaddr_path=/data/misc/bdaddr
+ro.bt.bdaddr_path=/data/misc/bluetooth/bdaddr
 qcom.bluetooth.soc=smd
 ro.qualcomm.bt.hci_transport=smd
 
@@ -180,8 +185,6 @@ persist.dbg.vt_avail_ovr=1
 persist.dbg.ims_volte_enable=1
 persist.data.iwlan.enable=true
 persist.dbg.wfc_avail_ovr=1
-#persist.radio.sw_mbn_update=0
-#persist.radio.hw_mbn_update=0
 
 
 # Radio - IMS [cedric]
@@ -191,7 +194,7 @@ persist.radio.sw_mbn_openmkt=1
 persist.radio.sw_mbn_update=1
 persist.radio.sw_mbn_volte=1
 persist.radio.start_ota_daemon=1
-persist.volte_enalbed_by_hw=1
+persist.volte_enabled_by_hw=1
 service.qti.ims.enabled=1
 net.tethering.noprovisioning=true
 
@@ -206,18 +209,135 @@ persist.ims.disableDebugLogs=0
 persist.ims.disableIMSLogs=0
 persist.ims.disableQXDMLogs=0
 persist.ims.rcs=false
-persist.ims.volte=false
+persist.ims.volte=true
 persist.ims.vt=false
 persist.ims.vt.epdg=false
 persist.mm.sta.enable=0
 persist.vt.supported=0
 ro.config.hw_volte_on=true
+persist.radio.videopause.mode
 
 #otg
 persist.sys.isUsbOtgEnabled=true
 
 #set cutoff voltage to 3400mV
+
+#enable zram and swap
+ro.config.zram=true
+ro.config.swap=true
 ro.cutoff_voltage_mv=3400
 
+#misc tweaks from stock
+
+persist.camera.HAL3.enabled=1
+camera.HAL3.enabled=1
+persist.camera.eis.enable=1
+camera.eis.enable=1
+persist.camera.is_mode=4
+camera.is_mode=4
+persist.camera.disable_zsl_mode=1
+system.fps=70
+debug.enable.gamed=1
+persist.hwc.enable_vds=1
+debug.sf.hw=1
+dalvik.vm.heapsize=36m
 sys.knockon.knockoff.distance=10
 persist.sensors.knock_delay=1000
+
+#test tweaks
+persist.sys.use_dithering=1
+persist.sys.scrollingcache=4
+persist.android.strictmode=0
+# Audio and Video Quality Tweaks
+ro.media.enc.jpeg.quality=100
+ro.media.dec.jpeg.memcap=8000000
+ro.media.enc.hprof.vid.bps=8000000
+ro.media.capture.maxres=8m
+ro.media.panorama.defres=3264×1840
+ro.media.panorama.frameres=1280×720
+ro.camcorder.videoModes=true
+ro.media.enc.hprof.vid.fps=70
+ro.media.dec.aud.wma.enabled=1
+ro.media.dec.vid.wmv.enabled=1
+ro.media.dec.aud.mp3.enabled=1
+ro.media.dec.vid.mp4.enabled=1
+ro.media.enc.aud.wma.enabled=1
+ro.media.enc.vid.wmv.enabled=1
+ro.media.enc.aud.mp3.enabled=1
+ro.media.enc.vid.mp4.enabled=1
+ro.media.dec.aud.flac.enabled=1
+ro.media.dec.vid.H.264.enabled=1
+ro.media.enc.aud.flac.enabled=1
+ro.media.enc.vid.H.264.enabled=1
+# Battery Efficiency Tweaks
+ro.ril.disable.power.collapse=0
+ro.ril.power_collapse=1
+power_supply.wakeup=enable
+profiler.force_disable_ulog=true
+profiler.force_disable_err_rpt=true
+profiler.force_disable_err_rpt=1
+profiler.force_disable_ulog=1
+# Performance Tweaks
+debug.performance.tuning=1
+debug.kill_allocating_task=0
+ro.debuggable=1
+# Steaming Tweaks
+media.stagefright.enable-http=true
+media.stagefright.enable-player=true
+media.stagefright.enable-meta=true
+media.stagefright.enable-aac=true
+media.stagefright.enable-qcp=true
+media.stagefright.enable-scan=true
+media.stagefright.enable-record=true
+# Net Speed Tweak
+net.tcp.buffersize.default=4096,87380,256960,4096, 16384,256960
+net.tcp.buffersize.wifi=4096,87380,256960,4096,163 84,256960
+net.tcp.buffersize.lte=524288,1048576,2097152,5242 88,1048576,2097152
+net.tcp.buffersize.hsdpa=6144,87380,1048576,6144,8 7380,1048576
+net.tcp.buffersize.hspa=6144,87380,524288,6144,163 84,262144
+net.tcp.buffersize.umts=4096,87380,256960,4096,163 84,256960
+net.tcp.buffersize.edge=4096,87380,256960,4096,163 84,256960
+net.tcp.buffersize.gprs=4096,87380,256960,4096,163 84,256960
+net.tcp.buffersize.evdo_b=6144,87380,1048576,6144, 87380,1048576
+net.ipv4.tcp_ecn=0
+net.ipv4.route.flush=1
+net.ipv4.tcp_rfc1337=1
+net.ipv4.ip_no_pmtu_disc=0
+net.ipv4.tcp_sack=1
+net.ipv4.tcp_fack=1
+net.ipv4.tcp_window_scaling=1
+net.ipv4.tcp_timestamps=1
+net.ipv4.tcp_rmem=4096 39000 187000
+net.ipv4.tcp_wmem=4096 39000 187000
+net.ipv4.tcp_mem=187000 187000 187000
+net.ipv4.tcp_no_metrics_save=1
+net.ipv4.tcp_moderate_rcvbuf=1
+net.ipv6.tcp_ecn=0
+net.ipv6.route.flush=1
+net.ipv6.tcp_rfc1337=1
+net.ipv6.ip_no_pmtu_disc=0
+net.ipv6.tcp_sack=1
+net.ipv6.tcp_fack=1
+net.ipv6.tcp_window_scaling=1
+net.ipv6.tcp_timestamps=1
+net.ipv6.tcp_rmem=4096 39000 187000
+net.ipv6.tcp_wmem=4096 39000 187000
+net.ipv6.tcp_mem=187000 187000 187000
+net.ipv6.tcp_no_metrics_save=1
+net.ipv6.tcp_moderate_rcvbuf=1
+# Gaming Tweaks
+persist.sys.NV_FPSLIMIT=60
+persist.sys.NV_POWERMODE=1
+persist.sys.NV_PROFVER=15
+persist.sys.NV_STEREOCTRL=0
+persist.sys.NV_STEREOSEPCHG=0
+persist.sys.NV_STEREOSEP=30
+# Dalvik Virtual Machine Tweaks
+dalvik.vm.checkjni=false
+dalvik.vm.dexopt-data-only=1
+dalvik.vm.heapstartsize=5m
+dalvik.vm.heapgrowthlimit=48m
+dalvik.vm.verify-bytecode=false
+dalvik.vm.execution-mode=int:jit
+dalvik.vm.lockprof.threshold=250
+ro.config.hw_fast_dormancy=1

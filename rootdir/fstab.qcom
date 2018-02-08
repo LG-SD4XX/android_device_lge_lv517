@@ -12,6 +12,9 @@
 /dev/block/bootdevice/by-name/persist      /persist        ext4 nosuid,nodev,noatime,noauto_da_alloc,errors=continue                       wait,notrim
 /dev/block/bootdevice/by-name/sns          /sns            ext4    nosuid,nodev,noatime,noauto_da_alloc,errors=continue  wait,notrim
 /dev/block/bootdevice/by-name/mpt          /mpt            ext4    nosuid,nodev,noatime,noauto_da_alloc,errors=continue  wait,notrim
+/dev/block/bootdevice/by-name/ftm          /ftm            emmc    defaults    defaults
 
-/devices/soc/7864900.sdhci/mmc_host*        /storage/sdcard1   vfat    nosuid,nodev         wait,voldmanaged=sdcard1:auto,noemulatedsd,encryptable=footer
-/devices/soc/78db000.usb/msm_hsusb_host/usb1/1-1/* /storage/usbotg vfat nosuid,nodev wait,voldmanaged=usbotg:auto
+
+/devices/soc/7864900.sdhci/mmc_host*      /storage/sdcard1         auto    nosuid,nodev                                                      wait,encryptable=/dev/block/bootdevice/by-name/encrypt,voldmanaged=external_SD:auto
+/devices/soc/78db000.usb/msm_hsusb_host/usb1/1-1/*     auto        auto    defaults                                             voldmanaged=usb:auto
+
