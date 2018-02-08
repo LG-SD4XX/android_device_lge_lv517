@@ -23,3 +23,7 @@ export VENDOR=xiaomi
 export DEVICE_COMMON=msm8917-common
 
 ./../../$VENDOR/$DEVICE_COMMON/extract-files.sh $@
+
+# Hax for camera configs
+CAMERA2_SENSOR_MODULES="$LINEAGE_ROOT"/vendor/"$VENDOR"/"$DEVICE"/proprietary/vendor/lib/libmmcamera2_sensor_modules.so
+sed -i "s|/system/etc/camera/|/vendor/etc/camera/|g" "$CAMERA2_SENSOR_MODULES"
