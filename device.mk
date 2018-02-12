@@ -116,9 +116,14 @@ PRODUCT_PACKAGES += \
     fingerprintd \
     fingerprint.msm8937
 
+# FM
+PRODUCT_PACKAGES += \
+    FMRadio \
+    libfmjni
+
 # Gesture handler
-#PRODUCT_PACKAGES += \
-#    GestureHandler
+PRODUCT_PACKAGES += \
+    GestureHandler
 
 # Charger
 PRODUCT_PACKAGES += \

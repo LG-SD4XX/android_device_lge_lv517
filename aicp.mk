@@ -17,12 +17,15 @@
 # Inherit framework first
 $(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
+$(call inherit-product, $(SRC_TARGET_DIR)/product/languages_full.mk)
 
 # Inherit from lv517 device
 $(call inherit-product, device/lge/lv517/device.mk)
 
 # Inherit some common LineageOS stuff.
 $(call inherit-product, vendor/aicp/configs/common.mk)
+$(call inherit-product, vendor/aicp/configs/telephony.mk)
+$(call inherit-product, vendor/aicp/configs/bootanimation.mk)
 
 # Set those variables here to overwrite the inherited values.
 BOARD_VENDOR := lge
