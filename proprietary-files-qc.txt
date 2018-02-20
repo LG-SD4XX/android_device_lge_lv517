@@ -112,9 +112,8 @@ vendor/lib64/libxml.so
 # Charger - from santoni (Redmi 4X)
 bin/hvdcp_opti:vendor/bin/hvdcp_opti
 
-# Consumer IR - from santoni (Redmi 4X)
-lib/hw/consumerir.default.so
-lib64/hw/consumerir.default.so
+# Consumer Ir - from tissot - OPR1.170623.026
+vendor/lib64/hw/consumerir.default.so
 
 # DPM - from TA-1000 - OPR1.170623.026
 vendor/bin/dpmQmiMgr
