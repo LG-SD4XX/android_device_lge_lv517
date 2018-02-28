@@ -404,12 +404,6 @@ service charger /charger
     group system graphics
     seclabel u:r:healthd:s0
 
-service vendor.msm_irqbalance /vendor/bin/msm_irqbalance -f /vendor/etc/msm_irqbalance.conf
-    class late_start
-    user root
-    group root
-    writepid /dev/cpuset/system-background/tasks
-
 service gx_fpd /system/bin/gx_fpd
     class core
     user root
