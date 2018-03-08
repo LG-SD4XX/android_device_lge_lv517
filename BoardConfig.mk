@@ -19,6 +19,9 @@ include device/lge/msm8937-common/BoardConfigCommon.mk
 
 LOCAL_PATH := device/lge/lv517
 
+# Asserts
+TARGET_OTA_ASSERT_DEVICE := lv517,TP260,MP260
+
 # Filesystem
 BOARD_FLASH_BLOCK_SIZE := 131072 # (BOARD_KERNEL_PAGESIZE * 64)
 BOARD_BOOTIMAGE_PARTITION_SIZE := 33554432
@@ -28,8 +31,27 @@ BOARD_USERDATAIMAGE_PARTITION_SIZE := 10887364608
 BOARD_CACHEIMAGE_PARTITION_SIZE := 524288000
 TARGET_USERIMAGES_USE_EXT4 := true
 
-# Recovery
+#FM
+BOARD_HAVE_QCOM_FM := true
+TARGET_QCOM_NO_FM_FIRMWARE := true
+AUDIO_FEATURE_ENABLED_FM_POWER_OPT := true
+
+#Recovery
 TARGET_RECOVERY_FSTAB := $(LOCAL_PATH)/rootdir/fstab.qcom
+
+#Recovery-twrp
+#RECOVERY_VARIANT := twrp 
+#TARGET_RECOVERY_FSTAB := $(LOCAL_PATH)/rootdir/fstab.twrp
+#TW_THEME := portrait_hdpi
+#TW_MAX_BRIGHTNESS := 250
+#TW_BRIGHTNESS_PATH := /sys/class/leds/lcd-backlight/brightness
+#TW_DEFAULT_EXTERNAL_STORAGE := true
+#TARGET_RECOVERY_QCOM_RTC_FIX := true
+#RECOVERY_SDCARD_ON_DATA := true
+#RECOVERY_GRAPHICS_USE_LINELENGTH := true
+#TW_IGNORE_MISC_WIPE_DATA := true
+#TW_SCREEN_BLANK_ON_BOOT := true
+#TW_INPUT_BLACKLIST := "hbtp_vm"
 
 # inherit from the proprietary version
 -include vendor/lge/lv517/BoardConfigVendor.mk

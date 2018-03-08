@@ -1,6 +1,11 @@
 # ART
 ro.sys.fw.dex2oat_thread_count=4
 
+# boot speed tweaks
+pm.dexopt.install=speed
+pm.dexopt.first-boot=speed
+pm.dexopt.boot=speed
+
 # Camera
 camera.hal1.packagelist=com.skype.raider,com.google.android.talk
 #properties for limiting preview size in camera
@@ -87,7 +92,6 @@ debug.qualcomm.sns.libsensor1=e
 persist.sensors.mag_filter_size=8
 
 # bluetooth
-#ro.bt.bdaddr_path=/data/misc/bdaddr
 qcom.bluetooth.soc=smd
 ro.qualcomm.bt.hci_transport=smd
 
@@ -191,7 +195,7 @@ persist.radio.sw_mbn_openmkt=1
 persist.radio.sw_mbn_update=1
 persist.radio.sw_mbn_volte=1
 persist.radio.start_ota_daemon=1
-persist.volte_enalbed_by_hw=1
+persist.volte_enabled_by_hw=1
 service.qti.ims.enabled=1
 net.tethering.noprovisioning=true
 
@@ -206,7 +210,7 @@ persist.ims.disableDebugLogs=0
 persist.ims.disableIMSLogs=0
 persist.ims.disableQXDMLogs=0
 persist.ims.rcs=false
-persist.ims.volte=false
+persist.ims.volte=true
 persist.ims.vt=false
 persist.ims.vt.epdg=false
 persist.mm.sta.enable=0
@@ -217,7 +221,30 @@ ro.config.hw_volte_on=true
 persist.sys.isUsbOtgEnabled=true
 
 #set cutoff voltage to 3400mV
+
+#enable zram and swap
+ro.config.zram=true
+ro.config.swap=true
 ro.cutoff_voltage_mv=3400
+
+#misc tweaks from stock
+
+persist.camera.HAL3.enabled=1
+camera.HAL3.enabled=1
+persist.camera.eis.enable=1
+camera.eis.enable=1
+persist.camera.is_mode=4
+camera.is_mode=4
+persist.camera.disable_zsl_mode=1
+system.fps=70
+debug.enable.gamed=1
+ro.config.hw_fast_dormancy=1
 
 sys.knockon.knockoff.distance=10
 persist.sensors.knock_delay=1000
+sys.ims.DATA_DAEMON_STATUS=1
+sys.ims.QMI_DAEMON_STATUS=1
+persist.ims.regmanager.mode=1
+ro.data.large_tcp_window_size=true
+
+
