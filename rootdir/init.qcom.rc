@@ -121,13 +121,6 @@ on boot
     chown root system /sys/kernel/dload/emmc_dload
     chmod 0660 /sys/kernel/dload/emmc_dload
 
-    # Goodix Fingerprint
-    chown system system /dev/goodix_fp
-    chmod 0644 /dev/goodix_fp
-
-    setprop persist.sys.fp.vendor none
-    start gx_fpd
-
     # IR blaster
     chown root system /sys/class/leds/infrared/transmit
     chown root system /sys/class/leds/infrared/brightness
@@ -404,24 +397,6 @@ service charger /charger
     class charger
     group system graphics
     seclabel u:r:healthd:s0
-
-service gx_fpd /system/bin/gx_fpd
-    class core
-    user root
-    group system system
-    disabled
-
-on property:persist.sys.fp.vendor=switchf
-    stop gx_fpd
-    setprop persist.sys.fp.vendor searchf
-    setprop ro.boot.fpsensor fpc
-    start fps_hal
-
-on property:persist.sys.fp.vendor=goodix
-    setprop persist.sys.fp.onstart 1
-    setprop ro.boot.fpsensor gdx
-    setprop ro.hardware.fingerprint goodix
-    start fps_hal
 
 service time_daemon /vendor/bin/time_daemon
     class main
