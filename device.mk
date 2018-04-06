@@ -19,6 +19,10 @@ DEVICE_PATH := $(LOCAL_PATH)
 # Inherit from msm8937-common
 $(call inherit-product, device/xiaomi/msm8937-common/msm8937.mk)
 
+# Overlay
+DEVICE_PACKAGE_OVERLAYS += \
+    $(LOCAL_PATH)/overlay
+
 # Include device-specific product fragments
 include $(DEVICE_PATH)/product/*.mk
 
