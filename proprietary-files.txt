@@ -205,6 +205,7 @@ vendor/lib/libOpenCL.so
 vendor/lib/libRSDriver_adreno.so
 vendor/lib/libadreno_utils.so
 vendor/lib/libbccQTI.so
+vendor/lib/libc2d30-a3xx.so
 vendor/lib/libc2d30-a5xx.so
 vendor/lib/libc2d30_bltlib.so
 vendor/lib/libgsl.so
@@ -227,6 +228,7 @@ vendor/lib64/libOpenCL.so
 vendor/lib64/libRSDriver_adreno.so
 vendor/lib64/libadreno_utils.so
 vendor/lib64/libbccQTI.so
+vendor/lib64/libc2d30-a3xx.so
 vendor/lib64/libc2d30-a5xx.so
 vendor/lib64/libc2d30_bltlib.so
 vendor/lib64/libgsl.so
@@ -264,6 +266,10 @@ vendor/lib/hw/vulkan.msm8937.so
 vendor/lib64/hw/vulkan.msm8937.so
 
 # Graphics firmware - from santoni (Redmi 4X)
+etc/firmware/a300_pfp.fw
+etc/firmware/a300_pm4.fw
+etc/firmware/a330_pfp.fw
+etc/firmware/a330_pm4.fw
 etc/firmware/a530_gpmu.fw2
 etc/firmware/a530_pfp.fw
 etc/firmware/a530_pm4.fw
