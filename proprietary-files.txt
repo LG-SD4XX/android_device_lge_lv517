@@ -286,19 +286,19 @@ vendor/lib/hw/vulkan.msm8937.so
 vendor/lib64/hw/vulkan.msm8937.so
 
 # Graphics firmware - from santoni (Redmi 4X)
-etc/firmware/a300_pfp.fw
-etc/firmware/a300_pm4.fw
-etc/firmware/a330_pfp.fw
-etc/firmware/a330_pm4.fw
-etc/firmware/a530_gpmu.fw2
-etc/firmware/a530_pfp.fw
-etc/firmware/a530_pm4.fw
-etc/firmware/a530v1_pfp.fw
-etc/firmware/a530v1_pm4.fw
-etc/firmware/a530v2_seq.fw2
-etc/firmware/a530v3_gpmu.fw2
-etc/firmware/a530v3_seq.fw2
-etc/firmware/a540_gpmu.fw2
+etc/firmware/a300_pfp.fw:vendor/firmware/a300_pfp.fw
+etc/firmware/a300_pm4.fw:vendor/firmware/a300_pm4.fw
+etc/firmware/a330_pfp.fw:vendor/firmware/a330_pfp.fw
+etc/firmware/a330_pm4.fw:vendor/firmware/a330_pm4.fw
+etc/firmware/a530_gpmu.fw2:vendor/firmware/a530_gpmu.fw2
+etc/firmware/a530_pfp.fw:vendor/firmware/a530_pfp.fw
+etc/firmware/a530_pm4.fw:vendor/firmware/a530_pm4.fw
+etc/firmware/a530v1_pfp.fw:vendor/firmware/a530v1_pfp.fw
+etc/firmware/a530v1_pm4.fw:vendor/firmware/a530v1_pm4.fw
+etc/firmware/a530v2_seq.fw2:vendor/firmware/a530v2_seq.fw2
+etc/firmware/a530v3_gpmu.fw2:vendor/firmware/a530v3_gpmu.fw2
+etc/firmware/a530v3_seq.fw2:vendor/firmware/a530v3_seq.fw2
+etc/firmware/a540_gpmu.fw2:vendor/firmware/a540_gpmu.fw2
 
 # Keystore - from TA-1000 - OPR1.170623.026
 vendor/lib/hw/keystore.msm8937.so
