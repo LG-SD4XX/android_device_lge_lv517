@@ -1,0 +1,4 @@
+on boot
+    # DT2W Permissions
+    chown system system /proc/gesture/onoff
+    chmod 660 /proc/gesture/onoff
