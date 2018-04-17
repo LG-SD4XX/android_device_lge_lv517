@@ -47,6 +47,9 @@ on fs
     mkdir /persist/bms 0700 root system
     restorecon_recursive /persist
 
+    chown system system /proc/gesture/onoff 
+    chmod 660 /proc/gesture/onoff 
+
 on post-fs-data
     mkdir /persist/data/sfs 0700 system system
     mkdir /persist/data/tz 0700 system system
