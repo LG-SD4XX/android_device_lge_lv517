@@ -1696,6 +1696,7 @@ vendor/lib/libchromatix_sony_imx486_ii_zsl_video_dw9714v.so
 # Camera mmcamera - from rolex
 lib/libmmcamera_interface.so:vendor/lib/libmmcamera_interface.so
 vendor/lib/libmmcamera_atmel_at24c32e_eeprom.so
+vendor/lib/libmmcamera_cac3_lib.so
 vendor/lib/libmmcamera_chromaflash_lib.so
 vendor/lib/libmmcamera_csidtg.so
 vendor/lib/libmmcamera_dbg.so
