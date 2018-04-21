@@ -300,6 +300,10 @@ etc/firmware/a540_gpmu.fw2:vendor/firmware/a540_gpmu.fw2
 # Keystore - from TA-1000 - OPR1.170623.026
 vendor/lib/hw/keystore.msm8937.so
 vendor/lib64/hw/keystore.msm8937.so
+ 	 
+# Lights - from santoni (Redmi 4X)
+vendor/lib/hw/lights.msm8937.so
+vendor/lib64/hw/lights.msm8937.so
 
 # Listen - from TA-1000 - OPR1.170623.026
 vendor/lib/hw/sound_trigger.primary.msm8937.so
