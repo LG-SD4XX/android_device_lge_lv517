@@ -21,6 +21,6 @@ set -e
 export DEVICE=rolex
 export VENDOR=xiaomi
 export INITIAL_COPYRIGHT_YEAR=2018
-export DEVICE_COMMON=msm8937-common
+export DEVICE_COMMON=msm8917-common
 
 ./../../$VENDOR/$DEVICE_COMMON/setup-makefiles.sh $@

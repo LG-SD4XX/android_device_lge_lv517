@@ -1,6 +1,6 @@
 [
   {
-    "repository": "android_device_xiaomi_msm8937-common",
-    "target_path": "device/xiaomi/msm8937-common"
+    "repository": "android_device_xiaomi_msm8917-common",
+    "target_path": "device/xiaomi/msm8917-common"
   }
 ]

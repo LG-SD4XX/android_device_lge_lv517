@@ -17,8 +17,8 @@
 
 DEVICE_PATH := device/xiaomi/rolex
 
-# inherit from common msm8937-common
--include device/xiaomi/msm8937-common/BoardConfigCommon.mk
+# inherit from common msm8917-common
+-include device/xiaomi/msm8917-common/BoardConfigCommon.mk
 
 # Inherit device-specific board fragments
 include $(DEVICE_PATH)/board/*.mk
