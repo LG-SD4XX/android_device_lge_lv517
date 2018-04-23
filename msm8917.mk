@@ -14,7 +14,7 @@
 # limitations under the License.
 #
 
-VENDOR_PATH := device/xiaomi/msm8937-common
+VENDOR_PATH := device/xiaomi/msm8917-common
 
 # Overlay
 DEVICE_PACKAGE_OVERLAYS += \
@@ -25,4 +25,4 @@ DEVICE_PACKAGE_OVERLAYS += \
 include $(VENDOR_PATH)/product/*.mk
 
 # Inherit common proprietary files
-$(call inherit-product-if-exists, vendor/xiaomi/msm8937-common/msm8937-common-vendor.mk)
+$(call inherit-product-if-exists, vendor/xiaomi/msm8917-common/msm8917-common-vendor.mk)

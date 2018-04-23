@@ -18,7 +18,7 @@
 
 set -e
 
-DEVICE_COMMON=msm8937-common
+DEVICE_COMMON=msm8917-common
 VENDOR=xiaomi
 
 INITIAL_COPYRIGHT_YEAR=2018

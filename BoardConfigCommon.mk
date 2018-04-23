@@ -14,7 +14,7 @@
 # limitations under the License.
 #
 
-VENDOR_PATH := device/xiaomi/msm8937-common
+VENDOR_PATH := device/xiaomi/msm8917-common
 
 TARGET_SPECIFIC_HEADER_PATH += $(VENDOR_PATH)/include
 
@@ -22,4 +22,4 @@ TARGET_SPECIFIC_HEADER_PATH += $(VENDOR_PATH)/include
 include $(VENDOR_PATH)/board/*.mk
 
 # Inherit the common proprietary files
--include vendor/xiaomi/msm8937-common/BoardConfigVendor.mk
+-include vendor/xiaomi/msm8917-common/BoardConfigVendor.mk
