@@ -20,8 +20,8 @@
 /data/system/fingerprint(/.*)?                  u:object_r:gx_fpd_data_file:s0
 /persist/data/gxfp(/.*)?                        u:object_r:gx_fpd_data_file:s0
 
-# HALs
-/vendor/bin/hw/android\.hardware\.ir@1\.0-service.xiaomi_8937       u:object_r:hal_ir_default_exec:s0
+# Ir
+/dev/lirc[0-9]*					u:object_r:lirc_device:s0
 
 # Init
 /vendor/bin/init\.qcom\.graphics\.sh                u:object_r:init_graphics_exec:s0

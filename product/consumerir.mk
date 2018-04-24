@@ -1,6 +1,6 @@
-# Consumer IR
+# Consumerir HIDL
 PRODUCT_PACKAGES += \
-    android.hardware.ir@1.0-service.xiaomi_8937
+    android.hardware.ir@1.0-impl
 
 # Permissions
 PRODUCT_COPY_FILES += \
