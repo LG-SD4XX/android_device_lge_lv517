@@ -1,0 +1,2 @@
+# Properties
+BOARD_PROPERTY_OVERRIDES_SPLIT_ENABLED := true
