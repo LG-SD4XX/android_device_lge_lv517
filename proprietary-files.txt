@@ -299,8 +299,8 @@ vendor/lib/hw/keystore.msm8937.so|3b01c9cda28c85accd726a8f9582fdd6bbb69cd6
 vendor/lib64/hw/keystore.msm8937.so|f555204adc1589746f5aa64e607cd64f7ba5ca4f
 
 # Lights
-vendor/lib/hw/lights.msm8937.so
-vendor/lib64/hw/lights.msm8937.so
+lib/hw/lights.msm8937.so:vendor/lib/hw/lights.msm8937.so
+lib64/hw/lights.msm8937.so:vendor/lib64/hw/lights.msm8937.so
 
 # Listen - from TA-1000 - OPR1.170623.026
 vendor/lib/hw/sound_trigger.primary.msm8937.so|1d9089682c2004757247c6ff4b9c096d1c4fda1e
