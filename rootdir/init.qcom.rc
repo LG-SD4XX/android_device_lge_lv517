@@ -330,6 +330,7 @@ service qti /vendor/bin/qti
     class main
     user radio
     group radio oem_2901 usb
+
 service baseband-sh /vendor/bin/init.qcom.baseband.sh
     class late_start
     user root
