@@ -789,9 +789,6 @@ private:
     int (*LINK_get_surface_pixel_alignment)();
     uint32_t mSurfaceStridePadding;
 
-    //QCamera Display Object
-    QCameraDisplay mCameraDisplay;
-
     bool m_bNeedRestart;
     Mutex mMapLock;
     Condition mMapCond;
