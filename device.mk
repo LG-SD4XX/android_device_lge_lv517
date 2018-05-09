@@ -20,7 +20,7 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/languages_full.mk)
 $(call inherit-product-if-exists, vendor/lge/ph2n/ph2n-vendor.mk)
 
 # common msm8937
-$(call inherit-product, device/lge/msm8937-common/msm8937.mk)
+$(call inherit-product, device/lge/sd4xx-common/sd4xx.mk)
 
 # Overlays
 DEVICE_PACKAGE_OVERLAYS += $(LOCAL_PATH)/overlay

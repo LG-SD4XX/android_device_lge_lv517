@@ -14,8 +14,8 @@
 # limitations under the License.
 #
 
-# inherit from common msm8937
-include device/lge/msm8937-common/BoardConfigCommon.mk
+# inherit from common sd4xx-common
+include device/lge/sd4xx-common/BoardConfigCommon.mk
 
 LOCAL_PATH := device/lge/ph2n
 
