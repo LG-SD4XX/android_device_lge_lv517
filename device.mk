@@ -50,10 +50,10 @@ PRODUCT_PACKAGES += \
 
 # NFC
 PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/configs/libnfc-brcm.conf:system/etc/libnfc-brcm.conf \
-    $(LOCAL_PATH)/configs/libnfc-nxp.conf:system/etc/libnfc-nxp.conf \
-    $(LOCAL_PATH)/configs/libnfc-nxp-lg.conf:system/etc/libnfc-nxp-lg.conf \
-    $(LOCAL_PATH)/configs/nfcee_access.xml:system/etc/nfcee_access.xml \
+    $(LOCAL_PATH)/configs/nfc/libnfc-brcm.conf:system/etc/libnfc-brcm.conf \
+    $(LOCAL_PATH)/configs/nfc/libnfc-nxp.conf:system/etc/libnfc-nxp.conf \
+    $(LOCAL_PATH)/configs/nfc/libnfc-nxp-lg.conf:system/etc/libnfc-nxp-lg.conf \
+    $(LOCAL_PATH)/configs/nfc/nfcee_access.xml:system/etc/nfcee_access.xml \
     frameworks/native/data/etc/android.hardware.nfc.xml:system/etc/permissions/android.hardware.nfc.xml \
     frameworks/native/data/etc/android.hardware.nfc.hce.xml:system/etc/permissions/android.hardware.nfc.hce.xml \
     frameworks/native/data/etc/com.android.nfc_extras.xml:system/etc/permissions/com.android.nfc_extras.xml
@@ -76,7 +76,7 @@ PRODUCT_COPY_FILES += \
 
 # Thermal Configuration
 PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/configs/thermal-engine-8937.conf:system/etc/thermal-engine-8937.conf
+    $(LOCAL_PATH)/configs/thermal/thermal-engine-8937.conf:system/etc/thermal-engine-8937.conf
 
 # WCNSS
 PRODUCT_COPY_FILES += \
