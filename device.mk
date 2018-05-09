@@ -67,24 +67,7 @@ PRODUCT_PACKAGES += \
 
 # Init
 PRODUCT_PACKAGES += \
-    fstab.qcom \
-    init.qcom.power.rc \
-    init.class_main.sh \
-    init.lge.fingerprints.rc \
-    init.qcom.usb.rc \
-    init.lge.usb.sh \
-    init.lge.usb.default.sh \
-    init.qcom.early_boot.sh \
-    init.qcom.post_boot.sh \
-    init.qcom.class_core.sh \
-    init.ph2n_core.rc \
-    init.qcom.rc \
-    init.qcom.sh \
-    init.qcom.sensors.sh \
-    init.qcom.wifi.sh \
-    init.qcom.bt.sh \
-    init.target.rc \
-    ueventd.qcom.rc
+    fstab.qcom
 
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/sensors/hals.conf:system/etc/sensors/hals.conf \
