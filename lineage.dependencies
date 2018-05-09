@@ -1,16 +1,8 @@
 [
  {
-   "repository": "android_external_bson",
-   "target_path": "external/bson"
+   "repository":"android_device_lge_sd4xx-common",
+   "target_path":"device/lge/sd4xx-common"
  },
- {
-   "repository": "android_external_stlport",
-   "target_path": "external/stlport"
- },
- {
-   "repository":"android_device_qcom_common",
-   "target_path":"device/qcom/common"
- }
  {
    "repository": "android_vendor_nxp-nfc_opensource_frameworks",
    "target_path": "vendor/nxp-nfc/opensource/frameworks"
@@ -22,9 +14,5 @@
  {
    "repository": "android_vendor_nxp-nfc_opensource_Nfc",
    "target_path": "vendor/nxp-nfc/opensource/Nfc"
- },
- {
-   "repository": "android_packages_resources_devicesettings",
-   "target_path": "packages/resources/devicesettings"
  }
 ]
