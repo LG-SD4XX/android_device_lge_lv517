@@ -20,7 +20,7 @@ include device/lge/sd4xx-common/BoardConfigCommon.mk
 LOCAL_PATH := device/lge/ph2n
 
 # kernel
-TARGET_KERNEL_CONFIG := lineage_ph2n_mini_defconfig
+TARGET_KERNEL_CONFIG := lineage_ph2n_defconfig
 
 # Filesystem
 BOARD_FLASH_BLOCK_SIZE := 131072 # (BOARD_KERNEL_PAGESIZE * 64)
