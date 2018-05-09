@@ -23,5 +23,10 @@
     "repository": "LineageOS/android_packages_resources_devicesettings",
     "target_path": "packages/resources/devicesettings",
     "branch": "cm-14.1"
+  },
+  {
+    "repository": "LineageOS/android_device_lge_common",
+    "target_path": "device/lge/common",
+    "branch": "cm-14.1"
   }
 ]

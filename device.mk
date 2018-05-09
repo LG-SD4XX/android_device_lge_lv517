@@ -24,7 +24,7 @@ $(call inherit-product-if-exists, frameworks/native/build/phone-hdpi-2048-dalvik
 $(call inherit-product-if-exists, vendor/lge/lv517/lv517-vendor.mk)
 
 # common msm8937
-$(call inherit-product, device/lge/msm8937-common/msm8937.mk)
+$(call inherit-product, device/lge/sd4xx-common/sd4xx.mk)
 
 # Overlays
 DEVICE_PACKAGE_OVERLAYS += $(LOCAL_PATH)/overlay

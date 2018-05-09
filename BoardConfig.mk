@@ -15,12 +15,21 @@
 #
 
 # inherit from common msm8937
-include device/lge/msm8937-common/BoardConfigCommon.mk
+include device/lge/sd4xx-common/BoardConfigCommon.mk
 
 LOCAL_PATH := device/lge/lv517
 
 # Asserts
 TARGET_OTA_ASSERT_DEVICE := lv517,TP260,MP260
+
+# Bluetooth
+BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := $(LOCAL_PATH)/bluetooth
+
+# Bootanimation
+TARGET_BOOTANIMATION_HALF_RES := true
+
+# Kernel
+TARGET_KERNEL_CONFIG := lineage_lv517_defconfig
 
 # Filesystem
 BOARD_FLASH_BLOCK_SIZE := 131072 # (BOARD_KERNEL_PAGESIZE * 64)
@@ -47,7 +56,7 @@ TARGET_RECOVERY_FSTAB := $(LOCAL_PATH)/rootdir/fstab.qcom
 #TW_BRIGHTNESS_PATH := /sys/class/leds/lcd-backlight/brightness
 #TW_DEFAULT_EXTERNAL_STORAGE := true
 #TARGET_RECOVERY_QCOM_RTC_FIX := true
-#RECOVERY_SDCARD_ON_DATA := true
+##RECOVERY_SDCARD_ON_DATA := true
 #RECOVERY_GRAPHICS_USE_LINELENGTH := true
 #TW_IGNORE_MISC_WIPE_DATA := true
 #TW_SCREEN_BLANK_ON_BOOT := true
