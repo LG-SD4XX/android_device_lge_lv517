@@ -1,22 +1,22 @@
-Device Tree for LG Stylo 2 Plus
+Device Tree for LG K20 Plus
 ==============================================
 
-The Stylo 2 Plus (codenamed _"ph2n"_) is a mid-range smartphone from Lg Electronics.
-It was released on June, 2016.
+The K20 Plus (codenamed _"lv517"_) is a mid-range smartphone from LG Electronics.
+It was released on December, 2017.
 
 Basic   | Spec Sheet
 -------:|:-------------------------
-CPU     | 4 Cortex-A53 cores clocked at 1.5 GHz & 4 other Cortex-A53 cores clocked at 1.2 GHz
-Chipset | Qualcomm MSM8937 Snapdragon 430
-GPU     | Adreno 505
+CPU     | 4 Cortex-A53 cores clocked at 1.2 GHz
+Chipset | Qualcomm MSM8917 Snapdragon 425
+GPU     | Adreno 308
 Memory  | 2 GB RAM
-Android Version | 6.0.1
-Storage | 16 GB
+Android Version | 7.0
+Storage | 32 GB
 MicroSD | Up to 32 GB
-Battery | Removable Li-Ion 3000mAh battery
-Display | 720 x 1280 pixels, 5.7 inches (~294 ppi pixel density)
+Battery | Removable Li-Ion 2700mAh battery
+Display | 720 x 1280 pixels, 5.3 inches (~277 ppi pixel density)
 Camera  | 13 MP, autofocus, flash LED
 
-Copyright 2017-2018 - The Lineage Android Operating System.
+Copyright 2017 - The Lineage Android Operating System.
 
-![Lg Stylo 2 Plus](http://4.bp.blogspot.com/-vTnhNAPuHSg/WFK4lnP9SlI/AAAAAAAAC00/RCnW-47sbngSB-nJdNEtU187rsuDMlDdQCK4B/s1600/1.jpg "Lg Stylo 2 Plus")
+![LG K20 Plus](https://camo.githubusercontent.com/2ad8117aa32c1d8b5dbd62e51a478bf16991cd33/68747470733a2f2f64316a62697035357979697478722e636c6f756466726f6e742e6e65742f75706c6f6164732f323031372f30382f31353135323430302f4c472d4b32302d506c75732d542d4d6f62696c652d70726573732d4b4b2d3136303078313238312e6a7067 "LG K20 Plus")
