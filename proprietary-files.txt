@@ -27,6 +27,7 @@ vendor/lib/libscvePanorama_lite.so
 vendor/lib/libscveTextReco.so
 vendor/lib/libscveTextRecoPostProcessing.so
 vendor/lib/libscveTextReco_stub.so
+vendor/lib/libsdsprpc.so
 vendor/lib64/libadsprpc.so
 vendor/lib64/libadsp_default_listener.so
 vendor/lib64/libfastcvadsp_stub.so
@@ -706,6 +707,7 @@ vendor/lib/libxtadapter.so
 vendor/lib/libxtwifi_ulp_adaptor.so
 vendor/lib/libxt_native.so
 vendor/lib/lib_drplugin_server.so
+vendor/lib64/hw/flp.default.so
 vendor/lib64/libalarmservice_jni.so
 vendor/lib64/libasn1cper.so
 vendor/lib64/libasn1crt.so
@@ -1167,9 +1169,9 @@ vendor/lib64/libthermalioctl.so
 -app/TimeService/TimeService.apk
 bin/time_daemon
 vendor/lib/libTimeService.so
-vendor/lib/libtime_genoff.so
+-vendor/lib/libtime_genoff.so
 vendor/lib64/libTimeService.so
-vendor/lib64/libtime_genoff.so
+-vendor/lib64/libtime_genoff.so
 
 # Widevine
 vendor/lib/mediadrm/libwvdrmengine.so
