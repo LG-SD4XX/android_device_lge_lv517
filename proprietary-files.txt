@@ -1886,6 +1886,9 @@ etc/firmware/cpp_firmware_v1_8_0.fw:vendor/firmware/cpp_firmware_v1_8_0.fw|26e2b
 etc/firmware/cpp_firmware_v1_10_0.fw:vendor/firmware/cpp_firmware_v1_10_0.fw|cf9458601aa4bbe9c57acfc1c7d0f158386ace9f
 etc/firmware/cpp_firmware_v1_12_0.fw:vendor/firmware/cpp_firmware_v1_12_0.fw|de18ccdf371824059acfdf3c7754c6e1bc1c2f8c
 
+# Charger
+bin/hvdcp_opti:vendor/bin/hvdcp_opti
+
 # Display calibration
 -etc/qdcm_calib_data_hx8394F_HD720p_video_BOE_c3a.xml
 -etc/qdcm_calib_data_ili9881c_HD720p_video_Ebbg_c3a.xml
