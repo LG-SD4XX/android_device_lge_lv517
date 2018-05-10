@@ -112,9 +112,6 @@ vendor/lib64/libcneqmiutils.so|41bf6f87336faaee239a3047b1fdac3f742ebde9
 vendor/lib64/libwqe.so|1ee0763c75da97daf3ef50a34be34cdb6465683f
 vendor/lib64/libxml.so|28642c2ee9abf46130f5b44b3665b63b008d150d
 
-# Charger
-bin/hvdcp_opti:vendor/bin/hvdcp_opti
-
 # Consumer Ir - from tissot - OPR1.170623.026
 vendor/lib64/hw/consumerir.default.so|f7c90fd1d6a0c5e6cf620aa23a862e780feaaf6c
 
