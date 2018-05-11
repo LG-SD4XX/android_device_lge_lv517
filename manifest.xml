@@ -81,6 +81,11 @@ included.
             <instance>default</instance>
             <instance>widevine</instance>
         </interface>
+        <interface>
+            <name>IDrmFactory</name>
+            <instance>default</instance>
+            <instance>widevine</instance>
+        </interface>
     </hal>
     <hal format="hidl">
         <name>android.hardware.gatekeeper</name>
