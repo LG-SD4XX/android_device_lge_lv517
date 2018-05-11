@@ -15,9 +15,8 @@
 #
 
 # Inherit framework first
-$(call inherit-product, $(SRC_TARGET_DIR)/product/core.mk)
+$(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
-$(call inherit-product, $(SRC_TARGET_DIR)/product/languages_full.mk)
 
 # Inherit from lv517 device
 $(call inherit-product, device/lge/lv517/device.mk)

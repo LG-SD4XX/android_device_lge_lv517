@@ -17,7 +17,7 @@
 
 set -e
 
-DEVICE=ph2n
+DEVICE=lv517
 VENDOR=lge
 
 # Load extractutils and do some sanity checks
@@ -52,7 +52,6 @@ fi
 # Initialize the helper
 setup_vendor "$DEVICE" "$VENDOR" "$CM_ROOT"
 
-extract "$MY_DIR"/proprietary-files-qc.txt "$SRC"
 extract "$MY_DIR"/proprietary-files.txt "$SRC"
 
 "$MY_DIR"/setup-makefiles.sh
