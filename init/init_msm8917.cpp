@@ -49,6 +49,8 @@ using android::init::property_set;
 using android::base::ReadFileToString;
 using android::base::Trim;
 
+char const *model;
+char const *power_profile;
 char const *heapstartsize;
 char const *heapgrowthlimit;
 char const *heapsize;
@@ -95,19 +97,33 @@ static void init_alarm_boot_properties()
 
 void check_device()
 {
+    std::ifstream fin;
+    std::string buf;
+
+    fin.open("/proc/cmdline");
+    while (std::getline(fin, buf, ' '))
+        if (buf.find("board_id") != std::string::npos)
+            break;
+    fin.close();
+
+    if (buf.find("S88503") != std::string::npos) {
+        model = "Redmi 4A";
+        power_profile = "/vendor/etc/power_profile.xml";
+    } else {
+        model = "Redmi 5A";
+        power_profile = "/vendor/etc/power_profile_riva.xml";
+    }
+
+}
+
+
+void check_ram()
+{
     struct sysinfo sys;
 
     sysinfo(&sys);
 
-    if (sys.totalram > 3072ull * 1024 * 1024) {
-        // from - phone-xxhdpi-4096-dalvik-heap.mk
-        heapstartsize = "16m";
-        heapgrowthlimit = "256m";
-        heapsize = "512m";
-        heapminfree = "4m";
-        heapmaxfree = "8m";
-	large_cache_height = "2048";
-    } else if (sys.totalram > 2048ull * 1024 * 1024) {
+    if (sys.totalram > 2048ull * 1024 * 1024) {
         // from - phone-xxhdpi-3072-dalvik-heap.mk
         heapstartsize = "8m";
         heapgrowthlimit = "288m";
@@ -130,6 +146,11 @@ void vendor_load_properties()
 {
     init_alarm_boot_properties();
     check_device();
+    check_ram();
+
+    property_set("ro.product.model", model);
+    property_set("ro.vendor.product.model", model);
+    property_set("ro.power_profile.override", power_profile);
 
     property_set("dalvik.vm.heapstartsize", heapstartsize);
     property_set("dalvik.vm.heapgrowthlimit", heapgrowthlimit);
