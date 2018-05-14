@@ -1,5 +1,5 @@
 #
-# Copyright (C) 2016 The CyanogenMod Project
+# Copyright (C) 2018 The LineageOS Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -14,15 +14,15 @@
 # limitations under the License.
 #
 
-VENDOR_PATH := device/xiaomi/msm8917-common
+DEVICE_PATH := $(LOCAL_PATH)
 
 # Overlay
 DEVICE_PACKAGE_OVERLAYS += \
-    $(VENDOR_PATH)/overlay \
-    $(VENDOR_PATH)/overlay-lineage
+    $(DEVICE_PATH)/overlay \
+    $(DEVICE_PATH)/overlay-lineage
 
 # Include device-specific product fragments
-include $(VENDOR_PATH)/product/*.mk
+include $(DEVICE_PATH)/product/*.mk
 
-# Inherit common proprietary files
-$(call inherit-product-if-exists, vendor/xiaomi/msm8917-common/msm8917-common-vendor.mk)
+# Inherit proprietary files
+$(call inherit-product-if-exists, vendor/xiaomi/rolex/rolex-vendor.mk)

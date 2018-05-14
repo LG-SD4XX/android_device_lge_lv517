@@ -1,6 +1,6 @@
 # IRSC
 PRODUCT_COPY_FILES += \
-    $(VENDOR_PATH)/configs/sec_config:$(TARGET_COPY_OUT_VENDOR)/etc/sec_config
+    $(DEVICE_PATH)/configs/sec_config:$(TARGET_COPY_OUT_VENDOR)/etc/sec_config
 
 # Permissions
 PRODUCT_COPY_FILES += \
@@ -75,8 +75,8 @@ PRODUCT_BOOT_JARS += \
 
 # Whitelisted app
 PRODUCT_COPY_FILES += \
-    $(VENDOR_PATH)/configs/qti_whitelist.xml:system/etc/sysconfig/qti_whitelist.xml
+    $(DEVICE_PATH)/configs/qti_whitelist.xml:system/etc/sysconfig/qti_whitelist.xml
 
 # Privileged app
 PRODUCT_COPY_FILES += \
-    $(VENDOR_PATH)/configs/privapp-permissions-qti.xml:system/etc/permissions/privapp-permissions-qti.xml
+    $(DEVICE_PATH)/configs/privapp-permissions-qti.xml:system/etc/permissions/privapp-permissions-qti.xml

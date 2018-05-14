@@ -1,5 +1,5 @@
 #
-# Copyright (C) 2016 The CyanogenMod Project
+# Copyright (C) 2018 The LineageOS Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -14,12 +14,12 @@
 # limitations under the License.
 #
 
-VENDOR_PATH := device/xiaomi/msm8917-common
+DEVICE_PATH := device/xiaomi/rolex
 
-TARGET_SPECIFIC_HEADER_PATH += $(VENDOR_PATH)/include
+TARGET_SPECIFIC_HEADER_PATH += $(DEVICE_PATH)/include
 
 # Inherit device-specific board fragments
-include $(VENDOR_PATH)/board/*.mk
+include $(DEVICE_PATH)/board/*.mk
 
-# Inherit the common proprietary files
--include vendor/xiaomi/msm8917-common/BoardConfigVendor.mk
+# Inherit the proprietary files
+-include vendor/xiaomi/rolex/BoardConfigVendor.mk

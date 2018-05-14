@@ -1,5 +1,5 @@
 # SELinux
 BOARD_SEPOLICY_DIRS += \
-    $(VENDOR_PATH)/sepolicy
+    $(DEVICE_PATH)/sepolicy
 
 include device/qcom/sepolicy/sepolicy.mk
