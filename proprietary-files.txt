@@ -526,9 +526,6 @@ vendor/lib/libmmcamera_isp_sub_module.so
 vendor/lib/libmmcamera_isp_template.so
 vendor/lib/libmmcamera_isp_wb40.so
 
-# Charger
-bin/hvdcp_opti
-
 # CNE
 -priv-app/CNEService/CNEService.apk
 bin/cnd
