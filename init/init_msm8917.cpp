@@ -162,8 +162,8 @@ void vendor_load_properties()
     check_device();
     check_ram();
 
-    property_set("ro.product.model", model);
-    property_set("ro.vendor.product.model", model);
+    property_override("ro.product.model", model);
+    property_override("ro.vendor.product.model", model);
     property_set("ro.power_profile.override", power_profile);
 
     property_set("dalvik.vm.heapstartsize", heapstartsize);
