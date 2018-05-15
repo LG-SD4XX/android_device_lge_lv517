@@ -146,7 +146,7 @@ vendor/lib/libactuator_rohm_bu64243gwz.so|bac8fcf1b40432af9459d804d70fc2afb094f2
 # Camera chromatix - from rolex - V9.2.6.0.NCCMIEK
 bin/mm-qcamera-app:vendor/bin/mm-qcamera-app|ae879389216910d93bf3661e9c7ef3b56a545397
 bin/mm-qcamera-daemon:vendor/bin/mm-qcamera-daemon|ac9b9fd8d4c2a93e10c461b62677454f22d760ab
-etc/camera/camera_config.xml:vendor/etc/camera/camera_config.xml|5df82c76aa8969f29c4556ddf3a7370c76e4d938
+etc/camera/camera_config.xml:vendor/etc/camera/camera_config.xml|3c9c4423d312c376c4a80be62be2b8ca349c3609
 etc/camera/csidtg_camera.xml:vendor/etc/camera/csidtg_camera.xml|406e2dec13dc910415ff72fc5a7ee084c97ab61f
 etc/camera/csidtg_chromatix.xml:vendor/etc/camera/csidtg_chromatix.xml|bf4b37d8dd850ebb6bda8c5ebdd427cdb5515f35
 etc/camera/imx214_chromatix.xml:vendor/etc/camera/imx214_chromatix.xml|c27c3a806a18dfa693c186dbf5fdf48f715acacb
