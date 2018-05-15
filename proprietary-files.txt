@@ -859,7 +859,6 @@ bin/imscmservice
 bin/imsdatadaemon
 bin/imsqmidaemon
 bin/ims_rtp_daemon
-etc/permissions/ims.xml
 etc/permissions/imscm.xml
 framework/imscmlibrary.jar
 vendor/lib/lib-dplmedia.so
