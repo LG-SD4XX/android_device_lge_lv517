@@ -630,7 +630,6 @@ vendor/lib/libfastrpc_aue_stub.so
 vendor/lib/libfastrpc_utf_stub.so
 
 # Fingerprint
-bin/fidod
 bin/fingerprintd
 lib/hw/fingerprint.msm8937.so
 lib/libfpfactory.so
