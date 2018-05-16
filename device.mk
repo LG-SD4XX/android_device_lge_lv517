@@ -44,6 +44,10 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     fingerprintd
 
+# GestureHandler
+PRODUCT_PACKAGES += \
+    GestureHandler
+
 # Init
  PRODUCT_PACKAGES += \
     init.qcom.bt.sh
