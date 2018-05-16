@@ -41,9 +41,6 @@ BOARD_NFC_DEVICE := "/dev/pn547"
 # Tap to wake
 TARGET_TAP_TO_WAKE_NODE := "/sys/devices/virtual/input/lge_touch/tap_to_wake"
 
-# Recovery
-TARGET_RECOVERY_FSTAB := $(LOCAL_PATH)/rootdir/fstab.qcom
-
 # Properties
 TARGET_SYSTEM_PROP += $(LOCAL_PATH)/system.prop
 
