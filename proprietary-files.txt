@@ -636,12 +636,7 @@ lib/libfpfactory.so
 lib/libfpfactory_jni.so
 
 # FM
-bin/fmconfig
-bin/fmfactorytest
-bin/fmfactorytestserver
 bin/fm_qsoc_patches
-framework/qcom.fmradio.jar
-lib/libqcomfm_jni.so
 
 # Gatekeeper
 vendor/lib/hw/gatekeeper.msm8937.so
