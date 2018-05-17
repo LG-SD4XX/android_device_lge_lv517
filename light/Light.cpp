@@ -159,12 +159,11 @@ namespace light {
 namespace V2_0 {
 namespace implementation {
 
-Light::Light(std::pair<std::ofstream, uint32_t>&& lcd_backlight, std::ofstream&& button_backlight,
+Light::Light(std::pair<std::ofstream, uint32_t>&& lcd_backlight,
              std::ofstream&& red_led, std::ofstream&& green_led, std::ofstream&& blue_led,
              std::ofstream&& red_blink, std::ofstream&& green_blink, std::ofstream&& blue_blink,
              std::ofstream&& red_led_time, std::ofstream&& green_led_time, std::ofstream&& blue_led_time)
     : mLcdBacklight(std::move(lcd_backlight)),
-      mButtonBacklight(std::move(button_backlight)),
       mRedLed(std::move(red_led)),
       mGreenLed(std::move(green_led)),
       mBlueLed(std::move(blue_led)),
@@ -177,12 +176,10 @@ Light::Light(std::pair<std::ofstream, uint32_t>&& lcd_backlight, std::ofstream&&
     auto attnFn(std::bind(&Light::setAttentionLight, this, std::placeholders::_1));
     auto backlightFn(std::bind(&Light::setLcdBacklight, this, std::placeholders::_1));
     auto batteryFn(std::bind(&Light::setBatteryLight, this, std::placeholders::_1));
-    auto buttonsFn(std::bind(&Light::setButtonsBacklight, this, std::placeholders::_1));
     auto notifFn(std::bind(&Light::setNotificationLight, this, std::placeholders::_1));
     mLights.emplace(std::make_pair(Type::ATTENTION, attnFn));
     mLights.emplace(std::make_pair(Type::BACKLIGHT, backlightFn));
     mLights.emplace(std::make_pair(Type::BATTERY, batteryFn));
-    mLights.emplace(std::make_pair(Type::BUTTONS, buttonsFn));
     mLights.emplace(std::make_pair(Type::NOTIFICATIONS, notifFn));
 
     for (int i = 0; i < MAX_COLOR; i++) {
@@ -236,14 +233,6 @@ void Light::setLcdBacklight(const LightState& state) {
     }
 
     mLcdBacklight.first << brightness << std::endl;
-}
-
-void Light::setButtonsBacklight(const LightState& state) {
-    std::lock_guard<std::mutex> lock(mLock);
-
-    uint32_t brightness = rgbToBrightness(state);
-
-    mButtonBacklight << brightness << std::endl;
 }
 
 void Light::setBatteryLight(const LightState& state) {
