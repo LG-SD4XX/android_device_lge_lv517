@@ -84,25 +84,19 @@ vendor/lib/libmmcamera_hi1332_ofilm.so
 vendor/lib/libmmcamera_hi1332_sunny.so
 vendor/lib/libmmcamera_imglib.so
 vendor/lib/libmmcamera_imx234.so
-vendor/lib/libmmcamera_imx258.so
 vendor/lib/libmmcamera_lgit_hi1332_eeprom.so
 vendor/lib/libmmcamera_lgit_imx234_eeprom.so
-vendor/lib/libmmcamera_lgit_imx258_eeprom.so
 vendor/lib/libmmcamera_llvd.so
 vendor/lib/libmmcamera_m24c32_hi553_eeprom.so
 vendor/lib/libmmcamera_mn34153.so
 vendor/lib/libmmcamera_ofilm_hi1332_eeprom.so
 vendor/lib/libmmcamera_optizoom_lib.so
-vendor/lib/libmmcamera_ov8858.so
-vendor/lib/libmmcamera_ov8858_otp.so
 vendor/lib/libmmcamera_paaf_lib.so
 vendor/lib/libmmcamera_pdaf.so
 vendor/lib/libmmcamera_pdafcamif.so
 vendor/lib/libmmcamera_ppbase_module.so
 vendor/lib/libmmcamera_ppeiscore.so
 vendor/lib/libmmcamera_quadracfa.so
-vendor/lib/libmmcamera_s5k3p3.so
-vendor/lib/libmmcamera_s5k5e2_eeprom.so
 vendor/lib/libmmcamera_s5k5e8_cowell.so
 vendor/lib/libmmcamera_s5k5e8_sunny.so
 vendor/lib/libmmcamera_stillmore_lib.so
@@ -141,28 +135,14 @@ vendor/lib/libactuator_dw9763.so
 
 # Camera Configs
 etc/camera/camera_config.xml
-etc/camera/csidtg_camera.xml
-etc/camera/csidtg_chromatix.xml
 etc/camera/hi553_chromatix.xml
-etc/camera/hi553_lv9_chromatix.xml
 etc/camera/hi842_chromatix.xml
 etc/camera/hi1332_lgit_chromatix.xml
 etc/camera/hi1332_ofilm_chromatix.xml
 etc/camera/hi1332_sunny_chromatix.xml
 etc/camera/imx234_chromatix.xml
-etc/camera/imx258_bear_chromatix.xml
-etc/camera/imx258_chromatix.xml
-etc/camera/imx258_mono_bear_chromatix.xml
-etc/camera/imx298_gt24c64_chromatix.xml
-etc/camera/imx362_chromatix_bear.xml
-etc/camera/imx378_chromatix.xml
 etc/camera/mn34153_chromatix.xml
 etc/camera/ov7251_chromatix.xml
-etc/camera/ov8858_chromatix.xml
-etc/camera/s5k2l7_8953_chromatix.xml
-etc/camera/s5k2l7_chromatix.xml
-etc/camera/s5k3p3_chromatix.xml
-etc/camera/s5k5e2_chromatix.xml
 etc/camera/s5k5e8_cowell_chromatix.xml
 etc/camera/s5k5e8_sunny_chromatix.xml
 
