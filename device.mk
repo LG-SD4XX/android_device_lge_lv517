@@ -50,7 +50,7 @@ PRODUCT_PACKAGES += \
 
 # Init
  PRODUCT_PACKAGES += \
-    init.qcom.bt.sh
+    init.target.rc
 
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/sensors/hals.conf:system/etc/sensors/hals.conf \
