@@ -32,4 +32,4 @@ ro.sys.fw.trim_cache_percent=100
 ro.sys.fw.trim_enable_memory=2147483648
 
 # Bluetooth
-ro.bt.bdaddr_path="/data/misc/bluetooth/bdaddr"
+ro.bt.bdaddr_path="/data/misc/bluetooth/bdaddr_loader"
