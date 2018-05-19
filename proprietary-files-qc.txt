@@ -113,7 +113,6 @@ vendor/lib64/libuiblur.so
 
 # CNE
 -priv-app/CNEService/CNEService.apk
-priv-app/CNEService/oat/arm/CNEService.odex
 bin/cnd
 etc/cne/andsfCne.xml
 etc/cne/SwimConfig.xml
@@ -298,7 +297,6 @@ vendor/lib/libwms.so
 vendor/lib64/libwms.so
 
 # Network
-priv-app/QtiTetherService/oat/arm/QtiTetherService.odex
 -priv-app/QtiTetherService/QtiTetherService.apk
 vendor/lib/libconnctrl.so
 vendor/lib/libcsm_data.so
