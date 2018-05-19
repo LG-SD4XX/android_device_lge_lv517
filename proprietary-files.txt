@@ -451,7 +451,7 @@ vendor/lib64/sensors.ssc.so
 vendor/lib64/sensor_calibrate.so
 
 # Subsystem restart
-vendor/bin/ssr_diag
+bin/ssr_diag
 
 # ARM Trustzone
 vendor/lib/libMcClient.so
