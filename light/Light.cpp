@@ -329,6 +329,20 @@ void Light::setSpeakerLightLocked(const LightState& state) {
     mBlueLedTime << breath_pattern << std::endl;
     mBlueBlink << (blink && blue ? 1 : 0) << std::endl;
 
+    // TODO: HACK for Redmi 5A
+    std::ifstream fin;
+    std::string buf;
+    fin.open("/proc/cmdline");
+    while (std::getline(fin, buf, ' '))
+        if (buf.find("board_id") != std::string::npos)
+            break;
+    fin.close();
+    if (buf.find("S88505") != std::string::npos) {
+        red = 255;
+        green = 255;
+        blue = 255;
+    }
+
     mRedLed << red << std::endl;
     mGreenLed << green << std::endl;
     mBlueLed << blue << std::endl;
