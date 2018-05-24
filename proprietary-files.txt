@@ -2456,6 +2456,14 @@ vendor/lib64/libthermalioctl.so|ca2dca5f433073df781073f449fd7ed73a4e4d3c
 vendor/bin/time_daemon|8ea7d65a65c1d50afc6553ad52848b454c62563d
 -vendor/lib64/libtime_genoff.so|7683a85cae9f17cd535e8960fceda1d6831074a0
 
+# TUI - from vivo 1724 - OPM1.171019.011
+lib/vendor.qti.hardware.tui_comm@1.0.so|b5460afc3e3c6b0f39dfdef6b49a39f537ffa89a
+lib64/vendor.qti.hardware.tui_comm@1.0.so|c627988a2f7a9e05cb5e573e0b70551aa300995f
+vendor/bin/hw/vendor.qti.hardware.tui_comm@1.0-service-qti|86da521db0433035667beb1ab50c0448e9e6d4e2
+vendor/etc/init/vendor.qti.hardware.tui_comm@1.0-service-qti.rc|2cfc563d7e1579374f001c94588fae7835a12ffc
+vendor/lib/vendor.qti.hardware.tui_comm@1.0_vendor.so|67007d86dc6d7bb00b069b07351054250a09fc63
+vendor/lib64/vendor.qti.hardware.tui_comm@1.0_vendor.so|cd312ae34506ce67444518b676d1568a12eb80bd
+
 # Widevine DRM - from marlin - OPM1.171019.011
 vendor/bin/hw/android.hardware.drm@1.0-service.widevine|62dbed3b465a6abe33d03dd66cf89f3227766850
 vendor/etc/init/android.hardware.drm@1.0-service.widevine.rc|51a3168a0dbc064d78ee11ca83614c0cd2e6daa5
