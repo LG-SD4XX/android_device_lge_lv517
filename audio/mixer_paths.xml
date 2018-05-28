@@ -856,9 +856,9 @@
     <path name="speaker">
         <ctl name="RX3 MIX1 INP1" value="RX1" />
         <ctl name="SPK" value="Switch" />
-        <ctl name="RX3 Digital Volume" value="92" />
+        <ctl name="RX3 Digital Volume" value="90" />
 	<ctl name="RX3 HPF Switch" value="1" />
-        <ctl name="RX3 HPF cut off" value="MIN_3DB_90Hz" />
+        <ctl name="RX3 HPF cut off" value="MIN_3DB_100Hz" />
     </path>
 
     <path name="speaker-mic">
@@ -924,12 +924,12 @@
 
     <path name="voice-speaker">
         <path name="speaker" />
-        <ctl name="RX3 Digital Volume" value="101" />
+        <ctl name="RX3 Digital Volume" value="90" />
     </path>
 
     <path name="voice-speaker-protected-ff">
         <path name="speaker" />
-        <ctl name="RX3 Digital Volume" value="101" />
+        <ctl name="RX3 Digital Volume" value="90" />
     </path>
 
     <path name="voice-speaker-mic">
