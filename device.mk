@@ -50,7 +50,7 @@ PRODUCT_PACKAGES += \
 
 # Init
  PRODUCT_PACKAGES += \
-    init.target.rc
+    init.variant.rc
 
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/sensors/hals.conf:system/etc/sensors/hals.conf \
