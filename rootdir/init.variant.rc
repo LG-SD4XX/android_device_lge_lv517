@@ -24,6 +24,8 @@
 # OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF
 # ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 #
+on early-fs
+    chmod 666 /dev/goodix_fp
 
 on boot
     # Feature chip vendor : qct
@@ -35,6 +37,19 @@ on boot
     # SCMS-T property set during phone Booting
     setprop persist.service.bdroid.a2dp_con 0
     setprop persist.service.bdroid.scms_t 0
+
+    # Sharp touchscreen
+    chmod 666 /dev/shtsc
+
+    # LG touchscreen features
+    chown system system /sys/devices/virtual/input/lge_touch/use_quick_window
+    chmod 664 /sys/devices/virtual/input/lge_touch/use_quick_window
+    chown system system /sys/devices/virtual/input/lge_touch/qmemo_status
+    chmod 664 /sys/devices/virtual/input/lge_touch/qmemo_status
+
+    # Camera debug
+    chown system system /sys/kernel/debug/camera/logsync
+    chmod 0664 /sys/kernel/debug/camera/logsync
 
 service bdaddr_loader /system/bin/bdaddr_loader
     class late_start
