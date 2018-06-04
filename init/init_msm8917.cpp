@@ -53,7 +53,6 @@ using android::base::ReadFileToString;
 using android::base::Trim;
 
 char const *model;
-char const *power_profile;
 char const *heapstartsize;
 char const *heapgrowthlimit;
 char const *heapsize;
@@ -122,10 +121,9 @@ void check_device()
 
     if (buf.find("S88503") != std::string::npos) {
         model = "Redmi 4A";
-        power_profile = "/vendor/etc/power_profile.xml";
     } else {
         model = "Redmi 5A";
-        power_profile = "/vendor/etc/power_profile_riva.xml";
+	property_set("ro.power_profile.override", "/vendor/etc/power_profile_riva.xml");
     }
 
 }
@@ -164,7 +162,6 @@ void vendor_load_properties()
 
     property_override("ro.product.model", model);
     property_override("ro.vendor.product.model", model);
-    property_set("ro.power_profile.override", power_profile);
 
     property_set("dalvik.vm.heapstartsize", heapstartsize);
     property_set("dalvik.vm.heapgrowthlimit", heapgrowthlimit);
