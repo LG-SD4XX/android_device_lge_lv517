@@ -22,6 +22,10 @@ $(call inherit-product-if-exists, vendor/lge/lv517/lv517-vendor.mk)
 # common msm8937
 $(call inherit-product, device/lge/sd4xx-common/sd4xx.mk)
 
+TARGET_USES_GOOGLE_CAMERA := true
+#TARGET_USES_OP_CAMERA := true
+TARGET_USES_SNAP_CAMERA := true
+
 # Overlays
 DEVICE_PACKAGE_OVERLAYS += $(LOCAL_PATH)/overlay
 
@@ -32,6 +36,8 @@ PRODUCT_AAPT_PREF_CONFIG := xhdpi
 # Boot animation
 TARGET_SCREEN_HEIGHT := 1280
 TARGET_SCREEN_WIDTH := 720
+TARGET_BOOTANIMATION_HALF_RES := true
+TARGET_BOOT_ANIMATION_RES := 720
 
 # System properties
 -include $(LOCAL_PATH)/system_prop.mk
@@ -46,7 +52,7 @@ PRODUCT_PACKAGES += \
 
 # GestureHandler
 PRODUCT_PACKAGES += \
-    GestureHandler
+    GestureHandler 
 
 # Init
  PRODUCT_PACKAGES += \

@@ -25,27 +25,46 @@
 # ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 #
 on early-fs
-    chmod 666 /dev/goodix_fp
+# change mode Fingerprint Test app
+	chmod 666 /dev/goodix_fp
 
 on boot
-    # Feature chip vendor : qct
-    setprop bluetooth.chip.vendor qcom
 
-    # Enable AVRCP Browsing
-    setprop persist.service.avrcp.browsing 1
+# Feature chip vendor : qct
+setprop bluetooth.chip.vendor qcom
 
-    # SCMS-T property set during phone Booting
-    setprop persist.service.bdroid.a2dp_con 0
-    setprop persist.service.bdroid.scms_t 0
+# Enable AVRCP Browsing
+setprop persist.service.avrcp.browsing 1
 
-    # Sharp touchscreen
+# START TOUCH Sharp specific
     chmod 666 /dev/shtsc
 
-    # LG touchscreen features
+# END TOUCH Sharp specific
+
+# START TOUCH Driver
+	chown system system /sys/devices/virtual/input/lge_touch/incoming_call
+	chmod 664 /sys/devices/virtual/input/lge_touch/incoming_call
+	chown system system /sys/devices/virtual/input/lge_touch/ime_status
+	chown system lgkeyguard /sys/devices/virtual/input/lge_touch/keyguard
+	chmod 664 /sys/devices/virtual/input/lge_touch/keyguard
+	chown system system /sys/devices/virtual/input/lge_touch/ts_noise_log_enable
+	chmod 664 /sys/devices/virtual/input/lge_touch/ts_noise_log_enable
+	chown system system /sys/devices/virtual/input/lge_touch/ts_noise
+	chmod 664 /sys/devices/virtual/input/lge_touch/ts_noise
+# END TOUCH Driver
+
+# START TOUCH Common
+
+    chown system system /sys/devices/virtual/input/lge_touch/lpwg_notify
+    chmod 664 /sys/devices/virtual/input/lge_touch/lpwg_notify
+    chown system system /sys/devices/virtual/input/lge_touch/quick_cover_status
+    chmod 664 /sys/devices/virtual/input/lge_touch/quick_cover_status
     chown system system /sys/devices/virtual/input/lge_touch/use_quick_window
     chmod 664 /sys/devices/virtual/input/lge_touch/use_quick_window
-    chown system system /sys/devices/virtual/input/lge_touch/qmemo_status
-    chmod 664 /sys/devices/virtual/input/lge_touch/qmemo_status
+	chown system system /sys/devices/virtual/input/lge_touch/qmemo_status
+	chmod 664 /sys/devices/virtual/input/lge_touch/qmemo_status
+
+# END TOUCH Commonon
 
     # Camera debug
     chown system system /sys/kernel/debug/camera/logsync
@@ -63,3 +82,4 @@ service fm_dl /system/bin/sh /system/etc/init.qcom.fm.sh
     group system
     disabled
     oneshot
+
