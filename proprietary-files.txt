@@ -13,8 +13,6 @@ bin/hci_qcomm_init
 lib/liblgftmitem.so
 vendor/lib/libbt-vendor.so
 vendor/lib/libbtnv.so
-vendor/lib64/libbt-vendor.so
-vendor/lib64/libbtnv.so
 
 # Bluetooth - Firmware
 etc/firmware/nvm_tlv.bin
@@ -307,7 +305,7 @@ lib/libgf_hal.so
 # FM
 bin/fm_qsoc_patches
 
-# GPS - from stock,64bit libs from santoni (Redmi 4X)
+# GPS - from stock
 bin/loc_launcher
 bin/lowi-server
 bin/xtwifi-client
@@ -320,8 +318,6 @@ etc/xtra_root_cert.pem
 framework/com.qti.location.sdk.jar
 framework/izat.xt.srv.jar
 lib/hw/gps.default.so
-lib64/libloc_api_v02.so
-lib64/libloc_ds_api.so
 lib/libloc_ds_api.so
 lib/libloc_api_v02.so
 lib/libloc_core.so
@@ -356,32 +352,6 @@ vendor/lib/libxt_native.so
 vendor/lib/libxtadapter.so
 vendor/lib/libxtwifi_ulp_adaptor.so
 vendor/lib/libloc_externalDr.so
-vendor/lib64/hw/flp.default.so
-vendor/lib64/libalarmservice_jni.so
-vendor/lib64/libasn1cper.so
-vendor/lib64/libasn1crt.so
-vendor/lib64/libasn1crtx.so
-vendor/lib64/libdataitems.so
-vendor/lib64/libdrplugin_client.so
-vendor/lib64/libDRPlugin.so
-vendor/lib64/libevent_observer.so
-vendor/lib64/libflp.so
-vendor/lib64/libgdtap.so
-vendor/lib64/libgeofence.so
-vendor/lib64/libizat_client_api.so
-vendor/lib64/libizat_core.so
-vendor/lib64/liblbs_core.so
-vendor/lib64/libloc_ext.so
-vendor/lib64/liblocationservice_glue.so
-vendor/lib64/liblocationservice.so
-vendor/lib64/liblowi_client.so
-vendor/lib64/liblowi_wifihal_nl.so
-vendor/lib64/liblowi_wifihal.so
-vendor/lib64/libquipc_os_api.so
-vendor/lib64/libulp2.so
-vendor/lib64/libxt_native.so
-vendor/lib64/libxtadapter.so
-vendor/lib64/libxtwifi_ulp_adaptor.so
 
 # Sensor
 bin/sensors.qcom
@@ -397,11 +367,6 @@ vendor/lib/libsensor_user_cal.so
 vendor/lib/libsensor_lge_cal.so
 vendor/lib/sensors.ssc.so
 vendor/lib/sensor_calibrate.so
-vendor/lib64/hw/activity_recognition.msm8937.so
-vendor/lib64/libsensor1.so
-vendor/lib64/libsensor_reg.so
-vendor/lib64/sensors.ssc.so
-vendor/lib64/sensor_calibrate.so
 
 # Subsystem restart
 bin/ssr_diag

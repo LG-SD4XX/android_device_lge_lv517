@@ -28,10 +28,6 @@ vendor/lib/libscveTextReco.so
 vendor/lib/libscveTextRecoPostProcessing.so
 vendor/lib/libscveTextReco_stub.so
 vendor/lib/libsdsprpc.so
-vendor/lib64/libadsprpc.so
-vendor/lib64/libadsp_default_listener.so
-vendor/lib64/libfastcvadsp_stub.so
-vendor/lib64/libfastcvopt.so
 
 # ADSP modules
 vendor/lib/rfsa/adsp/AlacDecoderModule.so.1
@@ -98,15 +94,6 @@ vendor/lib/libswvdec.so
 vendor/lib/soundfx/libqcbassboost.so
 vendor/lib/soundfx/libqcreverb.so
 vendor/lib/soundfx/libqcvirt.so
-vendor/lib64/libacdb-fts.so
-vendor/lib64/libacdbloader.so
-vendor/lib64/libacdbmapper.so
-vendor/lib64/libacdbrtac.so
-vendor/lib64/libadiertac.so
-vendor/lib64/libaudcal.so
-vendor/lib64/libaudioalsa.so
-vendor/lib64/libaudiodevarb.so
-vendor/lib64/libhwdaphal.so
 
 # DSP
 vendor/lib/libfastrpc_aue_stub.so
@@ -118,8 +105,6 @@ vendor/lib/libadpcmdec.so
 vendor/lib/liblistenjni.so
 vendor/lib/liblistensoundmodel2.so
 vendor/lib/libsmwrapper.so
-vendor/lib64/liblistenjni.so
-vendor/lib64/liblistensoundmodel2.so
 
 # Media
 etc/firmware/DE.o.msm8937
@@ -160,24 +145,3 @@ vendor/lib/libOmxMux.so
 vendor/lib/libOmxQcelp13Dec.so
 vendor/lib/libOmxVideoDSMode.so
 vendor/lib/libOmxWmaDec.so
-vendor/lib64/libAlacSwDec.so
-vendor/lib64/libApeSwDec.so
-vendor/lib64/libFlacSwDec.so
-vendor/lib64/libI420colorconvert.so
-vendor/lib64/libmm-color-convertor.so
-vendor/lib64/libmmosal.so
-vendor/lib64/libmmsw_detail_enhancement.so
-vendor/lib64/libmmsw_math.so
-vendor/lib64/libmmsw_opencl.so
-vendor/lib64/libmmsw_platform.so
-vendor/lib64/libMpeg4SwEncoder.so
-vendor/lib64/libOmxAacDec.so
-vendor/lib64/libOmxAlacDec.so
-vendor/lib64/libOmxAlacDecSw.so
-vendor/lib64/libOmxAmrwbplusDec.so
-vendor/lib64/libOmxApeDec.so
-vendor/lib64/libOmxApeDecSw.so
-vendor/lib64/libOmxEvrcDec.so
-vendor/lib64/libOmxMux.so
-vendor/lib64/libOmxQcelp13Dec.so
-vendor/lib64/libOmxWmaDec.so
