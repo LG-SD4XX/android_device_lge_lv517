@@ -49,6 +49,7 @@ vendor/lib/libjni_dualcamera.so
 vendor/lib/libjpegdhw.so
 vendor/lib/libjpegdmahw.so
 vendor/lib/libjpegehw.so
+vendor/lib/libmmcamera_imglib.so
 vendor/lib/libmmcamera2_c2d_module.so
 vendor/lib/libmmcamera2_cpp_module.so
 vendor/lib/libmmcamera2_dcrf.so
@@ -352,6 +353,14 @@ vendor/lib/libxt_native.so
 vendor/lib/libxtadapter.so
 vendor/lib/libxtwifi_ulp_adaptor.so
 vendor/lib/libloc_externalDr.so
+etc/flp.conf
+etc/gps.conf
+etc/izat.conf
+etc/lowi.conf
+etc/sap.conf
+etc/xtwifi.conf
+lib/libgps.utils.so
+lib/libgnsspps.so
 
 # Sensor
 bin/sensors.qcom
