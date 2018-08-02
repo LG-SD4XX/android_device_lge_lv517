@@ -46,6 +46,8 @@ on boot
     chmod 664 /sys/devices/virtual/input/lge_touch/use_quick_window
     chown system system /sys/devices/virtual/input/lge_touch/qmemo_status
     chmod 664 /sys/devices/virtual/input/lge_touch/qmemo_status
+    chown system system /sys/devices/virtual/input/lge_touch/lpwg_notify
+    chmod 664 /sys/devices/virtual/input/lge_touch/lpwg_notify
 
     # Camera debug
     chown system system /sys/kernel/debug/camera/logsync
