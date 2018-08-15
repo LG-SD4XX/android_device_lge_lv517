@@ -299,7 +299,7 @@ service tftp_server /vendor/bin/tftp_server
 service hciattach /vendor/bin/hci_qcomm_init -e
     class late_start
     user bluetooth
-    group bluetooth net_bt_admin oem_2950 diag radio
+    group bluetooth net_bt_admin oem_2901 diag radio
     disabled
     oneshot
 
