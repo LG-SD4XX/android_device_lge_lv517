@@ -62,6 +62,13 @@ extract "$MY_DIR"/proprietary-files.txt "$SRC" "$SECTION"
 
 "$MY_DIR"/setup-makefiles.sh
 
+# Define blobs path for the following hax
+BLOB_ROOT="$LINEAGE_ROOT"/vendor/"$VENDOR"/"$DEVICE"/proprietary
+
+# Hax for gnss to use vndk-27
+sed -i "s|android.hardware.gnss@1.0.so|android.hardware.gnss@1.0-v27.so|g" $BLOB_ROOT/lib64/vendor.qti.gnss@1.0.so
+sed -i "s|android.hardware.gnss@1.0.so|android.hardware.gnss@1.0-v27.so|g" $BLOB_ROOT/vendor/lib64/vendor.qti.gnss@1.0_vendor.so
+
 # Hax for camera configs
-CAMERA2_SENSOR_MODULES="$LINEAGE_ROOT"/vendor/"$VENDOR"/"$DEVICE"/proprietary/vendor/lib/libmmcamera2_sensor_modules.so
+CAMERA2_SENSOR_MODULES=$BLOB_ROOT/vendor/lib/libmmcamera2_sensor_modules.so
 sed -i "s|/system/etc/camera/|/vendor/etc/camera/|g" "$CAMERA2_SENSOR_MODULES"
