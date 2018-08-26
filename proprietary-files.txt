@@ -83,6 +83,12 @@ vendor/bin/hci_qcomm_init|0781c55c080ff2309e1e8d77d9fa0111a827b3c7
 vendor/lib64/libbtnv.so|a131e10a686bd373934037bb77a86af0b99e3e4e
 vendor/lib/libbtnv.so|3aa0dbcfd604ae8930636989d0b8302404373a81
 
+# Bluetooth (HIDL) - from lineageos - LineageOS change 224064
+vendor/bin/hw/android.hardware.bluetooth@1.0-service|dd7557ff9eb4d0c0a17cf8c0310cab4f4d9a243f
+vendor/etc/init/android.hardware.bluetooth@1.0-service.rc|138100cfb49a9ab2a6aaf15878b8fd2473f3ed34
+vendor/lib/hw/android.hardware.bluetooth@1.0-impl.so|d15837a1e61a3d45f6e90eaef1d72f3b0091fab6
+vendor/lib64/hw/android.hardware.bluetooth@1.0-impl.so|851aecf94b0a49ec24d23174dd62a94f55d7f085
+
 # Bluetooth Firmware
 etc/firmware/nvm_tlv.bin:vendor/firmware/nvm_tlv.bin
 etc/firmware/nvm_tlv_1.3.bin:vendor/firmware/nvm_tlv_1.3.bin
