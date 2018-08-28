@@ -34,6 +34,9 @@ TARGET_USERIMAGES_USE_EXT4 := true
 # Bluetooth
 BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := $(LOCAL_PATH)/bluetooth
 
+# Display
+TARGET_USES_COLOR_METADATA := true
+
 # Tap to wake
 TARGET_TAP_TO_WAKE_NODE := "/sys/devices/virtual/input/lge_touch/lpwg_notify"
 

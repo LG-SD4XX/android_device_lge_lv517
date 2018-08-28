@@ -1,5 +1,6 @@
 # Camera
 camera.hal1.packagelist=com.skype.raider,com.google.android.talk
+persist.camera.HAL3.enabled=1
 
 # properties for limiting preview size in camera
 camera.display.umax=1920x1080
