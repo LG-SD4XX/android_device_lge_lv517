@@ -53,6 +53,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
     debug.enable.sglscale=1 \
     debug.gralloc.enable_fb_ubwc=1 \
     debug.mdpcomp.logs=0 \
+    debug.sdm.support_writeback=0 \
     debug.sf.hw=1 \
     debug.sf.latch_unsignaled=1 \
     debug.sf.recomputecrop=0 \
