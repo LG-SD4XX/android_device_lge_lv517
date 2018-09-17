@@ -17,7 +17,7 @@ PRODUCT_PACKAGES += \
 
 # Wi-Fi HIDL
 PRODUCT_PACKAGES += \
-    android.hardware.wifi@1.0-service
+    android.hardware.wifi@1.1-service
 
 # Properties
 PRODUCT_PROPERTY_OVERRIDES += \
