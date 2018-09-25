@@ -25,46 +25,56 @@
 # ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 #
 on early-fs
-# change mode Fingerprint Test app
-	chmod 666 /dev/goodix_fp
+    chmod 666 /dev/goodix_fp
 
 on boot
+    copy -f /wifi/WCNSS_qcom_wlan_nv.bin system/etc/firmware/wlan/prima/WCNSS_qcom_wlan_nv_boot.bin
+    copy -f /wifi/WCNSS_qcom_wlan_nv.bin system/etc/firmware/wlan/prima/WCNSS_qcom_wlan_nv.bin
+    # Feature chip vendor : qct
+    setprop bluetooth.chip.vendor qcom
 
-# Feature chip vendor : qct
-setprop bluetooth.chip.vendor qcom
+    # Enable AVRCP Browsing
+    setprop persist.service.avrcp.browsing 1
 
-# Enable AVRCP Browsing
-setprop persist.service.avrcp.browsing 1
+    #Fingerprint
+   chown system input /sys/devices/virtual/input/lge_fingerprint/testmode
+   chown system input /sys/devices/virtual/input/lge_fingerprint/spitest
+   chown system input /sys/devices/virtual/input/lge_fingerprint/zonetest
+   chown system input /sys/devices/virtual/input/lge_fingerprint/checkerbdtest
+   chown system input /sys/devices/virtual/input/lge_fingerprint/rubbertest
+   chown system input /sys/devices/virtual/input/lge_fingerprint/intstatus
+   chown system input /sys/devices/virtual/input/lge_fingerprint/qup_id
+   chown system input /sys/devices/virtual/input/lge_fingerprint/waitfinger
+   chown system input /sys/devices/virtual/input/lge_fingerprint/spi_prepare
 
-# START TOUCH Sharp specific
+   chmod 0660 /sys/devices/virtual/input/lge_fingerprint/testmode
+   chmod 0660 /sys/devices/virtual/input/lge_fingerprint/spitest
+   chmod 0660 /sys/devices/virtual/input/lge_fingerprint/zonetest
+   chmod 0660 /sys/devices/virtual/input/lge_fingerprint/checkerbdtest
+   chmod 0660 /sys/devices/virtual/input/lge_fingerprint/rubbertest
+   chmod 0440 /sys/devices/virtual/input/lge_fingerprint/intstatus
+   chmod 0660 /sys/devices/virtual/input/lge_fingerprint/qup_id
+   chmod 0220 /sys/devices/virtual/input/lge_fingerprint/waitfinger
+   chmod 0660 /sys/devices/virtual/input/lge_fingerprint/spi_prepare
+
+    # SCMS-T property set during phone Booting
+    setprop persist.service.bdroid.a2dp_con 0
+    setprop persist.service.bdroid.scms_t 0
+
+    # Sharp touchscreen
     chmod 666 /dev/shtsc
 
-# END TOUCH Sharp specific
-
-# START TOUCH Driver
-	chown system system /sys/devices/virtual/input/lge_touch/incoming_call
-	chmod 664 /sys/devices/virtual/input/lge_touch/incoming_call
-	chown system system /sys/devices/virtual/input/lge_touch/ime_status
-	chown system lgkeyguard /sys/devices/virtual/input/lge_touch/keyguard
-	chmod 664 /sys/devices/virtual/input/lge_touch/keyguard
-	chown system system /sys/devices/virtual/input/lge_touch/ts_noise_log_enable
-	chmod 664 /sys/devices/virtual/input/lge_touch/ts_noise_log_enable
-	chown system system /sys/devices/virtual/input/lge_touch/ts_noise
-	chmod 664 /sys/devices/virtual/input/lge_touch/ts_noise
-# END TOUCH Driver
-
-# START TOUCH Common
-
-    chown system system /sys/devices/virtual/input/lge_touch/lpwg_notify
-    chmod 664 /sys/devices/virtual/input/lge_touch/lpwg_notify
-    chown system system /sys/devices/virtual/input/lge_touch/quick_cover_status
-    chmod 664 /sys/devices/virtual/input/lge_touch/quick_cover_status
+    # LG touchscreen features
     chown system system /sys/devices/virtual/input/lge_touch/use_quick_window
     chmod 664 /sys/devices/virtual/input/lge_touch/use_quick_window
-	chown system system /sys/devices/virtual/input/lge_touch/qmemo_status
-	chmod 664 /sys/devices/virtual/input/lge_touch/qmemo_status
+    chown system system /sys/devices/virtual/input/lge_touch/qmemo_status
+    chmod 664 /sys/devices/virtual/input/lge_touch/qmemo_status
+    chown system system /sys/devices/virtual/input/lge_touch/lpwg_notify
+    chmod 664 /sys/devices/virtual/input/lge_touch/lpwg_notify
 
-# END TOUCH Commonon
+    # Camera debug
+    chown system system /sys/kernel/debug/camera/logsync
+    chmod 0664 /sys/kernel/debug/camera/logsync
 
 service bdaddr_loader /system/bin/bdaddr_loader
     class late_start
@@ -72,9 +82,32 @@ service bdaddr_loader /system/bin/bdaddr_loader
     group bluetooth net_bt_admin
     oneshot
 
+service config_bt_addr /system/bin/btnvtool -O
+    class core
+    user bluetooth
+    group bluetooth radio
+    oneshot
+    
 service fm_dl /system/bin/sh /system/etc/init.qcom.fm.sh
     class late_start
     user root
     group system
     disabled
     oneshot
+
+# QMUX must be in multiple groups to support external process connections
+service qmuxd /system/bin/qmuxd
+    class main
+    user root
+    group radio audio bluetooth gps qcom_diag
+    disabled
+    
+on post-fs-data
+   # make factory test result directory
+   mkdir /sns/fingerprint 0775 system system
+
+# fingerprintd
+service fingerprintd /system/bin/fingerprintd
+    class late_start
+    user system
+    group system input

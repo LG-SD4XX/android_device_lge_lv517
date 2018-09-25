@@ -47,7 +47,18 @@ PRODUCT_PACKAGES += \
 # GestureHandler
 PRODUCT_PACKAGES += \
     GestureHandler
-
+    
+# HWADDRS
+PRODUCT_PACKAGES += \
+    hwaddrs
+    
+# IMS
+PRODUCT_PACKAGES += \
+    ims_regmanager \
+    ims_rtp_daemon \
+    imscmservice \
+    imsdatadaemon
+    
 # Init
  PRODUCT_PACKAGES += \
     init.variant.rc

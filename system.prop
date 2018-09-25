@@ -1,27 +1,28 @@
 # Camera
 camera.hal1.packagelist=com.skype.raider,com.google.android.talk
+persist.camera.HAL3.enabled=1
 
 # properties for limiting preview size in camera
 camera.display.umax=1920x1080
 camera.display.lmax=1280x720
 
 # display
-ro.sf.lcd_density=320
+ro.sf.lcd_density=299
 
-#HWUI properties
+# HWUI properties
 ro.hwui.texture_cache_size=72
 ro.hwui.layer_cache_size=48
-ro.hwui.r_buffer_cache_size=8
+ro.hwui.r_buffer_cache_size=16
 ro.hwui.path_cache_size=32
-ro.hwui.gradient_cache_size=1
+ro.hwui.gradient_cache_size=2
 ro.hwui.drop_shadow_cache_size=6
-ro.hwui.texture_cache_flushrate=0.4
+ro.hwui.texture_cache_flushrate=0.7
 ro.hwui.text_small_cache_width=1024
 ro.hwui.text_small_cache_height=1024
 ro.hwui.text_large_cache_width=2048
 ro.hwui.text_large_cache_height=2048
 
-#Trim properties
+# Trim properties
 ro.sys.fw.bservice_enable=true
 ro.sys.fw.bservice_limit=5
 ro.sys.fw.bservice_age=5000
@@ -32,4 +33,16 @@ ro.sys.fw.trim_cache_percent=100
 ro.sys.fw.trim_enable_memory=2147483648
 
 # Bluetooth
-ro.bt.bdaddr_path="/data/misc/bluetooth/bdaddr_loader"
+ro.bt.bdaddr_path="/data/misc/bluedroid/bdaddr"
+
+# Network
+ro.data.large_tcp_window_size=true
+
+dalvik.vm.heapstartsize=12m
+dalvik.vm.heapgrowthlimit=128m
+dalvik.vm.heapsize=128m
+dalvik.vm.heaptargetutilization=0.75
+dalvik.vm.heapminfree=4m
+camera2.portability.force_api=1
+ro.qualcomm.perf.cores_online=3
+ro.vendor.extension_library=libqti-perfd-client.so
