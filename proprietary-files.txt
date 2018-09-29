@@ -2086,92 +2086,92 @@ vendor/lib64/libxtadapter.so|dd494a0618b53d4c8f6fee88d13daadca1ff1ab7
 vendor/lib64/libxtwifi_ulp_adaptor.so|9e3d3b35ca62d3db539ae7fc28a14a8dbc8d8a8c
 vendor/lib64/vendor.qti.gnss@1.0_vendor.so|0d897b1746f46778130f086c5a5c8c827918cd3d
 
-# Graphics - from vivo 1724 - OPM1.171019.011
-vendor/lib/egl/eglsubAndroid.so|e575297e57373431f18d3ecd96bbc6bff29d5a95
+# Graphics - from marmite - OPM5.171019.017
 vendor/lib/egl/eglSubDriverAndroid.so|3c0634391acb5b9cd197873f458328d4add8a305
 vendor/lib/egl/libEGL_adreno.so|f72bbeb67a2f0463411a102dc66de707da4759f1
 vendor/lib/egl/libESXEGL_adreno.so|95164682cd189966c3808fe9dae53f403c0a1fdd
 vendor/lib/egl/libESXGLESv1_CM_adreno.so|bf385f213a849cd86f77bdf29d4d1dad8f9f8988
-vendor/lib/egl/libESXGLESv2_adreno.so|02d29237719ea3b7ef1751a387f39b9f569fe41c
+vendor/lib/egl/libESXGLESv2_adreno.so|0ddaeb57d3958fc8ae908e4906044efe2924e3f2
 vendor/lib/egl/libGLESv1_CM_adreno.so|0f3ab19a2572658f78826bfa6fe6149b0554fa9f
 vendor/lib/egl/libGLESv2_adreno.so|2f7b8abc7def59c607b58a03e091d92427c0da25
 vendor/lib/egl/libq3dtools_adreno.so|9c2f7a6b1b7f8ab47bf0b27a1bece858bcd5596b
 vendor/lib/egl/libq3dtools_esx.so|7a67d3e014b87a8d1fb090a11641b085433a8e48
 vendor/lib/egl/libQTapGLES.so|eecf892ab030ab04b58c69067945a644174ed354
-vendor/lib/egl/libRBEGL_adreno.so|f68c18c401c9a4f05fd4f3a5f8e3ce82946e7207
+vendor/lib/egl/libRBEGL_adreno.so|f45a5c9a012b7a8f922d9b8ecd4cfff402dda49a
 vendor/lib/egl/libRBGLESv1_CM_adreno.so|6e75b855cc076f0303b38f7f9e890298329ac9df
-vendor/lib/egl/libRBGLESv2_adreno.so|0d6e07f4e0a67f8c52e15c2cff7d6ff058b3da3d
+vendor/lib/egl/libRBGLESv2_adreno.so|fa121e692d934717207a9ec0a0550584214b0767
 vendor/lib/libadreno_utils.so|12d2c8c5f09670261bb38941646c6a32853bde3f
 vendor/lib/libbccQTI.so|5fd45eeba5a696c38d3a6a4a13a23e21b32d759c
 vendor/lib/libC2D2.so|cc98325c6912b4ebc5ed3aed86a8cf9a9319ed29
-vendor/lib/libc2d30-a3xx.so|2e6fe528d08e4a1713e8c08c585c2cf5975cb651
-vendor/lib/libc2d30_bltlib.so|81c20b64c7cd7b2cb3bf93c2b304b9b3ddedeff2
-vendor/lib/libCB.so|c1ffbf26e90603e866c95ebc7093915bd102c385
+vendor/lib/libc2d30_bltlib.so|a66198e27ccb64763f42cbface7e8aac86ee7be0
+vendor/lib/libCB.so|be6410c33cb4d86508ff12978d899664f1db7217
 vendor/lib/libgsl.so|f417000db693600ef54285eae55493bce2927fc1
-vendor/lib/libllvm-glnext.so|2ce386a95aac8e01438439b3bbb18f2c51556e0f
-vendor/lib/libllvm-qcom.so|c228813b8be38a34aec0baa29cfc7d07a81d8fa2
+vendor/lib/libllvm-glnext.so|096c6bd69d070d8d8f6754d0fcc34f6c1e46969e
+vendor/lib/libllvm-qcom.so|470938d4a85054136a9dfa6b0fcb68b2e2f97472
 vendor/lib/libmm-disp-apis.so|5a52a630c7d71ab1697d7d4ed882592e8f164494
 vendor/lib/libmm-qdcm.so|2b94e66da85134c4ced860e9e14286e8adab69b8
 vendor/lib/libOpenCL.so|7eea8306e7eff1c06f76719032a3cf84c6cd92ed
 vendor/lib/librs_adreno.so|c49f9b0e671b9da63f5724e651d27664a707da87
-vendor/lib/librs_adreno_sha1.so|d8b3503a699e24d92ea811edf24c819d0893561f
+vendor/lib/librs_adreno_sha1.so|03b32277cc2dc8e23166ef1b958134e55c31d707
 vendor/lib/libRSDriver_adreno.so|ccb3ac66e3295d1f41a171e33dbcc8dc79174db7
-vendor/lib64/egl/eglsubAndroid.so|a4afcd8eb1f41b4d0ec7a434349c5389da0895e9
 vendor/lib64/egl/eglSubDriverAndroid.so|94e2a631e859bf3560ae2b07c3cd05edcc868e52
 vendor/lib64/egl/libEGL_adreno.so|4c4033cc43f906c22c469cc5cc976476b736716a
 vendor/lib64/egl/libESXEGL_adreno.so|acbdaef91b81d5407134711902081e376d25bd9d
 vendor/lib64/egl/libESXGLESv1_CM_adreno.so|5b6c4b832a103625d441cacafa05cb9970eff735
-vendor/lib64/egl/libESXGLESv2_adreno.so|9c63148a7c1d642304eef32ba6cef76cf2712140
+vendor/lib64/egl/libESXGLESv2_adreno.so|05197f948075a5969b1af45881b5045a9b968a88
 vendor/lib64/egl/libGLESv1_CM_adreno.so|f839828b04bbb561eb9666ded7603e24cd4b3aeb
 vendor/lib64/egl/libGLESv2_adreno.so|38be59c91af5e606af1181761051d280c3bc6ec6
 vendor/lib64/egl/libq3dtools_adreno.so|83c3eff7ae5da1c29915802cf9c3672edfdcdbdc
 vendor/lib64/egl/libq3dtools_esx.so|0921617059dcb4b74d36dfe9c4d911022a9e0b9e
 vendor/lib64/egl/libQTapGLES.so|b830185d89acad55eded1a09d9eb753193427e02
-vendor/lib64/egl/libRBEGL_adreno.so|3180488746d97436123945069925407ffb04f214
+vendor/lib64/egl/libRBEGL_adreno.so|6102879d4eb9cee946ca835248161d73a216091b
 vendor/lib64/egl/libRBGLESv1_CM_adreno.so|3d6419088310604ee7f0bdb851682e3228e66c6e
-vendor/lib64/egl/libRBGLESv2_adreno.so|89d962413d6cab865c7a16dc7e97bba029dec5e5
+vendor/lib64/egl/libRBGLESv2_adreno.so|769f1505565ea9987e23534c5835590a28c371ad
 vendor/lib64/libadreno_utils.so|d258c40890f9dd509e3fddc389066d6f678881da
 vendor/lib64/libbccQTI.so|8acdaba4dec28c82a50d0c7b682e42dd571c02fb
 vendor/lib64/libC2D2.so|7de855a6bf9e7ddf4f4da809c4995860c7cf5145
-vendor/lib64/libc2d30-a3xx.so|79fade2fb42e5e749f01e9b07429b7204717a215
-vendor/lib64/libc2d30_bltlib.so|23421df03242f58e54254534d6e88a2a7d065fbd
-vendor/lib64/libCB.so|9ff548afdbf2e7cbc378c12ac9c7a70064717542
+vendor/lib64/libc2d30_bltlib.so|6cbe78d498aa0cb490f38570700053a5744004bd
+vendor/lib64/libCB.so|f2c7e51bc66a4013b2244ad6db99d83c7104a7c8
 vendor/lib64/libgsl.so|1a54bbcf4ddb44a3c7c2af967eff80f47983de07
-vendor/lib64/libllvm-glnext.so|a31666b2d6f099c044d4ad54210ee266c5dc5ff8
-vendor/lib64/libllvm-qcom.so|b1474cb2cc3c2c69531f670f308f62846e0f0dcf
+vendor/lib64/libllvm-glnext.so|5a869d4f9c16cf566886725543f1af31646b42cc
+vendor/lib64/libllvm-qcom.so|119459465e54d1834981c1ee460d4c3da1c0bfa5
 vendor/lib64/libmm-disp-apis.so|11400a1d2a29fdd9a66eb207300217e7c581535d
 vendor/lib64/libmm-hdcpmgr.so|f3bc845319ca6a4530537dbc6707a9210c9aac5c
 vendor/lib64/libmm-qdcm.so|04f1742447acd3c49b4c541381d438e854014e6b
 vendor/lib64/libOpenCL.so|dc152c278c8197157189a4700b9932fea1f850af
 vendor/lib64/librs_adreno.so|599341bba10de553cfc85b784aeaddb823d2612e
-vendor/lib64/librs_adreno_sha1.so|bf93a80fceed99c48cfedbdcc430c49ea129c309
+vendor/lib64/librs_adreno_sha1.so|a1171aa1a5bfdf0ca38f4c5e7d86a62000313710
 vendor/lib64/libRSDriver_adreno.so|e4891419b3b67f9e5b08177d2597eeb7b28d7471
 
-# Graphics (HDR) - from vivo 1724 - OPM1.171019.011
-vendor/lib/libhdr_tm.so|64e687737cad4d5a61c04109f27e359c4101e3b6
-vendor/lib64/libhdr_tm.so|3c00bd6b7c4517c57f304f4efb8bde74f8c04450
+# Graphics (Adreno 308) - from vivo 1724 - OPM1.171019.011
+vendor/lib/egl/eglsubAndroid.so|e575297e57373431f18d3ecd96bbc6bff29d5a95
+vendor/lib/libc2d30-a3xx.so|2e6fe528d08e4a1713e8c08c585c2cf5975cb651
+vendor/lib/libsc-a3xx.so|9429d7819af8f4b67d6b4a9babc770619dc626ab
+vendor/lib64/egl/eglsubAndroid.so|a4afcd8eb1f41b4d0ec7a434349c5389da0895e9
+vendor/lib64/libc2d30-a3xx.so|79fade2fb42e5e749f01e9b07429b7204717a215
+vendor/lib64/libsc-a3xx.so|fc7c257cdcac957917babd69a0c042f2c58825a5
 
-# Graphics (SDM) - from vivo 1724 - OPM1.171019.011
+# Graphics (HDR) - from marmite - OPM5.171019.017
+vendor/lib/libhdr_tm.so|da11f5eebeb16eba5cad910840224dabeacf34d3
+vendor/lib64/libhdr_tm.so|516358f18c32e884237449e5b93ba6868e21938c
+
+# Graphics (SDM) - from marmite - OPM5.171019.017
 -vendor/lib/libsdm-disp-vndapis.so|41d866c7f7297b02a7d63bf499fa7ea21f422eca
 -vendor/lib64/libsdm-disp-vndapis.so|51e2bc8715992e4b1edc9b6da00d7736ea81e449
-lib/libsdm-disp-apis.so|05d257299d06e1d3f04bb51c7034247c661c3743
-lib64/libsdm-disp-apis.so|e6f829012ebe08d99219ee312c9dff0255185857
-vendor/lib/libsc-a3xx.so|9429d7819af8f4b67d6b4a9babc770619dc626ab
 vendor/lib/libscalar.so|af7161c0a4a941eb133f82fffde21d5ed79e1b2d
 vendor/lib/libsdm-color.so|97293223d9e0cc7387515a5090022d177d3821de
 vendor/lib/libsdm-diag.so|c33bdf9a0a4aa9f0385f3d6772b37fd9034fa169
-vendor/lib/libsdmextension.so|584e6cba5be049e3466fa51aab9b2921f889d939
+vendor/lib/libsdmextension.so|75b082c542b1c9e3d31a5f155a834b06b18a7588
 vendor/lib/libtinyxml2_1.so|75c2e17a4677bcb21d1ac1ed411b92820fdfa299
-vendor/lib64/libsc-a3xx.so|fc7c257cdcac957917babd69a0c042f2c58825a5
 vendor/lib64/libscalar.so|778da7ece21c97b79e8486754f60e1cf7ebe11db
 vendor/lib64/libsdm-color.so|f6b415575c02a049362abcebf0ba5bc0b650cd2b
 vendor/lib64/libsdm-diag.so|b0578da9de5482f00201615a566e406de867865f
-vendor/lib64/libsdmextension.so|ca93674515967ca42080058b4b73c355f32f8ff1
+vendor/lib64/libsdmextension.so|3c904206ebffde26434f335f786c7ed70c8e5406
 vendor/lib64/libtinyxml2_1.so|c9624690a608cb858888d9461b97d40f6e54cb6e
 
-# Graphics vulkan - from TA-1000 - OPR1.170623.026
-vendor/lib/hw/vulkan.msm8937.so|5972b6749cdd941e110fa5c20ebe9986ba245758
-vendor/lib64/hw/vulkan.msm8937.so|4b35db5ba871023fbfba6636aef51b81f08dd937
+# Graphics (Vulkan) - from marmite - OPM5.171019.017
+vendor/lib/hw/vulkan.msm8937.so|51a1f4b341ca2ee428a46b3d7aafff147c3fe035
+vendor/lib64/hw/vulkan.msm8937.so|a7effff8c2dbc20efe18fde12c61b5fbf54e048a
 
 # Graphics firmware
 etc/firmware/a300_pfp.fw:vendor/firmware/a300_pfp.fw
