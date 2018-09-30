@@ -78,16 +78,14 @@ vendor/lib64/soundfx/libqcreverb.so|cbbcba339a8ad9d769bf1c89cff3c2c1a5772563
 vendor/lib64/soundfx/libqcvirt.so|6d8720c7adc40c888509cd0c1e8942fcde161059
 vendor/lib64/soundfx/libshoebox.so|72f230e368045ff6b7db529d3b3e534a6723d7ec
 
-# Bluetooth - from tissot - OPR1.170623.026
-vendor/bin/hci_qcomm_init|0781c55c080ff2309e1e8d77d9fa0111a827b3c7
-vendor/lib64/libbtnv.so|a131e10a686bd373934037bb77a86af0b99e3e4e
-vendor/lib/libbtnv.so|3aa0dbcfd604ae8930636989d0b8302404373a81
-
-# Bluetooth (HIDL) - from lineageos - LineageOS change 224064
-vendor/bin/hw/android.hardware.bluetooth@1.0-service|dd7557ff9eb4d0c0a17cf8c0310cab4f4d9a243f
-vendor/etc/init/android.hardware.bluetooth@1.0-service.rc|138100cfb49a9ab2a6aaf15878b8fd2473f3ed34
-vendor/lib/hw/android.hardware.bluetooth@1.0-impl.so|d15837a1e61a3d45f6e90eaef1d72f3b0091fab6
-vendor/lib64/hw/android.hardware.bluetooth@1.0-impl.so|851aecf94b0a49ec24d23174dd62a94f55d7f085
+# Bluetooth - from tissot - OPM1.171019.026
+vendor/bin/hw/android.hardware.bluetooth@1.0-service-qti|6a1f31ef0b626ca5fd51400195743416949eb7b9
+vendor/bin/hci_qcomm_init|bb2a52dac8b0cd86f4cdbb9c49b6745f05dac6ac
+vendor/bin/wcnss_filter|c00bfd553410e2093d7dab3f066c8e745e9aa7ae
+vendor/etc/init/android.hardware.bluetooth@1.0-service-qti.rc|1a2dc1c2d217f47b9c99a0afa9e4912abd32e381
+vendor/lib64/hw/android.hardware.bluetooth@1.0-impl-qti.so|9276c1b258c142cb6a4c13ad14b3cbdf35737735
+vendor/lib64/libbtnv.so|3d234c73102896e6493c5805d65238ece1d29f58
+vendor/lib64/libbt-hidlclient.so|c2358e54949c8b6cd267d34c6b8f3df92a90a490
 
 # Bluetooth Firmware
 etc/firmware/nvm_tlv.bin:vendor/firmware/nvm_tlv.bin
