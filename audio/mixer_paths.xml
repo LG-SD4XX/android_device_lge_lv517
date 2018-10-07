@@ -858,7 +858,7 @@
         <ctl name="SPK" value="Switch" />
         <ctl name="RX3 Digital Volume" value="90" />
 	<ctl name="RX3 HPF Switch" value="1" />
-        <ctl name="RX3 HPF cut off" value="MIN_3DB_80Hz" />
+        <ctl name="RX3 HPF cut off" value="MIN_3DB_100Hz" />
     </path>
 
     <path name="speaker-mic">
@@ -887,8 +887,8 @@
         <ctl name="HPHL" value="Switch" />
         <ctl name="HPHR" value="Switch" />
         <ctl name="EAR PA Gain" value="POS_6_DB" />
-        <ctl name="RX1 Digital Volume" value="80" />
-        <ctl name="RX2 Digital Volume" value="80" />
+        <ctl name="RX1 Digital Volume" value="78" />
+        <ctl name="RX2 Digital Volume" value="78" />
     </path>
 
     <path name="headset-mic">
@@ -953,9 +953,9 @@
         <path name="headphones" />
         <path name="speaker" />
         <ctl name="RX3 MIX1 INP2" value="RX2" />
-        <ctl name="RX1 Digital Volume" value="77" />
-        <ctl name="RX2 Digital Volume" value="77" />
-        <ctl name="RX3 Digital Volume" value="90" />
+        <ctl name="RX1 Digital Volume" value="75" />
+        <ctl name="RX2 Digital Volume" value="75" />
+        <ctl name="RX3 Digital Volume" value="88" />
     </path>
 
     <path name="usb-headphones">

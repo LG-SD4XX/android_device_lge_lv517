@@ -34,14 +34,37 @@ TARGET_USERIMAGES_USE_EXT4 := true
 # Bluetooth
 BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := $(LOCAL_PATH)/bluetooth
 
-# Display
-TARGET_USES_COLOR_METADATA := true
+# Libinit
+TARGET_LIBINIT_MSM8937_DEFINES_FILE := $(LOCAL_PATH)/libinit/init_lv517.cpp
 
 # Tap to wake
 TARGET_TAP_TO_WAKE_NODE := "/sys/devices/virtual/input/lge_touch/lpwg_notify"
+
+#Recovery
+#RECOVERY_VARIANT := twrp 
+#TARGET_RECOVERY_FSTAB := $(LOCAL_PATH)/rootdir/fstab.full
+
+# Recovery
+TARGET_RECOVERY_FSTAB := $(LOCAL_PATH)/rootdir/fstab.qcom
+#TW_THEME := portrait_hdpi
+#TW_MAX_BRIGHTNESS := 255
+#TW_BRIGHTNESS_PATH := /sys/class/leds/lcd-backlight/brightness
+#TW_DEFAULT_EXTERNAL_STORAGE := true
+#TARGET_RECOVERY_QCOM_RTC_FIX := true
+#BOARD_SUPPRESS_SECURE_ERASE := true
+#RECOVERY_SDCARD_ON_DATA := true
+#RECOVERY_GRAPHICS_USE_LINELENGTH := true
+#TW_IGNORE_MISC_WIPE_DATA := true
+#TW_SCREEN_BLANK_ON_BOOT := true
+#TW_INPUT_BLACKLIST := "hbtp_vm"
+#TW_EXCLUDE_SUPERSU := false
+#TARGET_RECOVERY_PIXEL_FORMAT := "RGB_8888"
+#TARGET_USERIMAGES_USE_EXT4 := true
+#TARGET_USERIMAGES_USE_F2FS := true
+#TW_NEW_ION_HEAP := true
 
 # Properties
 TARGET_SYSTEM_PROP += $(LOCAL_PATH)/system.prop
 
 # inherit from the proprietary version
--include vendor/lge/lv517/BoardConfigVendor.mk
+include vendor/lge/lv517/BoardConfigVendor.mk

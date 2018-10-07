@@ -28,12 +28,28 @@ on early-fs
     chmod 666 /dev/goodix_fp
 
 on boot
+    copy -f /wifi/WCNSS_qcom_wlan_nv.bin system/etc/firmware/wlan/prima/WCNSS_qcom_wlan_nv_boot.bin
+    copy -f /wifi/WCNSS_qcom_wlan_nv.bin system/etc/firmware/wlan/prima/WCNSS_qcom_wlan_nv.bin
     # Feature chip vendor : qct
     setprop bluetooth.chip.vendor qcom
 
     # Enable AVRCP Browsing
     setprop persist.service.avrcp.browsing 1
 
+    service fm_dl /system/bin/sh /system/etc/init.qcom.fm.sh
+    class late_start
+    user root
+    group system
+    disabled
+    oneshot
+
+on boot
+    setprop ro.fm.module QCT
+    
+   # Graphics 
+   chown system system /sys/class/panel/img_tune/image_enhance_set
+   chmod 664 /sys/class/panel/img_tune/image_enhance_set
+   
     #Fingerprint
    chown system input /sys/devices/virtual/input/lge_fingerprint/testmode
    chown system input /sys/devices/virtual/input/lge_fingerprint/spitest
@@ -80,11 +96,10 @@ service bdaddr_loader /system/bin/bdaddr_loader
     group bluetooth net_bt_admin
     oneshot
 
-service fm_dl /system/bin/sh /system/etc/init.qcom.fm.sh
-    class late_start
-    user root
-    group system
-    disabled
+service config_bt_addr /system/bin/btnvtool -O
+    class core
+    user bluetooth
+    group bluetooth radio
     oneshot
 
 # QMUX must be in multiple groups to support external process connections

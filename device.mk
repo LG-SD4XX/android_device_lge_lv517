@@ -36,6 +36,10 @@ TARGET_SCREEN_WIDTH := 720
 # System properties
 -include $(LOCAL_PATH)/system_prop.mk
 
+# Adb support
+PRODUCT_PACKAGES += \
+    adbd
+
 # Audio
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/audio/mixer_paths.xml:system/etc/mixer_paths.xml
@@ -44,9 +48,9 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     fingerprintd
 
-# GestureHandler
+# LineageActions
 PRODUCT_PACKAGES += \
-    GestureHandler
+    LineageActions
 
 # Init
  PRODUCT_PACKAGES += \
@@ -56,10 +60,6 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/sensors/hals.conf:system/etc/sensors/hals.conf \
     $(LOCAL_PATH)/configs/sensors/sensor_def_common.conf:system/etc/sensors/sensor_def_common.conf \
     $(LOCAL_PATH)/configs/sensors/sensor_def_variable.conf:system/etc/sensors/sensor_def_variable.conf
-
-# IRSC
-PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/configs/sec_config:system/etc/sec_config
 
 # Thermal Configuration
 PRODUCT_COPY_FILES += \
