@@ -87,6 +87,9 @@ vendor/lib64/hw/android.hardware.bluetooth@1.0-impl-qti.so|9276c1b258c142cb6a4c1
 vendor/lib64/libbtnv.so|3d234c73102896e6493c5805d65238ece1d29f58
 vendor/lib64/libbt-hidlclient.so|c2358e54949c8b6cd267d34c6b8f3df92a90a490
 
+# Bluetooth (ANT) - from tissot - OPM1.171019.026
+vendor/lib64/com.qualcomm.qti.ant@1.0_vendor.so|f5aa67e04c90f4a5e92693384cca81ba0aa38a79
+
 # Bluetooth Firmware
 etc/firmware/nvm_tlv.bin:vendor/firmware/nvm_tlv.bin
 etc/firmware/nvm_tlv_1.3.bin:vendor/firmware/nvm_tlv_1.3.bin
