@@ -225,7 +225,6 @@ on post-fs-data
 
     #Create folder for mm-qcamera-daemon
     mkdir /data/misc/camera 0770 camera camera
-    mkdir /dev/cpuset/camera-daemon/tasks 0770 camera camera
 
     mkdir /data/media 0770 media_rw media_rw
     chown media_rw media_rw /data/media
@@ -491,7 +490,6 @@ service tftp_server /vendor/bin/tftp_server
    class core
    user root
    group root system
-   writepid /dev/cpuset/system-background/tasks
 
 on property:wc_transport.start_hci=true
     start start_hci_filter
@@ -876,7 +874,6 @@ on property:persist.data.ds_fmc_app.mode=1
      user system
      socket ims_datad stream 0660 system radio
      group system wifi radio inet log diag
-     writepid /dev/cpuset/system-background/tasks
      disabled
  
  on property:vendor.ims.QMI_DAEMON_STATUS=1
@@ -901,7 +898,6 @@ service vendor.imsrcsservice /vendor/bin/imsrcsd
     user system
     group radio inet log
     group radio diag inet log
-    writepid /dev/cpuset/system-background/tasks
     disabled
 
 
@@ -1103,7 +1099,6 @@ service poweroffhandler /system/bin/poweroffhandler
 # Logcat dump daemon, dumps logs to logdump partition
 service logdumpd /system/bin/logcat -b all -v threadtime -D -w /dev/block/bootdevice/by-name/logdump
     class core
-    writepid /dev/cpuset/system-background/tasks
     seclabel u:r:logdumpd:s0
     disabled
 
