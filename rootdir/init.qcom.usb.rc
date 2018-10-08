@@ -41,11 +41,8 @@ on boot
     write /sys/class/android_usb/android0/iManufacturer ${ro.product.manufacturer}
     write /sys/class/android_usb/android0/iProduct ${ro.product.model}
 
-<<<<<<< HEAD
 service lge-usb-sh /system/bin/sh /init.lge.usb.sh
-=======
-service qcom-usb-sh /vendor/bin/sh /vendor/bin/init.qcom.usb.sh
->>>>>>> 977516f... msm8937-common: rootdir: Move init shell scripts to /vendor
+
     class core
     user root
     oneshot
