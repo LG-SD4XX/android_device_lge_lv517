@@ -78,29 +78,17 @@ vendor/lib64/soundfx/libqcreverb.so|cbbcba339a8ad9d769bf1c89cff3c2c1a5772563
 vendor/lib64/soundfx/libqcvirt.so|6d8720c7adc40c888509cd0c1e8942fcde161059
 vendor/lib64/soundfx/libshoebox.so|72f230e368045ff6b7db529d3b3e534a6723d7ec
 
-# Bluetooth - from tissot - OPM1.171019.026
+# Bluetooth - from riva - 8.11.6 (OPM1.171019.026)
 vendor/bin/hw/android.hardware.bluetooth@1.0-service-qti|6a1f31ef0b626ca5fd51400195743416949eb7b9
-vendor/bin/hci_qcomm_init|bb2a52dac8b0cd86f4cdbb9c49b6745f05dac6ac
-vendor/bin/wcnss_filter|c00bfd553410e2093d7dab3f066c8e745e9aa7ae
+vendor/bin/hci_qcomm_init|a126505ed80f980a2d57b875f6f24da098f3d24a
+vendor/bin/wcnss_filter|6e3e215ac6de0df332f9d5b3ccae00f57bd4dff0
 vendor/etc/init/android.hardware.bluetooth@1.0-service-qti.rc|1a2dc1c2d217f47b9c99a0afa9e4912abd32e381
-vendor/lib64/hw/android.hardware.bluetooth@1.0-impl-qti.so|9276c1b258c142cb6a4c13ad14b3cbdf35737735
-vendor/lib64/libbtnv.so|3d234c73102896e6493c5805d65238ece1d29f58
-vendor/lib64/libbt-hidlclient.so|c2358e54949c8b6cd267d34c6b8f3df92a90a490
+vendor/lib64/hw/android.hardware.bluetooth@1.0-impl-qti.so|82b0220470ff0a892288ae4b0070360bb933164a
+vendor/lib64/libbtnv.so|341645b0c350237c137d8151a387f0b578d987e8
+vendor/lib64/libbt-hidlclient.so|1b7676e421311be8264c1e4e66f74fa6cb5cfdbe
 
-# Bluetooth (ANT) - from tissot - OPM1.171019.026
+# Bluetooth (ANT) - from riva - 8.11.6 (OPM1.171019.026)
 vendor/lib64/com.qualcomm.qti.ant@1.0_vendor.so|f5aa67e04c90f4a5e92693384cca81ba0aa38a79
-
-# Bluetooth Firmware
-etc/firmware/nvm_tlv.bin:vendor/firmware/nvm_tlv.bin
-etc/firmware/nvm_tlv_1.3.bin:vendor/firmware/nvm_tlv_1.3.bin
-etc/firmware/nvm_tlv_2.1.bin:vendor/firmware/nvm_tlv_2.1.bin
-etc/firmware/nvm_tlv_3.0.bin:vendor/firmware/nvm_tlv_3.0.bin
-etc/firmware/nvm_tlv_3.2.bin:vendor/firmware/nvm_tlv_3.2.bin
-etc/firmware/rampatch_tlv.img:vendor/firmware/rampatch_tlv.img
-etc/firmware/rampatch_tlv_1.3.tlv:vendor/firmware/rampatch_tlv_1.3.tlv
-etc/firmware/rampatch_tlv_2.1.tlv:vendor/firmware/rampatch_tlv_2.1.tlv
-etc/firmware/rampatch_tlv_3.0.tlv:vendor/firmware/rampatch_tlv_3.0.tlv
-etc/firmware/rampatch_tlv_3.2.tlv:vendor/firmware/rampatch_tlv_3.2.tlv
 
 # Camera - from rolex - V9.2.6.0.NCCMIEK
 vendor/lib/libchromaflash.so|cf85560822e04014b8950a1abae9c2843069101d
