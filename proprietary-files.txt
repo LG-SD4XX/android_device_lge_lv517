@@ -2430,18 +2430,16 @@ vendor/lib64/lib-uceservice.so|e156a3cfe7dfba7598828080da45972f6102a928
 vendor/lib64/vendor.qti.imsrtpservice@1.0-service-Impl.so|071c61766e00e81751247eeaf1cc51a54a70007e
 vendor/lib64/vendor.qti.imsrtpservice@1.0_vendor.so|316b987040238deb27017b1b4013f62dcc9cf195
 
-# Sensors - from TA-1000 - OPR1.170623.026
-vendor/bin/sensors.qcom|70fabc83be642776b5572e939dc4cb834ef5651b
-vendor/lib/hw/activity_recognition.msm8937.so|40dc17025134a2ac39d09aaf2e183ed8da6455f1
-vendor/lib/libsensor1.so|625fb406db24610dcf2f4b85837afbe54c8d89f9
-vendor/lib/libsensor_reg.so|4897c646659af00d4a33a02d843d855f1ff5d690
-vendor/lib/libsensor_user_cal.so|a98f18509c24fc99e26ada5ec61520da6aecfc8d
-vendor/lib/sensors.ssc.so|5956cb8ea1cad4460e910a247bb3cf6f3a510050
-vendor/lib64/hw/activity_recognition.msm8937.so|8d0907f432d6e7810dcc9559ea66c0826e29d860
-vendor/lib64/libsensor1.so|bd08147998a85763aaf5ae9bbea2282c8d8e317c
-vendor/lib64/libsensor_reg.so|deeb52abed2945fbf01c3e3de9e2028100c934a9
-vendor/lib64/libsensor_user_cal.so|2333a3bfd440f51e6d38ddc573ddea5c15fe0fef
-vendor/lib64/sensors.ssc.so|dad2b62499253748a1685718718ecc02f358ac34
+# Sensors - from riva - 8.11.6 (OPM1.171019.026)
+vendor/bin/sensors.qcom|10ea900570c1534ef1dcc9e5701356e115ab045c
+vendor/lib/hw/activity_recognition.msm8937.so|851be64fed135cc6216d95902d3cfda94c133f92
+vendor/lib/libsensor1.so|6e0645e86de8699ca8e246527e5937143f9486a0
+vendor/lib/libsensor_reg.so|281b964df74e1b03bbcf0b9d62d5b8aa86826df6
+vendor/lib/sensors.ssc.so|be9ae2747fc15aeecef94a35bdf0c0b2c49c45c8
+vendor/lib64/hw/activity_recognition.msm8937.so|fd3cf7f0310849dc7db73f75edf8763e3cd005c3
+vendor/lib64/libsensor1.so|48adb8946756ff5978218b72d3613e072ed11f9a
+vendor/lib64/libsensor_reg.so|f6483236c17c3077a8e6846f74b6ad791f6a77a0
+vendor/lib64/sensors.ssc.so|85fed4a408bd476723bcde037b5951469501c1fc
 
 # Thermal - from TA-1000 - OPR1.170623.026
 vendor/bin/thermal-engine|e8adca1cf42c7328e03050b8776ba87a183b5dce
