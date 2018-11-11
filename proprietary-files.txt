@@ -2448,9 +2448,9 @@ vendor/lib64/libthermalclient.so|5b5dcfc714a31a65e1757ef786e697b1a69e012e
 vendor/lib64/libthermalfeature.so|655a4b39b45a80069d7d8706a921ee0ace3a4865
 vendor/lib64/libthermalioctl.so|fe08cc1d318087a8078c23fbd17ad4f4e6bf5836
 
-# Time services - from bardock-pro - OPM1.171019.011
--vendor/app/TimeService/TimeService.apk|5055619766db32fe499cda86b892c9f3081219c5
-vendor/bin/time_daemon|8ea7d65a65c1d50afc6553ad52848b454c62563d
+# Time services - from riva - 8.11.6 (OPM1.171019.026)
+-vendor/app/TimeService/TimeService.apk|e93cdc67def21c239029908a9442abf82552e47a
+vendor/bin/time_daemon|820ff6dec7665aff5af0650b5098763cf916eb10
 -vendor/lib64/libtime_genoff.so|7683a85cae9f17cd535e8960fceda1d6831074a0
 
 # TUI - from vivo 1724 - OPM1.171019.011
