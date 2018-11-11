@@ -2270,30 +2270,29 @@ vendor/bin/pm-service|aa671ebd941467bfda14af40310b4ba8f0cd3fa9
 vendor/lib/libperipheral_client.so|887d8f7016a3fb6d019413e7ea797b873d0a2b36
 vendor/lib64/libperipheral_client.so|13f3fc9c862d48f4a440981e33429e060460879a
 
-# Postprocessing - from tissot - OPR1.170623.026
+# Postprocessing - from riva - 8.11.6 (OPM1.171019.026)
 etc/permissions/com.qti.snapdragon.sdk.display.xml|0bff16d681e75f203c1e11ff33afba82490e49b3
-framework/com.qti.snapdragon.sdk.display.jar|d8878b2b14a63776c76de275cfcdbbd1168c6ad9
-lib/libsd_sdk_display.so:vendor/lib/libsd_sdk_display.so|e1f9b186e1b97f37298dc6991e5fd7626c22f532
--lib/vendor.display.color@1.0.so|6f87eca02e8aa72995f0aad8e3cf71975d4013f3
-lib/vendor.display.postproc@1.0.so|678c4d5324f1f7c267e0c9c53eb11b40d2a73d4b
-lib/vendor.qti.hardware.qdutils_disp@1.0.so|36afbf62738ecc56672e3ae5cd839ec32bfe5d44
-lib64/libsd_sdk_display.so:vendor/lib64/libsd_sdk_display.so|9449e3ddfea84fb94447cb3f95d324cff216491c
--lib64/vendor.display.color@1.0.so|80bcb5adf63d2f286ffc7408f47a113f9eb73820
-lib64/vendor.display.postproc@1.0.so|9d010d28b70d09654af526b143da4a79d401c1df
-lib64/vendor.qti.hardware.qdutils_disp@1.0.so|552894a63722a14ea963023eea50d1b066e2dfae
-vendor/bin/hw/vendor.display.color@1.0-service|21c9333722f94951658bbbff60c27ee86cfa43a9
-vendor/bin/hw/vendor.qti.hardware.qdutils_disp@1.0-service-qti|031985db0f340a93554d975dbce02fb2b61ed0fa
-vendor/bin/mm-pp-dpps|23f2cc421764e7f29f8a540318c9fa47ebed5b77
+framework/com.qti.snapdragon.sdk.display.jar|0bc9085e8d9e1e40c62c8226bc55f81595f12a0a
+lib/libsd_sdk_display.so:vendor/lib/libsd_sdk_display.so|3e718efe8c892c21e6efc80a1aacde93131563bf
+-lib/vendor.display.color@1.0.so|3ace5cf91dd9686a2250dfb7c50f883f81f38b74
+lib/vendor.display.postproc@1.0.so|d6069ae2c43121117acf976c79b1ce59735cfe3b
+lib/vendor.qti.hardware.qdutils_disp@1.0.so|a12b9e484ce9f7ab590b3fee91d320cba903badc
+lib64/libsd_sdk_display.so:vendor/lib64/libsd_sdk_display.so|79236db691e6bf6ba6d6a90c03073a78cc668d11
+-lib64/vendor.display.color@1.0.so|ecd9bfd4e7f416218c172481a7192328f5c2a48f
+lib64/vendor.display.postproc@1.0.so|67e865d2c463d36c8eda8528ef4f36462b973eef
+lib64/vendor.qti.hardware.qdutils_disp@1.0.so|182817148907df624dcea5af27fd8d8256e02442
+vendor/bin/hw/vendor.display.color@1.0-service|fec0d808fa0b795bf3afe8cad8afa06dcc3bf6e1
+vendor/bin/hw/vendor.qti.hardware.qdutils_disp@1.0-service-qti|b57ff8cb8ff18f9d1a1a5eec0f4165285f9e312b
 vendor/etc/init/vendor.display.color@1.0-service.rc|5ad673f879b3685a0e79b5633437e5499cb94f48
 vendor/etc/init/vendor.qti.hardware.qdutils_disp@1.0-service-qti.rc|69d9cbc54f8ac0a0fb010f92bfa7de5981d643cf
-vendor/lib/libdisp-aba.so|10a6deddc9b106b79f73afb765876a3a58811c05
-vendor/lib/vendor.display.color@1.0_vendor.so|601793fe28293377e9564d0077bbdc3c3d427262
-vendor/lib/vendor.display.postproc@1.0_vendor.so|313bd651412fe6d5a0428f3a9cb49fc81a1d03eb
-vendor/lib/vendor.qti.hardware.qdutils_disp@1.0_vendor.so|39f68d23383309430faabcdf01893a9f76eca26e
-vendor/lib64/libdisp-aba.so|4346ee5a17186c0cd27adde56a30e235b7df6736
-vendor/lib64/vendor.display.color@1.0_vendor.so|e4d4656f59dfff5cc4ee40714b1d83dac9c6b4fa
-vendor/lib64/vendor.display.postproc@1.0_vendor.so|8b4def2c389c22003a486a01963de2cbacd10d96
-vendor/lib64/vendor.qti.hardware.qdutils_disp@1.0_vendor.so|38543fa9e3c945f58f984980fee8d6e67009e377
+vendor/lib/libdisp-aba.so|0f76360c3f9ac037cd5e2e936bd07536135ba681
+vendor/lib/vendor.display.color@1.0_vendor.so|7ca706d322a38084ea2e6b103efe1acd33183400
+vendor/lib/vendor.display.postproc@1.0_vendor.so|a710a9d7f93892961ff71420fe222add0bfcf57e
+vendor/lib/vendor.qti.hardware.qdutils_disp@1.0_vendor.so|04bf21220673630ebaa4c8e7a84adbcdcf08f0dc
+vendor/lib64/libdisp-aba.so|92cee1a0436e3895141ac63b3dceef55e7d3d61d
+vendor/lib64/vendor.display.color@1.0_vendor.so|25c717f3004a5932dcbb2f55d5165c010f7eac1a
+vendor/lib64/vendor.display.postproc@1.0_vendor.so|503ef07fcfbbfcd8db096de79dfd822c8ada5e9b
+vendor/lib64/vendor.qti.hardware.qdutils_disp@1.0_vendor.so|d101774878c0374ad805d964c3d00c71b44456d9
 
 # QMI - from tissot - OPR1.170623.026
 etc/permissions/qti_libpermissions.xml|593bcb72cce68ceb0a70f50bcae7d460114e7c62
