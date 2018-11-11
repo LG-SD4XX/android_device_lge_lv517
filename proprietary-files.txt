@@ -2003,12 +2003,12 @@ vendor/lib64/hw/consumerir.default.so|f7c90fd1d6a0c5e6cf620aa23a862e780feaaf6c
 -etc/qdcm_calib_data_ili9881c_HD720p_video_Ebbg_c3a.xml
 -etc/qdcm_calib_data_nt35521s_HD720p_video_EBBG_c3a.xml
 
-# DPM - from TA-1000 - OPR1.170623.026
-vendor/bin/dpmQmiMgr|2d2c8f1bc822874ae1c335315110756521d0c5da
-vendor/lib64/com.qualcomm.qti.dpm.api@1.0_vendor.so|0f23520fc925b8a5bb4cebc73c544cb2d012ce7e
-vendor/lib64/libdpmqmihal.so|25bcb5d6853ccbf30fbe38230f9442049688c49a
-vendor/lib/com.qualcomm.qti.dpm.api@1.0_vendor.so|b7a9b3fc933e9f2155e74252ceeb4bf2fe6619d2
-vendor/lib/libdpmqmihal.so|81cd7b99f480466c37f8a1212e448afe1998b5d2
+# DPM - from riva - 8.11.6 (OPM1.171019.026)
+vendor/bin/dpmQmiMgr|6489e19d2f777dba7622e5d3cd38bdf63c5fe480
+vendor/lib64/com.qualcomm.qti.dpm.api@1.0_vendor.so|6f55fc94e316cae982b83130dd1a9e80d86813f0
+vendor/lib64/libdpmqmihal.so|08474b97a2076d99b97a10e7b9e02fe9b8e0f403
+vendor/lib/com.qualcomm.qti.dpm.api@1.0_vendor.so|139e45506809a7fd84dd7ab705efeef2cec7d292
+vendor/lib/libdpmqmihal.so|5e3abb74de42232f3dfc17eb470c02170699adc2
 
 # DRM - from TA-1000 - OPR1.170623.026
 vendor/bin/qseecomd|d51bb2af931ee5404cc06b05c959ff975320c9f3
