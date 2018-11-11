@@ -2235,38 +2235,34 @@ vendor/lib64/libvpplibrary.so|13a830207f6826985c09f1942dd5b9a8a8b0a60b
 vendor/lib/libwms.so|17cd161fbb6921af198b026e192f167bd3f827b0
 vendor/lib64/libwms.so|7982078fc4643c7ae6bed0614fbdc44df707d4fa
 
-# Perf - from TA-1000 - OPR1.170623.026
--lib/vendor.qti.hardware.iop@1.0.so|122ec67a39da6977cdde9d2a5c9e8b370b9ab023
-lib/vendor.qti.hardware.perf@1.0.so|86a267b582710c9ff653a16bd0b292327dc64ead
--lib64/vendor.qti.hardware.iop@1.0.so|8f6115594d941e1b356f29c8e79c97bbc060d155
-lib64/vendor.qti.hardware.perf@1.0.so|3ac7bcfcb6eed93d50f35b49de05ee77255d92e6
-vendor/bin/hw/vendor.qti.hardware.iop@1.0-service|ca792ae253f3d6b46e3607e3815838e0c989f9e3
-vendor/bin/hw/vendor.qti.hardware.perf@1.0-service|b8cad5f3bdf49c215f2f6a499710d29a7fa18a0d
-vendor/etc/init/vendor.qti.hardware.iop@1.0-service.rc|32890b3d05b3733ee92cdd030d5757ceab847848
-vendor/etc/init/vendor.qti.hardware.perf@1.0-service.rc|b50182aadab2e31409df61c523d0fb914a394e43
-vendor/etc/perf/perfboostsconfig.xml|9ca7d867f05b4a0b1efc780b04c1892826004854
+# Perf - from riva - 8.11.6 (OPM1.171019.026)
+-lib/vendor.qti.hardware.iop@1.0.so|3470a8c63e1e05d93e977936a92a16712b73e50f
+lib/vendor.qti.hardware.perf@1.0.so|cd7ddfd240d8a980396c10ffc01070713518087d
+-lib64/vendor.qti.hardware.iop@1.0.so|f0f5f04d43e6253b280ba622294fe983525f45a3
+lib64/vendor.qti.hardware.perf@1.0.so|db6d62913453c545bd057866aeb37a0d058bf6f6
+vendor/bin/hw/vendor.qti.hardware.perf@1.0-service|e34d3ab597388add3c68d0583cbb4e3a3fc5921e
+vendor/etc/init/vendor.qti.hardware.perf@1.0-service.rc|d0358240452e312e802afdd11f369fd6d848f008
+vendor/etc/perf/perfboostsconfig.xml|edf6c93e59e509a050cdec1b4cf106e88d01a536
 vendor/etc/perf/perf-profile0.conf|02204355bf29ceb0460cd53e6716552bb9d9b05f
 vendor/etc/perf/perf-profile1.conf|5ce649b26b71048734b797af7340d9f7f7b83ca0
-vendor/lib/hw/vendor.qti.hardware.iop@1.0-impl.so|a7acd6b7e3afa32a0d41bbc422f491830a1050ff
-vendor/lib/libfeedbackhandler.so|5400c090d77d596642347f3fa5269e12f5f06632
-vendor/lib/libperfgluelayer.so|deb4d538e0f812bf7a806cec2a9811f48a5b68f9
-vendor/lib/libqti-iopd.so|d71ddcfb6f51868f1a41c39536ba95d206b2030b
-vendor/lib/libqti-iopd-client.so|d7f2f84c2bcb9bfed749b67b40b9d96a788e9788
-vendor/lib/libqti-perfd.so|4e4b421c478b40d19dc16d1926e0fa9b74f06dff
-vendor/lib/libqti-perfd-client.so|d7582c491b1121341beffc6fc3f3ef333f5bc69c
-vendor/lib/libqti-util.so|f1b44fac3afbcac35b4fdc691c1a125b5e5302d7
-vendor/lib/vendor.qti.hardware.iop@1.0_vendor.so|d6b63738ddac4b597356c83b057b3d65d15554ea
-vendor/lib/vendor.qti.hardware.perf@1.0_vendor.so|c0cc3f681e52159da8e7a7a67478fe5c09ec4a81
-vendor/lib64/hw/vendor.qti.hardware.iop@1.0-impl.so|be8cf62a03b5acd84dca7bc2f15c6c06b6cfbfe7
-vendor/lib64/libfeedbackhandler.so|e9f304413a5a446e01f80be92fe4c3ac8ba9e242
-vendor/lib64/libperfgluelayer.so|82dd5994f15c3f882ecff7a098f5e194d4b03bda
-vendor/lib64/libqti-iopd.so|4a102b00163c43216856721c0ef64e4fea7358a4
-vendor/lib64/libqti-iopd-client.so|47a951e9c64b3fedb274befdbaba77a8498397ee
-vendor/lib64/libqti-perfd.so|f757c80b719a07ecf08af6c5a0cce8e4fe74e0f3
-vendor/lib64/libqti-perfd-client.so|b7b749d736470ccbca12ac2492f595ec35efb229
-vendor/lib64/libqti-util.so|dbb96954a50d36822ddf77a2ff886938d32cbb28
-vendor/lib64/vendor.qti.hardware.iop@1.0_vendor.so|06bacffa87ddcf855578079147bc802907b7374e
-vendor/lib64/vendor.qti.hardware.perf@1.0_vendor.so|75f2b67fe4ef59eb1a7db3f14620fd2dd5fc20e7
+vendor/lib/hw/vendor.qti.hardware.iop@1.0-impl.so|ed77937dc036d443a56f02caebea7808fabe30aa
+vendor/lib/libfeedbackhandler.so|6b9876b1f649aaef895b75ba6a47e03f8ae22186
+vendor/lib/libperfgluelayer.so|701dccc6912647b3ea29bb3fdb0b20a43b0c5213
+vendor/lib/libqti-iopd-client.so|38bdaeda9b10d06618d323e5f436ab38e449111e
+vendor/lib/libqti-perfd.so|8812d1ec9e01527c26b852f5a8692ae35fc427a0
+vendor/lib/libqti-perfd-client.so|582336afcadb82800178cc312367cb1e0a9dc3b4
+vendor/lib/libqti-util.so|49ef7e51ae38127ff3b54ce3c2b3d1986f0af38c
+vendor/lib/vendor.qti.hardware.iop@1.0_vendor.so|8dd2bee34529a8d5b12c258c1cadc4d160780929
+vendor/lib/vendor.qti.hardware.perf@1.0_vendor.so|add8d51e211ef4fd73c2289e8c066c5ecd0d4df9
+vendor/lib64/hw/vendor.qti.hardware.iop@1.0-impl.so|f4b58f8e6bd293ef0f44033fba408e4e8798b62c
+vendor/lib64/libfeedbackhandler.so|82728d38aa14268617868ab0750cbb8fb244bf9a
+vendor/lib64/libperfgluelayer.so|cc78cdefb9935c3152501bb2ba68c4e48f788f42
+vendor/lib64/libqti-iopd-client.so|dd2041f20d6e10e68eb97ee8b8ad52e0caf9440f
+vendor/lib64/libqti-perfd.so|4e2b3ba749b03409e01817dc2eeef4185d38696d
+vendor/lib64/libqti-perfd-client.so|d9724ac58072657c2ba9fc7502c0f2577ef75230
+vendor/lib64/libqti-util.so|6411586729d90e0c6a6f94e456f66d376ddb8969
+vendor/lib64/vendor.qti.hardware.iop@1.0_vendor.so|7db971c9432acb23b196676b3793577046f40e34
+vendor/lib64/vendor.qti.hardware.perf@1.0_vendor.so|fca94d3e81f9f6453b0cb781c2925be845bb2ddb
 
 # Peripheral manager - from TA-1000 - OPR1.170623.026
 vendor/bin/pm-proxy|e12c72d05c764a2c45b2a5d4d1886519cba3fb16
