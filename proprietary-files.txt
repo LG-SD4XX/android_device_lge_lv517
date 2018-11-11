@@ -2187,9 +2187,9 @@ vendor/firmware/a530v3_gpmu.fw2|0a2f6f450231673d75ba39e5d28776db3becf810
 vendor/firmware/a530v3_seq.fw2|8963a53acc689725dee4b22881a4dd4b80e5def8
 vendor/firmware/a540_gpmu.fw2|3530f10b4825a3b08c79e0bcfaf6471ec8422f24
 
-# Keystore - from TA-1000 - OPR1.170623.026
-vendor/lib/hw/keystore.msm8937.so|3b01c9cda28c85accd726a8f9582fdd6bbb69cd6
-vendor/lib64/hw/keystore.msm8937.so|f555204adc1589746f5aa64e607cd64f7ba5ca4f
+# Keystore - from riva - 8.11.6 (OPM1.171019.026)
+vendor/lib/hw/keystore.msm8937.so|bbd9ed278c2031bc8d2fe88be41b111f189dcecb
+vendor/lib64/hw/keystore.msm8937.so|eb4d65e03cbfffbbe134c7a140b1ef1677c630e7
 
 # Listen - from TA-1000 - OPR1.170623.026
 vendor/lib/hw/sound_trigger.primary.msm8937.so|1d9089682c2004757247c6ff4b9c096d1c4fda1e
