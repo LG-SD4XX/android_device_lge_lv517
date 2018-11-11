@@ -2441,11 +2441,12 @@ vendor/lib64/libsensor1.so|48adb8946756ff5978218b72d3613e072ed11f9a
 vendor/lib64/libsensor_reg.so|f6483236c17c3077a8e6846f74b6ad791f6a77a0
 vendor/lib64/sensors.ssc.so|85fed4a408bd476723bcde037b5951469501c1fc
 
-# Thermal - from TA-1000 - OPR1.170623.026
-vendor/bin/thermal-engine|e8adca1cf42c7328e03050b8776ba87a183b5dce
-vendor/lib/libthermalclient.so|6096637d37150d89caf3c730c9964ac07797fa55
-vendor/lib64/libthermalclient.so|9beae9671d80ee9b1d47689ed32b5780a863cb77
-vendor/lib64/libthermalioctl.so|ca2dca5f433073df781073f449fd7ed73a4e4d3c
+# Thermal - from riva - 8.11.6 (OPM1.171019.026)
+vendor/bin/thermal-engine|6b93c3563e6306a95ced17cc7eb467c393acbcc5
+vendor/lib/libthermalclient.so|5e77723f69df323a85360c39722b8da00297ba9a
+vendor/lib64/libthermalclient.so|5b5dcfc714a31a65e1757ef786e697b1a69e012e
+vendor/lib64/libthermalfeature.so|655a4b39b45a80069d7d8706a921ee0ace3a4865
+vendor/lib64/libthermalioctl.so|fe08cc1d318087a8078c23fbd17ad4f4e6bf5836
 
 # Time services - from bardock-pro - OPM1.171019.011
 -vendor/app/TimeService/TimeService.apk|5055619766db32fe499cda86b892c9f3081219c5
