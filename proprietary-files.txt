@@ -2010,24 +2010,24 @@ vendor/lib64/libdpmqmihal.so|08474b97a2076d99b97a10e7b9e02fe9b8e0f403
 vendor/lib/com.qualcomm.qti.dpm.api@1.0_vendor.so|139e45506809a7fd84dd7ab705efeef2cec7d292
 vendor/lib/libdpmqmihal.so|5e3abb74de42232f3dfc17eb470c02170699adc2
 
-# DRM - from TA-1000 - OPR1.170623.026
-vendor/bin/qseecomd|d51bb2af931ee5404cc06b05c959ff975320c9f3
-vendor/lib/libcppf.so|f7950e6e08e288a49de77f0421a4a8cf66566e2f
-vendor/lib/libQSEEComAPI.so|825b1631308309a1357a37695275fd32b85a1436
-vendor/lib/libtzdrmgenprov.so|de0f43ae032dd2940821e6aa2f544730de6af869
-vendor/lib64/libdrmfs.so|e93ad9f371c59a278d92e50735114e2e5e33a3d9
-vendor/lib64/libdrmtime.so|30c4007a4a5888d09a9394147d2c53633f53942d
-vendor/lib64/libGPreqcancel_svc.so|a87324a2d28da0a5c12ced18df880e882213fea4
-vendor/lib64/libGPreqcancel.so|9062c0c190228625f42fbdd24dab560b5eaf4f48
-vendor/lib64/libqisl.so|64a80bfe1cf36f72a77f6c3e1f7be74eba601a42
-vendor/lib64/libQSEEComAPI.so|d0b22d9e627700f63bb20e8b85c9160e36217ed3
-vendor/lib64/librpmb.so|4f3dabbd1ae00d2f658137a073f9a97568df90ae
-vendor/lib64/libsecureui_svcsock.so|d6ac4171cb271cc08d8d6650efcbf1b942708d74
-vendor/lib64/libsecureui.so|eeb9abe76def73af5d8f60a8ce87007e877bb893
-vendor/lib64/libSecureUILib.so|a63347a4fd2db272ff9a4f462e1bb578bf4316b8
-vendor/lib64/libssd.so|525090a06be89db33b2b1b3295bf708cb1b1245b
-vendor/lib64/libStDrvInt.so|4b6f5b1138fe7b731fa23b20a31f7a223f1136b8
-vendor/lib64/libtzdrmgenprov.so|5ba848535a7191ee8e679b4fbbd556411b1916ef
+# DRM - from riva - 8.11.6 (OPM1.171019.026)
+vendor/bin/qseecomd|24939c818a886d532608bfd57ead2a2e399d2e45
+vendor/lib/libcppf.so|95727f168cd0ca0cd1733a9b7a7ef3f04c0e6d59
+vendor/lib/libQSEEComAPI.so|fcfd978e6f1f560bc57bde40cf2a991eabd33d5b
+vendor/lib/libtzdrmgenprov.so|5f0970a5807770bbc0e27b037d67cb9508120739
+vendor/lib64/libdrmfs.so|34ea029e9295ebaa0ec62f35242be22caf609923
+vendor/lib64/libdrmtime.so|13a5467c058f8e90e9fd59af65af8378d6954193
+vendor/lib64/libGPreqcancel_svc.so|7bc769f92852e91b4aa1d5f2c504eca1d89bff4b
+vendor/lib64/libGPreqcancel.so|94af641b19d95e3329de345804d54dabef6c0624
+vendor/lib64/libqisl.so|99d7e878ec3e6c0137ecd9ec0d98af5694bac18c
+vendor/lib64/libQSEEComAPI.so|69625500391d710c67936cbe8e0f304ee258fb47
+vendor/lib64/librpmb.so|1f6888f350161e9080f8db057267b33ff514f387
+vendor/lib64/libsecureui_svcsock.so|51a3d37db55329b81f459eaefaee594ea4503607
+vendor/lib64/libsecureui.so|2ad234653ef736677fe9b3e13d5d8d18c9181b02
+vendor/lib64/libSecureUILib.so|a5881911408d1817bf36286099d0034c32307e95
+vendor/lib64/libssd.so|84a538b62d4e92b7a3612e42db0edab1bc6c164c
+vendor/lib64/libStDrvInt.so|b2f644d4870bf6864612a6125d62452ea8d635bd
+vendor/lib64/libtzdrmgenprov.so|43c873c8fb65828edcae5207c53c305ef9a3abd3
 
 # FM - from tissot - OPM1.171019.026
 -lib/vendor.qti.hardware.fm@1.0.so|e2e9a0c579c5a81d95cc2d5f51ec7e570889e70b
