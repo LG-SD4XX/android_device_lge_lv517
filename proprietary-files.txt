@@ -2264,11 +2264,11 @@ vendor/lib64/libqti-util.so|6411586729d90e0c6a6f94e456f66d376ddb8969
 vendor/lib64/vendor.qti.hardware.iop@1.0_vendor.so|7db971c9432acb23b196676b3793577046f40e34
 vendor/lib64/vendor.qti.hardware.perf@1.0_vendor.so|fca94d3e81f9f6453b0cb781c2925be845bb2ddb
 
-# Peripheral manager - from TA-1000 - OPR1.170623.026
-vendor/bin/pm-proxy|e12c72d05c764a2c45b2a5d4d1886519cba3fb16
-vendor/bin/pm-service|83fac998bf8f651f2f0cd2385f6e1b7c3eefe5ea
-vendor/lib/libperipheral_client.so|0dabab6dc68748c2b0d3a97a5708ee555b3d5650
-vendor/lib64/libperipheral_client.so|d6db5efd4667ae3e831403f4e313fa38a5ae7bc8
+# Peripheral manager - from riva - 8.11.6 (OPM1.171019.026)
+vendor/bin/pm-proxy|67215d883e6b188081a4d91d42221f44599112e5
+vendor/bin/pm-service|aa671ebd941467bfda14af40310b4ba8f0cd3fa9
+vendor/lib/libperipheral_client.so|887d8f7016a3fb6d019413e7ea797b873d0a2b36
+vendor/lib64/libperipheral_client.so|13f3fc9c862d48f4a440981e33429e060460879a
 
 # Postprocessing - from tissot - OPR1.170623.026
 etc/permissions/com.qti.snapdragon.sdk.display.xml|0bff16d681e75f203c1e11ff33afba82490e49b3
