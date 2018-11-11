@@ -2461,10 +2461,10 @@ vendor/etc/init/vendor.qti.hardware.tui_comm@1.0-service-qti.rc|2cfc563d7e157937
 vendor/lib/vendor.qti.hardware.tui_comm@1.0_vendor.so|cdb0454905bcd5124ccb6e69df6f8256ce203250
 vendor/lib64/vendor.qti.hardware.tui_comm@1.0_vendor.so|359b87c1daad8c430005c86c451a7b095a934d91
 
-# Widevine DRM - from marlin - OPM1.171019.011
-vendor/bin/hw/android.hardware.drm@1.0-service.widevine|62dbed3b465a6abe33d03dd66cf89f3227766850
+# Widevine DRM - from riva - 8.11.6 (OPM1.171019.026)
+vendor/bin/hw/android.hardware.drm@1.0-service.widevine|692aff9d8c2632ddda775b2b9187ce26ed245871
 vendor/etc/init/android.hardware.drm@1.0-service.widevine.rc|51a3168a0dbc064d78ee11ca83614c0cd2e6daa5
-vendor/lib/libwvhidl.so|88ebba6280bd85e5bfea18efe2f685b0e1fb6f50
+vendor/lib/libwvhidl.so|7fdc15977e78dfffcfde45674872889523e795ca
 
 # Wi-Fi - from tissot - OPR1.170623.026
 vendor/bin/wcnss_service|28b35124227c32964479d9a320180f75caa21142
