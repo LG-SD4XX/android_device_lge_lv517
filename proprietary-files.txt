@@ -2430,6 +2430,7 @@ vendor/lib64/lib-rtpcommon.so|48f2cea6e66afc947051e9f9db5b37a744a2f4e8
 vendor/lib64/lib-rtpcore.so|c1afe59cbfe71f56fab0f7f3f8b5e724697cbcd8
 vendor/lib64/lib-rtpdaemoninterface.so|401d4c22536d74cffc6ac9ff95739bfc1e34a24e
 vendor/lib64/lib-rtpsl.so|1daa8deb83a413d01f6b5a92456f6a04b218a5b1
+vendor/lib64/lib-siputility.so|16c286c0ebbeac10081c20b6fef226a965d0b62e
 vendor/lib64/lib-uceservice.so|e156a3cfe7dfba7598828080da45972f6102a928
 vendor/lib64/vendor.qti.imsrtpservice@1.0-service-Impl.so|071c61766e00e81751247eeaf1cc51a54a70007e
 vendor/lib64/vendor.qti.imsrtpservice@1.0_vendor.so|316b987040238deb27017b1b4013f62dcc9cf195
