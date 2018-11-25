@@ -2231,6 +2231,11 @@ vendor/lib64/libOmxVpp.so|e377f41631e8ec74f379b3ecf75e6af024347622
 vendor/lib64/libOmxWmaDec.so|9c8445789e5b0c42b36064b8d8f4301596f5ba08
 vendor/lib64/libvpplibrary.so|13a830207f6826985c09f1942dd5b9a8a8b0a60b
 
+# Media OMX - from riva - 8.11.6 (OPM1.171019.026)
+vendor/lib/libMpeg4SwEncoder.so|6dd8134a8304d31a1b4da711853d035b7881ec32
+vendor/lib/libOmxSwVdec.so|c02ad8aa2aa92a5010f23cb14c1b561bc5751f01
+vendor/lib/libOmxSwVencMpeg4.so|7851d137a3f51f4136040413e061edea87038153
+
 # Modem - from riva - 8.11.6 (OPM1.171019.026)
 vendor/lib/libwms.so|17cd161fbb6921af198b026e192f167bd3f827b0
 vendor/lib64/libwms.so|7982078fc4643c7ae6bed0614fbdc44df707d4fa
