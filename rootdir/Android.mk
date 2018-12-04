@@ -3,6 +3,14 @@ LOCAL_PATH := $(call my-dir)
 # Init scripts
 
 include $(CLEAR_VARS)
+LOCAL_MODULE       := init.variant.rc
+LOCAL_MODULE_TAGS  := optional eng
+LOCAL_MODULE_CLASS := ETC
+LOCAL_SRC_FILES    := init.variant.rc
+LOCAL_MODULE_PATH  := $(TARGET_OUT_VENDOR_ETC)/init/hw
+include $(BUILD_PREBUILT)
+
+include $(CLEAR_VARS)
 LOCAL_MODULE       := fstab.qcom
 LOCAL_MODULE_TAGS  := optional eng
 LOCAL_MODULE_CLASS := ETC
@@ -37,7 +45,7 @@ include $(BUILD_PREBUILT)
 include $(CLEAR_VARS)
 LOCAL_MODULE       := init.qcom.sh
 LOCAL_MODULE_TAGS  := optional eng
-LOCAL_MODULE_CLASS := ETC
+LOCAL_MODULE_CLASS := EXECUTABLES
 LOCAL_SRC_FILES    := init.qcom.sh
 LOCAL_MODULE_PATH  := $(TARGET_OUT_VENDOR_EXECUTABLES)
 include $(BUILD_PREBUILT)
@@ -45,7 +53,7 @@ include $(BUILD_PREBUILT)
 include $(CLEAR_VARS)
 LOCAL_MODULE       := init.qcom.baseband.sh
 LOCAL_MODULE_TAGS  := optional eng
-LOCAL_MODULE_CLASS := ETC
+LOCAL_MODULE_CLASS := EXECUTABLES
 LOCAL_SRC_FILES    := init.qcom.baseband.sh
 LOCAL_MODULE_PATH  := $(TARGET_OUT_VENDOR_EXECUTABLES)
 include $(BUILD_PREBUILT)
@@ -53,7 +61,7 @@ include $(BUILD_PREBUILT)
 include $(CLEAR_VARS)
 LOCAL_MODULE       := init.qcom.graphics.sh
 LOCAL_MODULE_TAGS  := optional eng
-LOCAL_MODULE_CLASS := ETC
+LOCAL_MODULE_CLASS := EXECUTABLES
 LOCAL_SRC_FILES    := init.qcom.graphics.sh
 LOCAL_MODULE_PATH  := $(TARGET_OUT_VENDOR_EXECUTABLES)
 include $(BUILD_PREBUILT)
@@ -79,7 +87,7 @@ LOCAL_MODULE       := init.recovery.qcom.rc
 LOCAL_MODULE_TAGS  := optional eng
 LOCAL_MODULE_CLASS := ETC
 LOCAL_SRC_FILES    := init.qcom.power.rc
-LOCAL_MODULE_PATH  := $(TARGET_OUT_VENDOR_ETC)/init/hw
+LOCAL_MODULE_PATH  := $(TARGET_ROOT_OUTY)
 include $(BUILD_PREBUILT)
 
 include $(CLEAR_VARS)

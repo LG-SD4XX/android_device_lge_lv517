@@ -28,6 +28,8 @@
 import /vendor/etc/init/hw/init.qcom.power.rc
 import /vendor/etc/init/hw/init.qcom.usb.rc
 import /vendor/etc/init/hw/init.target.rc
+import /vendor/etc/init/hw/init.variant.rc
+import /vendor/etc/init/hw/init.lge.rc
 
 on early-init
     mount debugfs debugfs /sys/kernel/debug
