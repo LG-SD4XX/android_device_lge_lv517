@@ -13,9 +13,9 @@
 // limitations under the License.
 
 cc_binary {
-    name: "android.hardware.light@2.0-service.aw2013.rolex",
+    name: "android.hardware.light@2.0-service.aw2013.lv517",
     relative_install_path: "hw",
-    init_rc: ["android.hardware.light@2.0-service.aw2013.rolex.rc"],
+    init_rc: ["android.hardware.light@2.0-service.aw2013.lv517.rc"],
     srcs: ["service.cpp", "Light.cpp"],
     shared_libs: [
         "libbase",
