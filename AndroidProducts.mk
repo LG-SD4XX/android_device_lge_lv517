@@ -1,5 +1,6 @@
+
 #
-# Copyright (C) 2018 The LineageOS Project
+# Copyright (C) 2016 The CyanogenMod Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -12,16 +13,6 @@
 # WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 # See the License for the specific language governing permissions and
 # limitations under the License.
-#
 
-DEVICE_PATH := device/lge/lv517
-
-# Overlay
-DEVICE_PACKAGE_OVERLAYS += \
-    $(DEVICE_PATH)/overlay
-
-# Include device-specific product fragments
-include device/lge/lv517/product/*.mk
-
-# Inherit proprietary files
-$(call inherit-product-if-exists, vendor/lge/lv517/lv517-vendor.mk)
+PRODUCT_MAKEFILES := \
+$(LOCAL_DIR)/carbon_lv517.mk

@@ -1,2 +1,2 @@
-add_lunch_combo lineage_lv517-eng
-add_lunch_combo lineage_lv517-userdebug
+add_lunch_combo carbon_lv517-eng
+add_lunch_combo carbon_lv517-userdebug

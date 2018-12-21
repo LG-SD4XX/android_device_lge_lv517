@@ -25,10 +25,6 @@ PRODUCT_PACKAGES += \
     libtinyxml \
     memtrack.msm8937
 
-# Display calibration
-PRODUCT_PACKAGES += \
-    vendor.lineage.livedisplay@1.0-service-sdm
-
 # Display HAL
 PRODUCT_PACKAGES += \
     android.hardware.graphics.allocator@2.0-impl \

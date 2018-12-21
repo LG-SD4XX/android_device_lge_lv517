@@ -19,15 +19,16 @@
 $(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 
-# Inherit some common Lineage stuff
-$(call inherit-product, vendor/lineage/config/common_full_phone.mk)
+# Inherit some common CarbonRom stuff.
+$(call inherit-product, vendor/carbon/config/common.mk)
+$(call inherit-product, vendor/carbon/config/gsm.mk)
 
 # Inherit from lv517 device
 $(call inherit-product, device/lge/lv517/device.mk)
 
 BOARD_VENDOR := lge
 PRODUCT_DEVICE := lv517
-PRODUCT_NAME := lineage_lv517
+PRODUCT_NAME := carbon_lv517
 PRODUCT_BRAND := lge
 PRODUCT_MODEL := TP260
 PRODUCT_MANUFACTURER := lge
