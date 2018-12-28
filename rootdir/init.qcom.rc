@@ -342,9 +342,9 @@ service graphics-sh /vendor/bin/init.qcom.graphics.sh
     oneshot
 
 service sensors /vendor/bin/sensors.qcom
-    class core
+    class late_start
     user root
-    group root
+    group root system input wakelock
 
 # Adjust socket buffer to enlarge TCP receive window for high bandwidth
 # but only if ro.data.large_tcp_window_size property is set.
