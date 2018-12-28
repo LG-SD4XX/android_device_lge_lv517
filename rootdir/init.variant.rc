@@ -94,7 +94,7 @@ service bdaddr_loader /vendor/bin/bdaddr_loader
     group bluetooth
     oneshot
 
-service config_bt_addr /vendor/bin/btnvtool -O
+service config_bt_addr /vendor/bin/bdaddr_loader -O
     class core
     user bluetooth
     group bluetooth radio
@@ -116,3 +116,11 @@ service fingerprintd /vendor/bin/fingerprintd
     class late_start
     user system
     group system input
+    
+# SSC/SLPI sensors
+    mkdir /persist/sensors 0775 system root
+    write /persist/sensors/sensors_settings 1
+    chown system root /persist/sensors/sensors_settings
+    chmod 0664 /persist/sensors/sensors_settings
+    chown system system /persist/PRSensorData.txt
+    chmod 0600 /persist/PRSensorData.txt
