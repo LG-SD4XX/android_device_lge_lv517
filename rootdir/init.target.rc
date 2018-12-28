@@ -60,7 +60,7 @@ on post-fs-data
 service qcamerasvr /vendor/bin/mm-qcamera-daemon
     class late_start
     user camera
-    group camera system inet input graphics
+    group camera gps system inet input graphics
 
 # Allow usb charging to be disabled peristently
 on property:persist.usb.chgdisabled=1
@@ -148,6 +148,9 @@ on property:init.svc.zygote=running
 
 on property:init.svc.zygote=restarting
     stop ppd
+    
+on property:sys.boot_completed=1
+    restart cameraserver
 
 on charger
     wait /dev/block/bootdevice/by-name/system
