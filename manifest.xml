@@ -47,10 +47,11 @@ included.
     </hal>
     <hal format="hidl">
         <name>android.hardware.camera.provider</name>
-        <transport>hwbinder</transport>
+        <transport arch="32+64">passthrough</transport>
         <version>2.4</version>
         <interface>
             <name>ICameraProvider</name>
+            <instance>external/0</instance>
             <instance>legacy/0</instance>
         </interface>
     </hal>
@@ -245,7 +246,7 @@ included.
     </hal>
     <hal format="hidl">
         <name>android.hardware.vibrator</name>
-        <transport>hwbinder</transport>
+        <transport arch="32+64">passthrough</transport>
         <version>1.0</version>
         <interface>
             <name>IVibrator</name>
