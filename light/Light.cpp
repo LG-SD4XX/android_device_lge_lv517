@@ -24,7 +24,7 @@
 
 #define LCD_LED_BRIGHTNESS    "/sys/class/leds/lcd-backlight/brightness"
 
-#define MAX_LCD_BRIGHTNESS    4095
+#define MAX_LCD_BRIGHTNESS    255
 
 namespace {
 /*
