@@ -88,13 +88,13 @@ on boot
     chown system system /sys/kernel/debug/camera/logsync
     chmod 0664 /sys/kernel/debug/camera/logsync
 
-service bdaddr_loader /vendor/bin/bdaddr_loader
+service bdaddr_loader /system/vendor/bin/bdaddr_loader
     class late_start
     user root
     group bluetooth
     oneshot
 
-service config_bt_addr /vendor/bin/bdaddr_loader -O
+service config_bt_addr /system/vendor/bin/bdaddr_loader -O
     class core
     user bluetooth
     group bluetooth radio
@@ -111,16 +111,21 @@ on post-fs-data
    # make factory test result directory
    mkdir /sns/fingerprint 0775 system system
 
+## Disable for now ##
 # fingerprintd
-service fingerprintd /vendor/bin/fingerprintd
+service fingerprintd /system/vendor/bin/fingerprintd
     class late_start
     user system
     group system input
-    
-# SSC/SLPI sensors
-    mkdir /persist/sensors 0775 system root
-    write /persist/sensors/sensors_settings 1
-    chown system root /persist/sensors/sensors_settings
-    chmod 0664 /persist/sensors/sensors_settings
-    chown system system /persist/PRSensorData.txt
-    chmod 0600 /persist/PRSensorData.txt
+
+on property:sys.boot_completed=1
+    setprop sys.use.fifo_ui 1
+    setprop ro.config.max_starting_bg 32
+    setprop ro.sys.fw.bg_apps_limit 64
+    setprop ro.sys.fw.bg_cached_ratio 0.5
+    setprop ro.sys.fw.mOomMinFree1 73728
+    setprop ro.sys.fw.mOomMinFree2 92160
+    setprop ro.sys.fw.mOomMinFree3 110592
+    setprop ro.sys.fw.mOomMinFree4 153600
+    setprop ro.sys.fw.mOomMinFree5 245760
+    setprop ro.sys.fw.mOomMinFree6 428468

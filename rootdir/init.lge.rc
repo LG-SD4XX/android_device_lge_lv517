@@ -30,10 +30,6 @@
 import init.qcom.power.rc
 import init.variant.rc
 
-on init
-    export LD_SHIM_LIBS "/system/vendor/lib/lib-imsvt.so|libshims_ims.so"
-    export LD_SHIM_LIBS "libshim_camera.so:/system/lib/hw/camera.msm8937.so|libshim_camera.so:/system/lib/libfilm_emulation.so|libshim_camera.so"
-
 on boot
     # For setting tcp delayed ack
     chown system system /proc/sys/net/ipv4/tcp_delack_seg
