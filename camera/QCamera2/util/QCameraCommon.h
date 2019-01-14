@@ -1,4 +1,4 @@
-/* Copyright (c) 2012, 2016, The Linux Foundation. All rights reserved.
+/* Copyright (c) 2016, The Linux Foundation. All rights reserved.
  *
  * Redistribution and use in source and binary forms, with or without
  * modification, are permitted provided that the following conditions are
@@ -27,51 +27,38 @@
  *
  */
 
-#ifndef __QCAMERA_CMD_THREAD_H__
-#define __QCAMERA_CMD_THREAD_H__
+#ifndef __QCAMERA_COMMON_H__
+#define __QCAMERA_COMMON_H__
 
-// System dependencies
-#include <pthread.h>
+#include <utils/Timers.h>
 
 // Camera dependencies
-#include "cam_semaphore.h"
 #include "cam_types.h"
-#include "QCameraQueue.h"
+#include "cam_intf.h"
 
 namespace qcamera {
 
-typedef enum
-{
-    CAMERA_CMD_TYPE_NONE,
-    CAMERA_CMD_TYPE_START_DATA_PROC,
-    CAMERA_CMD_TYPE_STOP_DATA_PROC,
-    CAMERA_CMD_TYPE_DO_NEXT_JOB,
-    CAMERA_CMD_TYPE_EXIT,
-    CAMERA_CMD_TYPE_TIMEOUT,
-    CAMERA_CMD_TYPE_MAX
-} camera_cmd_type_t;
+#define ALIGN(a, b) (((a) + (b)) & ~(b))
+#define MAX(a, b) ((a) > (b) ? (a) : (b))
 
-typedef struct {
-    camera_cmd_type_t cmd;
-} camera_cmd_t;
-
-class QCameraCmdThread {
+class QCameraCommon {
 public:
-    QCameraCmdThread();
-    ~QCameraCmdThread();
+    QCameraCommon();
+    ~QCameraCommon();
 
-    int32_t launch(void *(*start_routine)(void *), void* user_data);
-    int32_t setName(const char* name);
-    int32_t exit();
-    int32_t sendCmd(camera_cmd_type_t cmd, uint8_t sync_cmd, uint8_t priority);
-    camera_cmd_type_t getCmd();
+    int32_t init(cam_capability_t *cap);
 
-    QCameraQueue cmd_queue;      /* cmd queue */
-    pthread_t cmd_pid;           /* cmd thread ID */
-    cam_semaphore_t cmd_sem;               /* semaphore for cmd thread */
-    cam_semaphore_t sync_sem;              /* semaphore for synchronized call signal */
+    int32_t getAnalysisInfo(
+        bool fdVideoEnabled, bool hal3, cam_feature_mask_t featureMask,
+        cam_analysis_info_t *pAnalysisInfo);
+    static uint32_t calculateLCM(int32_t num1, int32_t num2);
+    static nsecs_t getBootToMonoTimeOffset();
+
+private:
+    cam_capability_t *m_pCapability;
+
 };
 
 }; // namespace qcamera
+#endif /* __QCAMERA_COMMON_H__ */
 
-#endif /* __QCAMERA_CMD_THREAD_H__ */
