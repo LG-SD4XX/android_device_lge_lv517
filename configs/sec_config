@@ -272,7 +272,7 @@
 /* Allow RCS service to aquire net_raw permission */
 18:4294967295:1001:3004
 /* Allow QMID service to aquire net_raw permission */
-3:4294967295:1001:3004
+3:4294967295:1001:1021:3004
 2:4294967295:1001:3004
 42:4294967295:1001:3004
 18:4294967295:1001:3004
@@ -320,3 +320,6 @@
 57:4294967295:1000
 /* Allow VSS GNSS service to be used by system and net_raw processes */
 704:4294967295:1000:3004
+/*SERVREG_NOTIF*/
+64:4294967295:1001
+66:4294967295:1001
