@@ -16,5 +16,8 @@
 
 /* TODO: Actually provide implementations for these function! */
 
-// libfilm_emulation.so
+// libshims
 void _ZN7android13GraphicBufferC1Ejjij() {}
+void _ZNK7android11MediaBuffer8refcountEv() {}
+void _ZN7android13GraphicBufferC1EjjijjP13native_handleb() {}
+void _ZN7android20DisplayEventReceiverC1Ev() {}
