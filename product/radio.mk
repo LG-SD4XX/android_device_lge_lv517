@@ -1,12 +1,14 @@
 # IRSC
 PRODUCT_COPY_FILES += \
-    $(DEVICE_PATH)/configs/sec_config:$(TARGET_COPY_OUT_VENDOR)/etc/sec_config
+    $(DEVICE_PATH)/configs/sec_config:system/etc/sec_config \
+    $(DEVICE_PATH)/configs/sec_config:system/vendor/etc/sec_config
 
 # Permissions
 PRODUCT_COPY_FILES += \
-    frameworks/native/data/etc/android.hardware.telephony.gsm.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.telephony.gsm.xml \
-    frameworks/native/data/etc/android.hardware.telephony.cdma.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.telephony.cdma.xml \
-    frameworks/native/data/etc/android.software.sip.voip.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.software.sip.voip.xml
+    frameworks/native/data/etc/android.hardware.telephony.gsm.xml:system/etc/permissions/android.hardware.telephony.gsm.xml \
+    frameworks/native/data/etc/android.hardware.telephony.gsm.xml:system/vendor/etc/permissions/android.hardware.telephony.gsm.xml \
+    frameworks/native/data/etc/android.software.sip.voip.xml:system/etc/permissions/android.software.sip.voip.xml \
+    frameworks/native/data/etc/android.software.sip.voip.xml:system/vendor/etc/permissions/android.software.sip.voip.xml
 
 PRODUCT_PACKAGES += \
     libjson
@@ -38,18 +40,18 @@ PRODUCT_PROPERTY_OVERRIDES += \
     persist.vendor.radio.sib16_support=1 \
     ril.ecclist=100,101,102,108,112 \
     ril.subscription.types=NV,RUIM \
-    rild.libpath=/vendor/lib64/libril-qc-qmi-1.so \
+    rild.libpath=/system/vendor/lib64/libril-qc-qmi-1.so \
     ro.telephony.call_ring.multiple=false \
-    ro.telephony.default_network=10 \
+    ro.telephony.default_network=22,20 \
     ro.use_data_netmgrd=true \
     service.qti.ims.enabled=1 \
     telephony.lteOnCdmaDevice=1
 
 # Radio
 PRODUCT_PACKAGES += \
-    libcnefeatureconfig \
     librmnetctl \
-    libxml2
+    libcnefeatureconfig \
+    libxml2 \
 
 # Net
 PRODUCT_PACKAGES += \
@@ -72,7 +74,7 @@ PRODUCT_PACKAGES += \
 PRODUCT_BOOT_JARS += \
     telephony-ext
 
-# Whitelisted app
+# Whitelisted app	
 PRODUCT_COPY_FILES += \
     $(DEVICE_PATH)/configs/qti_whitelist.xml:system/etc/sysconfig/qti_whitelist.xml
 
