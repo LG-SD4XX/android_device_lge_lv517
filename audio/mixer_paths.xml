@@ -951,9 +951,9 @@
         <path name="headphones" />
         <path name="speaker" />
         <ctl name="RX3 MIX1 INP2" value="RX2" />
-        <ctl name="RX1 Digital Volume" value="65" />
-        <ctl name="RX2 Digital Volume" value="65" />
-        <ctl name="RX3 Digital Volume" value="86" />
+        <ctl name="RX1 Digital Volume" value="69" />
+        <ctl name="RX2 Digital Volume" value="69" />
+        <ctl name="RX3 Digital Volume" value="90" />
     </path>
 
     <path name="usb-headphones">
@@ -978,7 +978,7 @@
     <path name="camcorder-mic">
         <path name="adc1" />
         <ctl name="IIR1 INP1 MUX" value="DEC1" />
-	<ctl name="DEC1 Volume" value="87" />
+	<ctl name="DEC1 Volume" value="93" />
     </path>
 
     <path name="bt-sco-headset">
