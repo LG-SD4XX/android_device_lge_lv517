@@ -10,6 +10,7 @@ PRODUCT_AAPT_CONFIG := normal
 PRODUCT_AAPT_PREF_CONFIG := xhdpi
 # A list of dpis to select prebuilt apk, in precedence order.
 PRODUCT_AAPT_PREBUILT_DPI := hdpi
+PRODUCT_PROPERTY_OVERRIDES += debug.hwui.use_buffer_age=false
 
 # Ambient display
 PRODUCT_PACKAGES += \
@@ -48,27 +49,31 @@ PRODUCT_COPY_FILES += \
 
 # Properties
 PRODUCT_PROPERTY_OVERRIDES += \
+    debug.mdpcomp.logs=0 \
+    debug.sf.hw=1 \
     debug.egl.hw=1 \
     debug.enable.sglscale=1 \
     debug.gralloc.enable_fb_ubwc=1 \
-    debug.mdpcomp.logs=0 \
-    debug.sf.hw=1 \
-    debug.sf.latch_unsignaled=1 \
-    debug.sf.recomputecrop=0 \
-    debug.hwui.renderer=opengl \
+    persist.sys.force_sw_gles=0 \
     dev.pm.dyn_samplingrate=1 \
     persist.debug.wfd.enable=1 \
     persist.demo.hdmirotationlock=false \
     persist.hwc.enable_vds=1 \
     persist.hwc.mdpcomp.enable=true \
+    debug.composition.type=mdp \
     persist.sys.wfd.virtual=0 \
     ro.opengles.version=196610 \
     ro.qualcomm.cabl=0 \
+    debug.sdm.support_writeback=0 \
+    debug.sf.recomputecrop=0 \
+    debug.sf.latch_unsignaled=1 \
+    debug.sf.disable_backpressure=1 \
     ro.sf.lcd_density=320 \
     sdm.debug.disable_rotator_split=1 \
+    vendor.debug.disable_skip_validate=1 \
     sdm.debug.disable_skip_validate=1 \
     sdm.perf_hint_window=50 \
-    sys.display-size=3840x2160
+    sys.display-size=1280x720
 
 # RenderScript HAL
 PRODUCT_PACKAGES += \
