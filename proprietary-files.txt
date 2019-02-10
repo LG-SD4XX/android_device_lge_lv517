@@ -489,7 +489,7 @@ vendor/lib64/hw/gatekeeper.msm8937.so|b2507be6b3e182f6da1c5af3eaf9be8330cb3f2b
 
 # GPS - from tissot - OPR1.170623.026
 etc/permissions/com.qti.location.sdk.xml|cb68a566bd77dcc75bb7547199d528289fac01cb
-etc/permissions/com.qualcomm.location.xml|e837966b6a1a63430ac7ff648e84b0312cd3a46b
+etc/permissions/com.qualcomm.location.xml|78b2c4d3f4d053f7d7b3e27a60a8d9e65ac583c3
 etc/permissions/izat.xt.srv.xml|a0f460056f27b5495a4d6e959eecf0e429c42a57
 framework/com.qti.location.sdk.jar|a9e650c6e9847eb0e344a93be803cfd51ec88086
 framework/izat.xt.srv.jar|3c7bb115236e9e521bb31cded902d1d6eb620f59
