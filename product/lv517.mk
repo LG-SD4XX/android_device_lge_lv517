@@ -1,7 +1,6 @@
 # Pulled from stock 11e lv517
 PRODUCT_PROPERTY_OVERRIDES += \
 	ro.product.first_api_level=23 \
-	persist.graphics.vulkan.disable=true \
 	ro.movetosdcard.enable=true \
 	ro.frp.pst=/dev/block/bootdevice/by-name/persistent \
 	persist.debug.sensors.hal=i \

@@ -24,7 +24,11 @@ PRODUCT_PACKAGES += \
     libdisplayconfig \
     libqdMetaData.system \
     libtinyxml \
-    memtrack.msm8937
+    liboverlay \
+    libgenlock \
+    memtrack.msm8937 \
+    vendor.display.config@1.0 \
+    vendor.display.config@1.0_vendor \
 
 # Display calibration
 PRODUCT_PACKAGES += \
@@ -73,7 +77,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
     vendor.debug.disable_skip_validate=1 \
     sdm.debug.disable_skip_validate=1 \
     sdm.perf_hint_window=50 \
-    sys.display-size=1280x720
+    sys.display-size=1920x1080
 
 # RenderScript HAL
 PRODUCT_PACKAGES += \
