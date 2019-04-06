@@ -10,4 +10,3 @@ TARGET_USE_SDCLANG := true
 
 # ExFAT target
 TARGET_EXFAT_DRIVER := exfat
-
