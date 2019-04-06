@@ -36,10 +36,13 @@ on early-init
     chmod 0755 /sys/kernel/debug
     chown root system /dev/kmsg
     chmod 0620 /dev/kmsg
-
-on init
+    
     # Set permissions for persist partition
     mkdir /persist 0771 root system
+    wait /dev/block/platform/soc/${ro.boot.bootdevice}
+    symlink /dev/block/platform/soc/${ro.boot.bootdevice} /dev/block/bootdevice
+
+on init
 
     # Support legacy path
     symlink /sdcard /storage/sdcard0

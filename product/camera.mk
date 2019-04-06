@@ -8,6 +8,7 @@ PRODUCT_COPY_FILES += \
 # Camera
 PRODUCT_PACKAGES += \
     camera.msm8937 \
+    libsensorndkbridge \
     libmm-qcamera
 	
 # Camera HAL
@@ -36,3 +37,6 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.media.capture.maxres=13 \
     ro.media.capture.fast.fps=4 \
     ro.camcorder.videoModes=true
+
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/configs/external_camera_config.xml:system/vendor/etc/external_camera_config.xml
