@@ -37,7 +37,6 @@ PRODUCT_PROPERTY_OVERRIDES += \
     vendor.vidc.enc.disable_bframes=1 \
     vidc.enc.narrow.searchrange=1 \
     vidc.disable.split.mode=1 \
-    persist.media.treble_omx=false \
     vidc.debug.perf.mode=2
     
 

@@ -38,7 +38,7 @@ on early-init
     chmod 0620 /dev/kmsg
     
     # Set permissions for persist partition
-    mkdir /persist 0771 root system
+    mkdir /persist 0770 root system
     wait /dev/block/platform/soc/${ro.boot.bootdevice}
     symlink /dev/block/platform/soc/${ro.boot.bootdevice} /dev/block/bootdevice
 
@@ -288,6 +288,22 @@ on post-fs-data
     chmod 655 /data/system/sensors
     write /data/system/sensors/settings 1
     chmod 660 /data/system/sensors/settings
+    
+    service vendor.audio-hal-2-0 /vendor/bin/hw/android.hardware.audio@2.0-service
+    override
+    class hal
+    user audioserver
+    # media gid needed for /dev/fm (radio) and for /data/misc/media (tee)
+    group audio camera drmrpc inet media mediadrm net_bt net_bt_admin net_bw_acct oem_2901 wakelock
+    capabilities BLOCK_SUSPEND
+    ioprio rt 4
+    writepid /dev/cpuset/foreground/tasks /dev/stune/foreground/tasks
+    # audioflinger restarts itself when it loses connection with the hal
+    # and its .rc file has an "onrestart restart audio-hal" rule, thus
+    # an additional auto-restart from the init process isn't needed.
+    oneshot
+    interface android.hardware.audio@4.0::IDevicesFactory default
+    interface android.hardware.audio@2.0::IDevicesFactory default
 
 on property:sys.boot_completed=1
     write /dev/kmsg "Boot completed "
