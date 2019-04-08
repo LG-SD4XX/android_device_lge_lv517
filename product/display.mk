@@ -27,12 +27,12 @@ PRODUCT_PACKAGES += \
     liboverlay \
     libgenlock \
     memtrack.msm8937 \
-    vendor.display.config@1.0 \
-    vendor.display.config@1.0_vendor \
+    vendor.display.config@1.1 \
+    vendor.display.config@1.1_vendor \
 
 # Display calibration
 PRODUCT_PACKAGES += \
-    vendor.lineage.livedisplay@1.0-service-sdm
+    vendor.lineage.livedisplay@2.0-service-sdm
 
 # Display HAL
 PRODUCT_PACKAGES += \
@@ -43,6 +43,7 @@ PRODUCT_PACKAGES += \
     android.hardware.graphics.mapper@2.0-impl \
     android.hardware.memtrack@1.0-impl \
     android.hardware.memtrack@1.0-service \
+    android.hardware.configstore@1.0-service \
 
 # Permissions
 PRODUCT_COPY_FILES += \
