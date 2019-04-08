@@ -42,8 +42,6 @@
 #define IOCTL_H <SYSTEM_HEADER_PREFIX/ioctl.h>
 #include IOCTL_H
 
-#define EXTRA_ENTRY 6
-
 // Camera dependencies
 #include "mm_camera_dbg.h"
 #include "mm_camera_interface.h"
@@ -55,6 +53,8 @@ static mm_camera_ctrl_t g_cam_ctrl;
 
 static pthread_mutex_t g_handler_lock = PTHREAD_MUTEX_INITIALIZER;
 static uint16_t g_handler_history_count = 0; /* history count for handler */
+
+#define EXTRA_ENTRY 8
 
 #ifndef DAEMON_PRESENT
 static bool g_shim_initialized = FALSE; /* Tells mct shim layer initialized or not */
