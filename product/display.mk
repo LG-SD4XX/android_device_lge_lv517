@@ -23,18 +23,10 @@ PRODUCT_PACKAGES += \
     hwcomposer.msm8937 \
     libdisplayconfig \
     libqdMetaData.system \
+    libjni_livedisplay \
     libtinyxml \
-    liboverlay \
-    libgenlock \
-    memtrack.msm8937 \
-    vendor.display.config@1.1 \
-    vendor.display.config@1.1_vendor \
+    memtrack.msm8937
 
-# Display calibration
-PRODUCT_PACKAGES += \
-    vendor.lineage.livedisplay@2.0-service-sdm
-
-# Display HAL
 PRODUCT_PACKAGES += \
     android.hardware.graphics.allocator@2.0-impl \
     android.hardware.graphics.allocator@2.0-service \
@@ -42,8 +34,7 @@ PRODUCT_PACKAGES += \
     android.hardware.graphics.composer@2.1-service \
     android.hardware.graphics.mapper@2.0-impl \
     android.hardware.memtrack@1.0-impl \
-    android.hardware.memtrack@1.0-service \
-    android.hardware.configstore@1.0-service \
+    android.hardware.memtrack@1.0-service
 
 # Permissions
 PRODUCT_COPY_FILES += \
@@ -52,33 +43,33 @@ PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.vulkan.level-0.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.vulkan.level-0.xml \
     frameworks/native/data/etc/android.hardware.vulkan.version-1_0_3.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.vulkan.version-1_0_3.xml
 
-# Properties
+# Display
 PRODUCT_PROPERTY_OVERRIDES += \
-    debug.mdpcomp.logs=0 \
-    debug.sf.hw=1 \
+    ro.opengles.version=196608 \
+    ro.vendor.display.cabl=2 \
+    vendor.display.enable_default_color_mode=1
+
+# Graphics
+PRODUCT_PROPERTY_OVERRIDES += \
     debug.egl.hw=1 \
-    debug.enable.sglscale=1 \
-    debug.gralloc.enable_fb_ubwc=1 \
-    persist.sys.force_sw_gles=0 \
+    debug.cpurend.vsync=false \
+    debug.gralloc.gfx_ubwc_disable=0 \
+    debug.hwui.use_buffer_age=false \
+    debug.sdm.support_writeback=0 \
+    debug.sf.disable_backpressure=1 \
+    debug.sf.hw=1 \
+    debug.sf.latch_unsignaled=1 \
+    debug.sf.recomputecrop=0 \
     dev.pm.dyn_samplingrate=1 \
-    persist.debug.wfd.enable=1 \
     persist.demo.hdmirotationlock=false \
     persist.hwc.enable_vds=1 \
     persist.hwc.mdpcomp.enable=true \
-    debug.composition.type=mdp \
-    persist.sys.wfd.virtual=0 \
-    ro.opengles.version=196610 \
-    ro.qualcomm.cabl=0 \
-    debug.sdm.support_writeback=0 \
-    debug.sf.recomputecrop=0 \
-    debug.sf.latch_unsignaled=1 \
-    debug.sf.disable_backpressure=1 \
+    vendor.display.disable_rotator_split=1 \
+    vendor.display.disable_skip_validate=1 \
+    vendor.display.perf_hint_window=50 \
+    vendor.gralloc.enable_fb_ubwc=1
     ro.sf.lcd_density=320 \
-    sdm.debug.disable_rotator_split=1 \
-    vendor.debug.disable_skip_validate=1 \
-    sdm.debug.disable_skip_validate=1 \
-    sdm.perf_hint_window=50 \
-    sys.display-size=1920x1080
+    sys.display-size=1280x720
 
 # RenderScript HAL
 PRODUCT_PACKAGES += \
