@@ -6,10 +6,6 @@ LOCAL_MODULE := libloc_core
 LOCAL_VENDOR_MODULE := true
 LOCAL_MODULE_TAGS := optional
 
-ifeq ($(BOARD_VENDOR_QCOM_LOC_PDK_FEATURE_SET),true)
-LOCAL_CFLAGS += -DPDK_FEATURE_SET
-endif
-
 LOCAL_SHARED_LIBRARIES := \
     liblog \
     libutils \

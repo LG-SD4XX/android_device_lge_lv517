@@ -2,7 +2,6 @@ LOCAL_PATH := $(call my-dir)
 
 include $(CLEAR_VARS)
 
-
 ## Libs
 LOCAL_SHARED_LIBRARIES := \
     libutils \
@@ -43,8 +42,6 @@ LOCAL_HEADER_LIBRARIES := \
 LOCAL_MODULE := libgps.utils
 LOCAL_VENDOR_MODULE := true
 LOCAL_MODULE_TAGS := optional
-
-LOCAL_PRELINK_MODULE := false
 
 LOCAL_CFLAGS += $(GNSS_CFLAGS)
 

@@ -24,8 +24,6 @@ LOCAL_HEADER_LIBRARIES := \
     libloc_pla_headers \
     libgps.utils_headers
 
-LOCAL_PRELINK_MODULE := false
-
 LOCAL_CFLAGS += $(GNSS_CFLAGS)
 include $(BUILD_SHARED_LIBRARY)
 
