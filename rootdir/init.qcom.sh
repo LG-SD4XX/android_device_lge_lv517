@@ -46,12 +46,13 @@ fi
 
 cur_version_info=`cat /firmware/verinfo/ver_info.txt`
 if [ ! -f /firmware/verinfo/ver_info.txt -o "$prev_version_info" != "$cur_version_info" ]; then
+    chmod g+w -R /data/vendor/modem_config/*
     rm -rf /data/vendor/radio/modem_config
     mkdir /data/vendor/radio/modem_config
     chmod 770 /data/vendor/radio/modem_config
-    cp -r /firmware/image/modem_pr/mcfg/configs/* /data/vendor/radio/modem_config
-    chown -hR radio.radio /data/vendor/radio/modem_config
-    cp /firmware/verinfo/ver_info.txt /data/vendor/radio/ver_info.txt
+    cp --preserve=m -dr /firmware/image/modem_pr/mcfg/configs/* /data/vendor/radio/modem_config
+    chown -hR radio.root /data/vendor/radio/modem_config
+    cp --preserve=m -d /firmware/verinfo/ver_info.txt /data/vendor/radio/ver_info.txt
     chown radio.radio /data/vendor/radio/ver_info.txt
 fi
 cp /firmware/image/modem_pr/mbn_ota.txt /data/vendor/radio/modem_config

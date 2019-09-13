@@ -35,17 +35,31 @@ on early-init
     write /sys/block/zram0/comp_algorithm lz4
 
 on fs
-    mount_all /system/vendor/etc/fstab.qcom
+    wait /dev/block/platform/soc/${ro.boot.bootdevice}
+    symlink /dev/block/platform/soc/${ro.boot.bootdevice} /dev/block/bootdevice
+
+    mount_all /vendor/etc/fstab.qcom
     swapon_all /system/vendor/etc/fstab.qcom
     write /proc/sys/vm/page-cluster 0
     write /proc/sys/vm/swappiness 100
 
+    # Set permissions for persist partition
+    chown root system /persist
+    chmod 0771 /persist
+    mkdir /persist/alarm 0770 system system
+    mkdir /persist/bluetooth 0770 bluetooth bluetooth
     mkdir /persist/data 0700 system system
     mkdir /persist/bms 0700 root system
+    mkdir /persist/display 0770 system graphics
+    mkdir /persist/time 0770 system system
     restorecon_recursive /persist
+
+    setprop sys.usb.ffs.aio_compat 1
 
     chown system system /proc/gesture/onoff 
     chmod 660 /proc/gesture/onoff 
+    
+    chmod 0770 /sys/module/msm_thermal/cpr_band/curr_cpr_band
 
 on post-fs-data
     mkdir /persist/data/sfs 0700 system system
@@ -58,12 +72,6 @@ service qcamerasvr /system/vendor/bin/mm-qcamera-daemon
     class main
     user camera
     group camera system inet input graphics
-    
-on property:init.svc.media=restarting
-    restart qcamerasvr
-
-on property:init.svc.servicemanager=restarting
-    restart qcamerasvr
 
 # Allow usb charging to be disabled peristently
 on property:persist.usb.chgdisabled=1
@@ -84,20 +92,22 @@ service thermal-engine /system/vendor/bin/thermal-engine -c ${sys.qcom.thermalcf
     socket thermal-recv-client stream 0660 system system
     socket thermal-recv-passive-client stream 0666 system system
     socket thermal-send-rule stream 0660 system system
-    group root
+    group root system
 
 service wcnss-service /system/vendor/bin/wcnss_service
-    class main
+    class late_start
     user system
     group system wifi radio
     oneshot
 
+## imsdatadaemon starts with root and UID will be downgraded to SYSTEM.
 service imsqmidaemon /system/vendor/bin/imsqmidaemon
     class main
     user system
     socket ims_qmid stream 0660 system radio
     group radio log diag
 
+# imsdatadaemon starts with root and UID will be downgraded to SYSTEM.
 service imsdatadaemon /system/vendor/bin/imsdatadaemon
     class main
     user system
@@ -105,43 +115,31 @@ service imsdatadaemon /system/vendor/bin/imsdatadaemon
     group system wifi radio inet log diag
     disabled
 
-on property:vendor.ims.QMI_DAEMON_STATUS=1
+on property:ims.QMI_DAEMON_STATUS=1
     start imsdatadaemon
 
 service ims_rtp_daemon /system/vendor/bin/ims_rtp_daemon
     class main
     user system
-    socket ims_rtpd stream 0660 system radio
     group radio diag inet log
-    disabled
 
-service vendor.imsrcsservice /system/vendor/bin/imsrcsd
+service imsrcsservice /system/vendor/bin/imsrcsd
     class main
     user system
-    group radio inet log
-    disabled
+    group radio diag inet log
 
-on property:vendor.ims.DATA_DAEMON_STATUS=1
-    start ims_rtp_daemon
-    start vendor.imsrcsservice
+on property:ims.DATA_DAEMON_STATUS=1
+    restart ims_rtp_daemon
 
 service ppd /system/vendor/bin/mm-pp-dpps
-    class late_start
-    disabled
+    class hal
     user system
-    socket pps stream 0660 system system
     group system graphics
+    socket pps stream 0660 system system
 
-on property:init.svc.surfaceflinger=stopped
-    stop ppd
-
-on property:init.svc.surfaceflinger=running
-    start ppd
 
 on property:init.svc.surfaceflinger=restarting
-    stop hwcomposer-2-1
-    start hwcomposer-2-1
-    stop ppd
+    restart hwcomposer-2-1
 
 on property:init.svc.zygote=stopped
     stop ppd
@@ -184,3 +182,16 @@ service hvdcp_opti /system/vendor/bin/hvdcp_opti
     class main
     user root
     group root
+
+service per_proxy /system/vendor/bin/pm-proxy
+    class core
+    user system
+    group system
+    disabled
+
+on property:init.svc.per_mgr=running
+    start per_proxy
+
+on property:sys.powerctl=*
+    stop per_proxy
+    stop ims_rtp_daemon
