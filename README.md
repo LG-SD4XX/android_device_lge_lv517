@@ -1,11 +1,10 @@
-# Device Tree for Xiaomi Redmi 4A (rolex) and Xiaomi Redmi 5A (riva)
+# Device Tree for LG K20 PLUS (lv517)
 
 ## Spec Sheet
 <table>
   <tr>
     <th>Feature</th>
-    <th>Specifications Redmi 4A</th>
-    <th>Specifications Redmi 5A</th>
+    <th>Specifications LG K20 Plus</th>
   </tr>
   <tr>
     <td>CPU</td>
@@ -21,16 +20,15 @@
   </tr>
   <tr>
     <td>Memory</td>
-    <td colspan="2">2/3 GB</td>
+    <td>2 GB</td>
   </tr>
   <tr>
     <td>Shipped Android Version</td>
-    <td>6.0.1</td>
-    <td>7.1.2</td>
+    <td>7.0</td>
   </tr>
   <tr>
     <td>Storage</td>
-    <td colspan="2">16/32 GB</td>
+    <td>32 GB</td>
   </tr>
   <tr>
     <td>MicroSD</td>
@@ -38,17 +36,11 @@
   </tr>
   <tr>
     <td>Battery</td>
-    <td>3120 mAh (non-removable)</td>
-    <td>3000 mAh (non-removable)</td>
-  </tr>
-  <tr>
-    <td>Dimensions</td>
-    <td>139.9 x 70.4 x 8.5 mm</td>
-    <td>140.4 x 70.1 x 8.35 mm</td>
+    <td>2800 mAh (removable)</td>
   </tr>
   <tr>
     <td>Display</td>
-    <td colspan="2">720 x 1280 pixels, 5" (~294 PPI)</td>
+    <td colspan="2">720 x 1280 pixels, 5.5" (~ PPI)</td>
   </tr>
   <tr>
     <td>Rear Camera</td>
@@ -61,12 +53,8 @@
   </tr>
   <tr>
     <td>Release Date</td>
-    <td>November 2016</td>
-    <td>December 2017 </td>
+
   </tr>
 </table>
 
-## Device Picture
-Xiaomi Redmi 4A: https://www.gsmarena.com/xiaomi_redmi_4a-pictures-8420.php
-Xiaomi Redmi 5A: https://www.gsmarena.com/xiaomi_redmi_5a-pictures-8898.php
 
