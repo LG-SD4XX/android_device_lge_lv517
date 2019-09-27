@@ -26,23 +26,6 @@
 #
 on early-fs
     chmod 666 /dev/goodix_fp
-
-on boot
-    # Feature chip vendor : qct
-    setprop bluetooth.chip.vendor qcom
-
-    # Enable AVRCP Browsing
-    setprop persist.service.avrcp.browsing 1
-
-    service fm_dl /system/bin/sh /system/etc/init.qcom.fm.sh
-    class late_start
-    user root
-    group system
-    disabled
-    oneshot
-
-on boot
-    setprop ro.fm.module QCT
     
    # Graphics 
    chown system system /sys/class/panel/img_tune/image_enhance_set
@@ -87,6 +70,23 @@ on boot
     # Camera debug
     chown system system /sys/kernel/debug/camera/logsync
     chmod 0664 /sys/kernel/debug/camera/logsync
+
+on boot
+    # Feature chip vendor : qct
+    setprop bluetooth.chip.vendor qcom
+
+    # Enable AVRCP Browsing
+    setprop persist.service.avrcp.browsing 1
+
+    service fm_dl /system/bin/sh /system/etc/init.qcom.fm.sh
+    class late_start
+    user root
+    group system
+    disabled
+    oneshot
+
+on boot
+    setprop ro.fm.module QCT
 
 service bdaddr_loader /system/vendor/bin/bdaddr_loader
     class late_start

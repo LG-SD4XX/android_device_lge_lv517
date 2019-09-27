@@ -302,7 +302,10 @@ low_ram=`getprop ro.config.low_ram`
 
 if [ "$ProductName" == "msmnile" ]; then
       # Enable ZRAM
+      configure_zram_parameters
       configure_read_ahead_kb_values
+      echo 0 > /proc/sys/vm/page-cluster
+      echo 70 > /proc/sys/vm/swappiness
 else
     arch_type=`uname -m`
     MemTotalStr=`cat /proc/meminfo | grep MemTotal`
@@ -360,7 +363,7 @@ else
 
         # Enable adaptive LMK for all targets &
         # use Google default LMK series for all 64-bit targets >=2GB.
-        echo 0 > /sys/module/lowmemorykiller/parameters/enable_adaptive_lmk
+        echo 1 > /sys/module/lowmemorykiller/parameters/enable_adaptive_lmk
 
         # Enable oom_reaper
         if [ -f /sys/module/lowmemorykiller/parameters/oom_reaper ]; then
@@ -401,6 +404,8 @@ else
     # Disable wsf for all targets beacause we are using efk.
     # wsf Range : 1..1000 So set to bare minimum value 1.
     echo 1 > /proc/sys/vm/watermark_scale_factor
+
+    configure_zram_parameters
 
     configure_read_ahead_kb_values
 
@@ -2674,7 +2679,7 @@ case "$target" in
             echo 0 > /sys/devices/system/cpu/cpu0/cpufreq/schedutil/up_rate_limit_us
             echo 0 > /sys/devices/system/cpu/cpu0/cpufreq/schedutil/down_rate_limit_us
             echo 1401600 > /sys/devices/system/cpu/cpu4/cpufreq/schedutil/hispeed_freq
-            echo 652800 > /sys/devices/system/cpu/cpu4/cpufreq/scaling_min_freq
+            echo 1056000 > /sys/devices/system/cpu/cpu4/cpufreq/scaling_min_freq
 
 	    echo 1 > /proc/sys/kernel/sched_walt_rotate_big_tasks
 
@@ -2694,6 +2699,10 @@ case "$target" in
             configure_memory_parameters
 
             # Enable bus-dcvs
+            ddr_type=`od -An -tx /proc/device-tree/memory/ddr_device_type`
+            ddr_type4="07"
+            ddr_type3="05"
+
             for device in /sys/devices/platform/soc
             do
                 for cpubw in $device/*cpu-cpu-ddr-bw/devfreq/*cpu-cpu-ddr-bw
@@ -2701,7 +2710,16 @@ case "$target" in
                     echo "bw_hwmon" > $cpubw/governor
                     echo 50 > $cpubw/polling_interval
                     echo 762 > $cpubw/min_freq
-                    echo "2288 3440 4173 5195 5859 7759 10322 11863 13763" > $cpubw/bw_hwmon/mbps_zones
+                    if [ ${ddr_type:4:2} == $ddr_type4 ]; then
+                        # LPDDR4
+                        echo "2288 3440 4173 5195 5859 7759 10322 11863 13763" > $cpubw/bw_hwmon/mbps_zones
+                        echo 85 > $cpubw/bw_hwmon/io_percent
+                    fi
+                    if [ ${ddr_type:4:2} == $ddr_type3 ]; then
+                        # LPDDR3
+                        echo "1525 3440 5195 5859 7102" > $cpubw/bw_hwmon/mbps_zones
+                        echo 34 > $cpubw/bw_hwmon/io_percent
+                    fi
                     echo 4 > $cpubw/bw_hwmon/sample_ms
                     echo 85 > $cpubw/bw_hwmon/io_percent
                     echo 90 > $cpubw/bw_hwmon/decay_rate
@@ -2771,7 +2789,7 @@ case "$target" in
         fi
 
         case "$soc_id" in
-            "336" | "337" | "347" | "360" | "393" )
+            "336" | "337" | "347" | "360" | "393" | "370" | "371" )
 
             # Start Host based Touch processing
             case "$hw_platform" in
@@ -4309,6 +4327,8 @@ case "$target" in
         start mpdecision
     ;;
     "msm8916")
+        setprop vendor.post_boot.parsed 1
+
         if [ -f /sys/devices/soc0/soc_id ]; then
            soc_id=`cat /sys/devices/soc0/soc_id`
         else
@@ -4325,6 +4345,8 @@ case "$target" in
         esac
     ;;
     "msm8937" | "msm8953")
+        setprop vendor.post_boot.parsed 1
+
         low_ram_enable=`getprop ro.config.low_ram`
 
         if [ "$low_ram_enable" != "true" ]; then

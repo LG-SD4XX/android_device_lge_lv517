@@ -1,0 +1,4 @@
+allow platform_app qemu_hw_mainkeys_prop:file read;
+allow platform_app exfat:dir rw_dir_perms;
+allow platform_app persist_file:dir search;
+allow platform_app sensors_device:chr_file { open read write };

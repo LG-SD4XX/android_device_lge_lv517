@@ -1,9 +1,19 @@
-typeattribute mm-qcamerad binder_in_vendor_violators;
+allow mm-qcamerad debug_prop:property_service set;
+allow mm-qcamerad device:chr_file ioctl;
+allow mm-qcamerad init:unix_stream_socket connectto;
 allow mm-qcamerad { sysfs sysfs_graphics }:file r_file_perms;
+allow mm-qcamerad camera_socket:sock_file { create unlink };
 allow mm-qcamerad binder_device:chr_file rw_file_perms;
 allow mm-qcamerad sensorservice_service:service_manager find;
+allow mm-qcamerad shell_exec:file { read execute open execute_no_trans };
+allow mm-qcamerad sysfs:file write;
+allow mm-qcamerad system_data_file:dir { read w_dir_perms };
+allow mm-qcamerad system_data_file:file open;
 allow mm-qcamerad system_server:unix_stream_socket { read write };
-allow mm-qcamerad camera_data_file:dir { add_name remove_name search write };
-allow mm-qcamerad camera_data_file:sock_file { unlink create };
-allow mm-qcamerad default_prop:property_service set;
-binder_use(mm-qcamerad)
+
+allow servicemanager mm-qcamerad:dir search;
+allow servicemanager mm-qcamerad:file { open read };
+allow servicemanager mm-qcamerad:process getattr;
+
+binder_call(mm-qcamerad, servicemanager)
+binder_call(mm-qcamerad, system_server)

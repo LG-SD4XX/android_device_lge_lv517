@@ -121,21 +121,26 @@ on property:ims.QMI_DAEMON_STATUS=1
 service ims_rtp_daemon /system/vendor/bin/ims_rtp_daemon
     class main
     user system
+    socket ims_rtpd stream 0660 system radio
     group radio diag inet log
+    disabled
 
 service imsrcsservice /system/vendor/bin/imsrcsd
     class main
     user system
-    group radio diag inet log
+    group radio inet log
+    disabled
 
-on property:ims.DATA_DAEMON_STATUS=1
-    restart ims_rtp_daemon
+on property:vendor.ims.DATA_DAEMON_STATUS=1
+    start ims_rtp_daemon
+    start vendor.imsrcsservice
 
 service ppd /system/vendor/bin/mm-pp-dpps
-    class hal
+    class late_start
+    disabled
     user system
-    group system graphics
     socket pps stream 0660 system system
+    group system graphics
 
 
 on property:init.svc.surfaceflinger=restarting

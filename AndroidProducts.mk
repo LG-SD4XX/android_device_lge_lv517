@@ -15,3 +15,7 @@
 
 PRODUCT_MAKEFILES := \
     $(LOCAL_DIR)/lineage_lv517.mk
+
+COMMON_LUNCH_CHOICES := \
+    lineage_lv517-userdebug \
+    lineage_lv517-eng
